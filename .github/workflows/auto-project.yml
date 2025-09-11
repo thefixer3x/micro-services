@@ -1,0 +1,23 @@
+name: Auto-add issues to Project
+
+on:
+  issues:
+    types: [opened, labeled]
+
+jobs:
+  add_to_project:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Add issue to project
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          OWNER: ${{ github.repository_owner }}
+          REPO: ${{ github.event.repository.name }}
+          PROJECT_NUMBER: ${{ secrets.PROJECT_NUMBER }}
+        run: |
+          if [ -z "$PROJECT_NUMBER" ]; then
+            echo "PROJECT_NUMBER secret not set; skipping."
+            exit 0
+          fi
+          ISSUE_URL="https://github.com/${OWNER}/${REPO}/issues/${{ github.event.issue.number }}"
+          gh project item-add --owner "$OWNER" --number "$PROJECT_NUMBER" --url "$ISSUE_URL"

@@ -1,0 +1,360 @@
+Unnamed: 0,Unnamed: 1,Unnamed: 2,Unnamed: 3,Unnamed: 4
+,,,,
+,,,,
+,USER,Account Management,User Registration and KYC,Digital ID verification with AI-powered document scanning
+,,,,Facial recognition with liveness detection
+,,,,Biometric login support
+,,,,"Multi-language support (English, Pidgin English, Yoruba, French)"
+,,,,"Multiple account types (Individual, Business, Joint)"
+,,,,Document upload and verification
+,,,,Address verification system
+,,,,Social security/NIN verification
+,,,Profile Management,Personal information management
+,,,,Transaction history viewing
+,,,,Document storage and management
+,,,,Biometric authentication setup
+,,,,Communication preferences
+,,,,Security settings configuration
+,,,,Language preferences
+,,,,Notification management
+,,Wallet & Payments,Digital Wallet,Multi-currency wallet support
+,,,,Real-time balance viewing
+,,,,Transaction history
+,,,,Virtual card creation
+,,,,Statement generation
+,,,Payment Methods,Bank account linking
+,,,,Card management (virtual/physical)
+,,,,Recurring payment setup
+,,,,Quick payment shortcuts
+,,,,Favorite beneficiaries
+,,,,Payment limits management
+,,,Money Transfer Services,Domestic transfers
+,,,,International remittances
+,,,,Bulk transfers
+,,,,Schedule future transfers
+,,,,Regular payment setup
+,,Security & Control,Account Security,Two-factor authentication
+,,,,Biometric login
+,,,,Device management
+,,,,Login activity monitoring
+,,,,Security Questions
+,,,,PIN management
+,,,,Transaction limits
+,,,,Geo-location restrictions
+,,,Transaction Security,Transaction notifications
+,,,,Fraud alerts
+,,,,Suspicious activity reporting
+,,,,Transaction verification
+,,,,Beneficiary management
+,,,,Payment confirmation
+,,,,Transaction disputes
+,,,,Block/unblock cards
+,,Value Added Services,Rewards & Loyalty,Cashback tracking
+,,,,Reward points management
+,,,,Loyalty tier status
+,,,,Reward redemption
+,,,,Referral program
+,,,,Special promotions
+,,,,Anniversary rewards
+,,Business Features (B2B),Business Tools,Bulk payment processing
+,,,,Virtual IBAN management
+,,,,QuickBooks integration
+,,,,Business analytics dashboard
+,,,B2B Onboarding Flow,Business verification and documentation
+,,,,Multi-user account setup
+,,,,Role assignment for team members
+,,,,Credit limit assessment
+,,,,Integration documentation access
+,,,,API key management
+,,,,Compliance documentation submission
+,,,Escrow Services,Escrow account creation
+,,,,Multi-signature authorization
+,,,,Release condition management
+,,,,Dispute resolution system
+,,,,Escrow fee calculator
+,,,,Document verification for large transactions
+,,,,Release schedule management
+,,User Interface & Experience,Mobile Features,Native iOS and Android apps
+,,,,Biometric login
+,,,,Low-bandwidth mode
+,,,,Offline capabilities
+,,,,Widget support
+,,,,Quick actions
+,,,,App shortcuts
+,,,,Dark/light mode
+,,,Web Features,Responsive dashboard
+,,,,Cross-device synchronization
+,,,,Progressive web app
+,,,,Keyboard shortcuts
+,,,,Data export capabilities
+,,,,Custom dashboard layout
+,,,,Multi-screen support
+,,,,Browser notifications
+,,Support,Customer Support,In-app chat support
+,,,,Ticket creation
+,,,,Video call support
+,,,,Knowledge base
+,,,,FAQs
+,,,,Community forum
+,,,,Feedback submission
+,,,,Support status tracking
+,,,,
+,,,,
+,,,,
+,ADMINISTRATOR,Customer Management,Customer 360° View,Unified customer profile dashboard
+,,,,Transaction history and patterns
+,,,,Risk profile scoring
+,,,,Customer segmentation
+,,,,Lifetime value tracking
+,,,,Service usage analytics
+,,,,Customer interaction history
+,,,,Document repository
+,,,Account Management,Account status management
+,,,,Balance monitoring
+,,,,Transaction limits configuration
+,,,,Fee structure customization
+,,,,Service access control
+,,,,Account freezing/unfreezing
+,,,,Customer tier management
+,,,,Account closure workflow
+,,,Customer Support,Ticket management system
+,,,,Customer communication history
+,,,,Dispute resolution workflow
+,,,,Refund processing
+,,,,Service request tracking
+,,,,Customer feedback management
+,,,,SLA monitoring
+,,,,Support agent performance tracking
+,,Financial Management,Ledger Management,Double-entry accounting system
+,,,,Real-time balance sheet
+,,,,Profit & loss statements
+,,,,Trial balance generation
+,,,,Journal entry management
+,,,,Account reconciliation
+,,,,Multi-currency support
+,,,,Financial year management
+,,,Treasury Management,Liquidity monitoring
+,,,,Cash flow forecasting
+,,,,FX position management
+,,,,Interest calculation
+,,,,Fund allocation tracking
+,,,,Bank account management
+,,,,Investment portfolio tracking
+,,,Revenue Management,Fee collection tracking
+,,,,Revenue recognition
+,,,,Commission calculation
+,,,,Promotional discount tracking
+,,,,Refund management
+,,,,Revenue forecasting
+,,,,Profitability analysis
+,,Regulatory Compliance,Compliance Reporting,Suspicious Activity Reports (SARs)
+,,,,Currency Transaction Reports (CTRs)
+,,,,Know Your Customer (KYC) reports
+,,,,Anti-Money Laundering (AML) reports
+,,,,Regulatory examination support
+,,,,Compliance training tracking
+,,,,Policy violation reports
+,,,,Risk assessment reports
+,,,Regulatory Requirements,License management
+,,,,Regulatory filing calendar
+,,,,Compliance deadline tracking
+,,,,Regulatory correspondence
+,,,,Policy document management
+,,,Risk Management,Risk assessment framework
+,,,,Risk scoring models
+,,,,Exposure monitoring
+,,,,Limit management
+,,,,Risk reporting dashboard
+,,,,Incident management
+,,,,Risk mitigation tracking
+,,,,Control effectiveness monitoring
+,,KYC Management,KYC Administration,Manual review system for flagged cases
+,,,,Blockchain-based KYC data management
+,,,,User verification status monitoring
+,,,,Document validation tools
+,,,Compliance Management,AML monitoring tools
+,,,,Sanctions screening interface
+,,,,Risk assessment dashboard
+,,,,Regulatory reporting tools
+,,Role-Based Access Control,Staff Management,Role creation and configuration
+,,,,Permission assignment
+,,,,Access level management
+,,,,Staff onboarding workflow
+,,,,Performance tracking
+,,,,Activity monitoring
+,,,,Training module assignment
+,,,Department Management,Department creation and structuring
+,,,,Role hierarchy configuration
+,,,,Cross-department permission management
+,,,,Approval workflow configuration
+,,Transaction Management,Transaction Monitoring,Real-time transaction dashboard
+,,,,Transaction categorization
+,,,,High-value transaction alerts
+,,,,Transaction routing management
+,,,,Fee calculation verification
+,,,,Exchange rate management
+,,,,Settlement tracking
+,,,,Batch transaction processing
+,,,Settlement Management,Settlement cycle management
+,,,,Settlement reconciliation
+,,,,Payment gateway settlement
+,,,,Partner settlement tracking
+,,,,Settlement dispute resolution
+,,,,Settlement reporting
+,,,,Float management
+,,Wallet Management,System Wallet Control,Master wallet monitoring
+,,,,Virtual account management
+,,,,Wallet balance reconciliation
+,,,,Wallet limit management
+,,,,Wallet type configuration
+,,,,Wallet status management
+,,,Customer Wallet Operations,Wallet creation workflow
+,,,,Balance management
+,,,,Transaction limits
+,,,,Access control
+,,,,Feature enablement
+,,,,Account linking
+,,,,Wallet upgrade/downgrade
+,,,,Closure processing
+,,Escrow Administration,Account Oversight,Monitor all escrow accounts
+,,,,Review account creation requests
+,,,,Manage escrow templates
+,,,,Configure fee structures
+,,,,Set transaction limits
+,,,,Monitor account balances
+,,,,Track dormant accounts
+,,,,Manage interest distributions
+,,,Transaction Management,Review release requests
+,,,,Monitor milestone completions
+,,,,Verify supporting documents
+,,,,Process manual releases
+,,,,Override automated releases
+,,,,Manage payment schedules
+,,,,Track failed transactions
+,,,,Monitor suspicious activities
+,,,Compliance & Risk,KYC verification for escrow parties
+,,,,Risk assessment of transactions
+,,,,Regulatory reporting
+,,,,Document verification
+,,,,Sanction screening
+,,,,Transaction monitoring
+,,,,Audit trail maintenance
+,,,,Policy enforcement
+,,,Dispute Resolution,Review dispute cases
+,,,,Assign mediators
+,,,,Monitor resolution progress
+,,,,Enforce decisions
+,,,,Process refunds
+,,,,Document case histories
+,,,,Generate resolution reports
+,,,,Track appeal processes
+,,,Financial Operations,Manage escrow pool accounts
+,,,,Calculate and distribute interest
+,,,,Process fee collections
+,,,,Reconcile accounts
+,,,,Generate financial reports
+,,,,Track revenue
+,,,,Manage tax reporting
+,,,,Monitor float balances
+,,,Partner Management,Manage bank relationships
+,,,,Monitor partner performance
+,,,,Track service levels
+,,,,Manage API integrations
+,,,,Configure settlement processes
+,,,,Monitor partner fees
+,,,,Track partner disputes
+,,,,Review partner reports
+,,,Reporting & Analytics,Generate regulatory reports
+,,,,Track escrow metrics
+,,,,Monitor risk indicators
+,,,,Analyze transaction patterns
+,,,,Generate compliance reports
+,,,,Track dispute statistics
+,,,,Monitor service levels
+,,,,Generate business intelligence
+,,,System Configuration,Configure workflow rules
+,,,,Set up approval matrices
+,,,,Define release conditions
+,,,,Configure notification rules
+,,,,Set up document templates
+,,,,Manage user permissions
+,,,,Configure validation rules
+,,,,Set up integration parameters
+,,Reporting,Financial Reports,Daily settlement reports
+,,,,Revenue reports
+,,,,Transaction volume reports
+,,,,Fee collection reports
+,,,,Partner settlement reports
+,,,,Reconciliation reports
+,,,,Tax reports
+,,,,Audit reports
+,,,Operational Reports,System performance reports
+,,,,User activity reports
+,,,,Customer acquisition reports
+,,,,Service usage reports
+,,,,Error/Exception reports
+,,,,SLA compliance reports
+,,,,Partner performance reports
+,,,,Support ticket reports
+,,,Business Intelligence,Customer behavior analysis
+,,,,Market trend analysis
+,,,,Product performance metrics
+,,,,Customer segmentation analysis
+,,,,Churn prediction
+,,,,Revenue forecasting
+,,,,Risk analytics
+,,,,Competitive analysis
+,,AI Fraud Detection Features,Real-Time Fraud Monitoring,AI-powered anomaly detection for unusual transaction patterns
+,,,,Live transaction risk scoring based on machine learning models
+,,,,Instant flagging of high-risk transactions for manual review
+,,,Automated Fraud Rules & Alerts,"Customizable fraud detection rules (e.g., transaction limits, velocity checks)"
+,,,,AI-based behavioral analysis to detect deviations from normal user activity
+,,,,Alerts for rapid or repetitive transactions within short time frames
+,,,Risk-Based Transaction Scoring,AI assigns risk scores to every transaction based on:
+,,,,Amount
+,,,,Frequency
+,,,,Location
+,,,,Payment method
+,,,,User behavior history
+,,,,High-risk transactions are automatically flagged for admin approval
+,,,Pattern & Behavioral Analysis,AI learns user spending patterns and detects deviations
+,,,,"Identification of device fingerprinting mismatches (e.g., multiple accounts from the same device/IP)"
+,,,,"Detection of suspicious login behavior (e.g., multiple failed login attempts, logins from different geolocations)"
+,,,Multi-Factor Authentication Enforcement,"AI detects unusual login attempts and enforces additional authentication (OTP, biometric)"
+,,,,Adaptive authentication based on user risk profile
+,,,Suspicious Account Activity Detection,Flagging of newly registered accounts making large transactions
+,,,,Detection of accounts making transactions across unrelated geographies
+,,,,Alerts for multiple failed KYC attempts
+,,,Chargeback & Dispute Prediction,AI predicts high-risk transactions likely to result in chargebacks
+,,,,Automatic flagging of suspicious refunds and chargeback attempts
+,,,AML Compliance Monitoring,AI cross-checks transactions against global sanctions and watchlists
+,,,,Monitoring of large transactions against anti-money laundering (AML) thresholds
+,,,,Automatic suspicious activity reports (SARs) for regulatory compliance
+,,,Machine Learning Fraud Prevention Engine,Continuous improvement of fraud detection models based on new fraud trends
+,,,,Self-learning AI that refines detection accuracy over time
+,,,,"Automated classification of fraud types (e.g., phishing, identity theft, money laundering)"
+,,,Fraud Analytics & Reporting,"AI-generated reports on fraud trends, risk levels, and flagged transactions"
+,,,,Dashboard for tracking real-time fraud attempts and resolution status
+,,,,"Visual analytics for admin decision-making (graphs, heat maps of fraud-prone regions)"
+,,Audit Trail,System Audit,User action logging
+,,,,System change tracking
+,,,,Configuration modification history
+,,,,Access attempt monitoring
+,,,,Security event logging
+,,,,Data modification tracking
+,,,,Compliance violation alerts
+,,,Transaction Audit,Complete transaction history
+,,,,Modification tracking
+,,,,Approval chain documentation
+,,,,Document version control
+,,,,User interaction history
+,,,,System interaction logs
+,,,,Time-stamped event tracking
+,,System Configuration,Feature Management,Language configuration
+,,,,Fee structure updates
+,,,,Service availability management
+,,,,Feature flag management
+,,,Integration Management,Third-party API configuration
+,,,,Payment gateway settings
+,,,,SMS/USSD service management
+,,,,Blockchain network configuration

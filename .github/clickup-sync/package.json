@@ -1,0 +1,25 @@
+{
+  "name": "github-clickup-automation",
+  "version": "1.0.0",
+  "description": "Zero-touch automation between GitHub and ClickUp",
+  "main": "index.ts",
+  "scripts": {
+    "start": "tsx index.ts",
+    "bulk-import": "tsx bulk-import.ts",
+    "test": "tsx test-local.ts",
+    "build": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@octokit/rest": "^19.0.11",
+    "axios": "^1.6.2",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "tsx": "^4.6.2",
+    "typescript": "^5.3.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

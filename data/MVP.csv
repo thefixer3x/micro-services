@@ -1,0 +1,156 @@
+Unnamed: 0,Unnamed: 1,Unnamed: 2,Unnamed: 3,Unnamed: 4
+,,,,
+,,,,
+,USER,Account Management,User Registration and KYC,Digital ID verification with AI-powered document scanning
+,,,,Facial recognition with liveness detection
+,,,,Biometric login support
+,,,,"Multi-language support (English, Pidgin English, Yoruba, French)"
+,,,,"Multiple account types (Individual, Business, Joint)"
+,,,,Document upload and verification
+,,,,Address verification system
+,,,,Social security/NIN verification
+,,,Profile Management,Personal information management
+,,,,Transaction history viewing
+,,,,Document storage and management
+,,,,Biometric authentication setup
+,,,,Communication preferences
+,,,,Security settings configuration
+,,,,Language preferences
+,,,,Notification management
+,,Wallet & Payments,Digital Wallet,Multi-currency wallet support
+,,,,Real-time balance viewing
+,,,,Transaction history
+,,,,Virtual card creation
+,,,,Statement generation
+,,,Money Transfer Services,Domestic transfers
+,,,,International remittances
+,,Security & Control,Account Security,Two-factor authentication
+,,,,Security Questions
+,,,,PIN management
+,,,,Transaction limits
+,,,Transaction Security,Transaction notifications
+,,User Interface & Experience,Mobile Features,Native iOS and Android apps
+,,,Web Features,Responsive dashboard
+,,,,Cross-device synchronization
+,,,,Progressive web app
+,,,,Browser notifications
+,,Support,Customer Support,In-app chat support
+,,,,Ticket creation
+,,,,FAQs
+,,,,Support status tracking
+,,,,
+,,,,
+,,,,
+,ADMINISTRATOR,Customer Management,Customer 360° View,Unified customer profile dashboard
+,,,,Customer segmentation
+,,,,Lifetime value tracking
+,,,,Document repository
+,,,Account Management,Account status management
+,,,,Balance monitoring
+,,,,Fee structure customization
+,,,,Account freezing/unfreezing
+,,,,Customer tier management
+,,,,Account closure workflow
+,,,Customer Support,Ticket management system
+,,,,Customer communication history
+,,,,Dispute resolution workflow
+,,,,Refund processing
+,,,,Service request tracking
+,,,,Support agent performance tracking
+,,Financial Management,Ledger Management,Double-entry accounting system
+,,,,Real-time balance sheet
+,,,,Profit & loss statements
+,,,,Trial balance generation
+,,,,Journal entry management
+,,,,Account reconciliation
+,,,,Multi-currency support
+,,,,Financial year management
+,,,Treasury Management,Liquidity monitoring
+,,,,Cash flow forecasting
+,,,,FX position management
+,,,,Interest calculation
+,,,,Fund allocation tracking
+,,,,Bank account management
+,,,,Investment portfolio tracking
+,,,Revenue Management,Fee collection tracking
+,,,,Revenue recognition
+,,,,Commission calculation
+,,,,Promotional discount tracking
+,,,,Refund management
+,,,,Revenue forecasting
+,,,Regulatory Requirements,License management
+,,,,Regulatory filing calendar
+,,,,Compliance deadline tracking
+,,,,Regulatory correspondence
+,,,,Policy document management
+,,Role-Based Access Control,Staff Management,Role creation and configuration
+,,,,Permission assignment
+,,,,Access level management
+,,,,Staff onboarding workflow
+,,,,Performance tracking
+,,,,Activity monitoring
+,,,,Training module assignment
+,,,Department Management,Department creation and structuring
+,,,,Role hierarchy configuration
+,,,,Cross-department permission management
+,,,,Approval workflow configuration
+,,Transaction Management,Transaction Monitoring,Real-time transaction dashboard
+,,,,Transaction categorization
+,,,,High-value transaction alerts
+,,,,Transaction routing management
+,,,,Fee calculation verification
+,,,,Exchange rate management
+,,,,Settlement tracking
+,,,,Batch transaction processing
+,,,Settlement Management,Settlement cycle management
+,,,,Settlement reconciliation
+,,,,Payment gateway settlement
+,,,,Partner settlement tracking
+,,,,Settlement dispute resolution
+,,,,Settlement reporting
+,,,,Float management
+,,Wallet Management,System Wallet Control,Master wallet monitoring
+,,,,Virtual account management
+,,,,Wallet balance reconciliation
+,,,,Wallet status management
+,,,Customer Wallet Operations,Wallet creation workflow
+,,,,Balance management
+,,,,Transaction limits
+,,,,Wallet upgrade/downgrade
+,,,,Closure processing
+,,Reporting,Financial Reports,Daily settlement reports
+,,,,Revenue reports
+,,,,Transaction volume reports
+,,,,Fee collection reports
+,,,,Partner settlement reports
+,,,,Reconciliation reports
+,,,,Tax reports
+,,,,Audit reports
+,,,Operational Reports,System performance reports
+,,,,User activity reports
+,,,,Customer acquisition reports
+,,,,Service usage reports
+,,,,Error/Exception reports
+,,,,SLA compliance reports
+,,,,Partner performance reports
+,,,,Support ticket reports
+,,Audit Trail,System Audit,User action logging
+,,,,System change tracking
+,,,,Configuration modification history
+,,,,Access attempt monitoring
+,,,,Security event logging
+,,,,Data modification tracking
+,,,,Compliance violation alerts
+,,,Transaction Audit,Complete transaction history
+,,,,Modification tracking
+,,,,Approval chain documentation
+,,,,Document version control
+,,,,User interaction history
+,,,,System interaction logs
+,,,,Time-stamped event tracking
+,,System Configuration,Feature Management,Language configuration
+,,,,Fee structure updates
+,,,,Service availability management
+,,,,Feature flag management
+,,,Integration Management,Third-party API configuration
+,,,,Payment gateway settings

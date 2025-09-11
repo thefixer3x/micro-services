@@ -1,0 +1,3145 @@
+title,body,labels
+USER,"### Source Row
+```json
+{
+  ""Unnamed: 1"": ""USER"",
+  ""Unnamed: 2"": ""Account Management"",
+  ""Unnamed: 3"": ""User Registration and KYC"",
+  ""Unnamed: 4"": ""Digital ID verification with AI-powered document scanning""
+}
+```",sheet:Product
+Facial recognition with liveness detection,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Facial recognition with liveness detection""
+}
+```",sheet:Product
+Biometric login support,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Biometric login support""
+}
+```",sheet:Product
+"Multi-language support (English, Pidgin English, Yoruba, French)","### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Multi-language support (English, Pidgin English, Yoruba, French)""
+}
+```",sheet:Product
+"Multiple account types (Individual, Business, Joint)","### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Multiple account types (Individual, Business, Joint)""
+}
+```",sheet:Product
+Document upload and verification,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Document upload and verification""
+}
+```",sheet:Product
+Address verification system,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Address verification system""
+}
+```",sheet:Product
+Social security/NIN verification,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Social security/NIN verification""
+}
+```",sheet:Product
+Profile Management,"### Source Row
+```json
+{
+  ""Unnamed: 3"": ""Profile Management"",
+  ""Unnamed: 4"": ""Personal information management""
+}
+```",sheet:Product
+Transaction history viewing,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Transaction history viewing""
+}
+```",sheet:Product
+Document storage and management,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Document storage and management""
+}
+```",sheet:Product
+Biometric authentication setup,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Biometric authentication setup""
+}
+```",sheet:Product
+Communication preferences,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Communication preferences""
+}
+```",sheet:Product
+Security settings configuration,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Security settings configuration""
+}
+```",sheet:Product
+Language preferences,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Language preferences""
+}
+```",sheet:Product
+Notification management,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Notification management""
+}
+```",sheet:Product
+Wallet & Payments,"### Source Row
+```json
+{
+  ""Unnamed: 2"": ""Wallet & Payments"",
+  ""Unnamed: 3"": ""Digital Wallet"",
+  ""Unnamed: 4"": ""Multi-currency wallet support""
+}
+```",sheet:Product
+Real-time balance viewing,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Real-time balance viewing""
+}
+```",sheet:Product
+Transaction history,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Transaction history""
+}
+```",sheet:Product
+Virtual card creation,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Virtual card creation""
+}
+```",sheet:Product
+Statement generation,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Statement generation""
+}
+```",sheet:Product
+Payment Methods,"### Source Row
+```json
+{
+  ""Unnamed: 3"": ""Payment Methods"",
+  ""Unnamed: 4"": ""Bank account linking""
+}
+```",sheet:Product
+Card management (virtual/physical),"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Card management (virtual/physical)""
+}
+```",sheet:Product
+Recurring payment setup,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Recurring payment setup""
+}
+```",sheet:Product
+Quick payment shortcuts,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Quick payment shortcuts""
+}
+```",sheet:Product
+Favorite beneficiaries,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Favorite beneficiaries""
+}
+```",sheet:Product
+Payment limits management,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Payment limits management""
+}
+```",sheet:Product
+Money Transfer Services,"### Source Row
+```json
+{
+  ""Unnamed: 3"": ""Money Transfer Services"",
+  ""Unnamed: 4"": ""Domestic transfers""
+}
+```",sheet:Product
+International remittances,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""International remittances""
+}
+```",sheet:Product
+Bulk transfers,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Bulk transfers""
+}
+```",sheet:Product
+Schedule future transfers,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Schedule future transfers""
+}
+```",sheet:Product
+Regular payment setup,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Regular payment setup""
+}
+```",sheet:Product
+Security & Control,"### Source Row
+```json
+{
+  ""Unnamed: 2"": ""Security & Control"",
+  ""Unnamed: 3"": ""Account Security"",
+  ""Unnamed: 4"": ""Two-factor authentication""
+}
+```",sheet:Product
+Biometric login,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Biometric login""
+}
+```",sheet:Product
+Device management,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Device management""
+}
+```",sheet:Product
+Login activity monitoring,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Login activity monitoring""
+}
+```",sheet:Product
+Security Questions,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Security Questions""
+}
+```",sheet:Product
+PIN management,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""PIN management""
+}
+```",sheet:Product
+Transaction limits,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Transaction limits""
+}
+```",sheet:Product
+Geo-location restrictions,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Geo-location restrictions""
+}
+```",sheet:Product
+Transaction Security,"### Source Row
+```json
+{
+  ""Unnamed: 3"": ""Transaction Security"",
+  ""Unnamed: 4"": ""Transaction notifications""
+}
+```",sheet:Product
+Fraud alerts,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Fraud alerts""
+}
+```",sheet:Product
+Suspicious activity reporting,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Suspicious activity reporting""
+}
+```",sheet:Product
+Transaction verification,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Transaction verification""
+}
+```",sheet:Product
+Beneficiary management,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Beneficiary management""
+}
+```",sheet:Product
+Payment confirmation,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Payment confirmation""
+}
+```",sheet:Product
+Transaction disputes,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Transaction disputes""
+}
+```",sheet:Product
+Block/unblock cards,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Block/unblock cards""
+}
+```",sheet:Product
+Value Added Services,"### Source Row
+```json
+{
+  ""Unnamed: 2"": ""Value Added Services"",
+  ""Unnamed: 3"": ""Rewards & Loyalty"",
+  ""Unnamed: 4"": ""Cashback tracking""
+}
+```",sheet:Product
+Reward points management,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Reward points management""
+}
+```",sheet:Product
+Loyalty tier status,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Loyalty tier status""
+}
+```",sheet:Product
+Reward redemption,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Reward redemption""
+}
+```",sheet:Product
+Referral program,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Referral program""
+}
+```",sheet:Product
+Special promotions,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Special promotions""
+}
+```",sheet:Product
+Anniversary rewards,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Anniversary rewards""
+}
+```",sheet:Product
+Business Features (B2B),"### Source Row
+```json
+{
+  ""Unnamed: 2"": ""Business Features (B2B)"",
+  ""Unnamed: 3"": ""Business Tools"",
+  ""Unnamed: 4"": ""Bulk payment processing""
+}
+```",sheet:Product
+Virtual IBAN management,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Virtual IBAN management""
+}
+```",sheet:Product
+QuickBooks integration,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""QuickBooks integration""
+}
+```",sheet:Product
+Business analytics dashboard,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Business analytics dashboard""
+}
+```",sheet:Product
+B2B Onboarding Flow,"### Source Row
+```json
+{
+  ""Unnamed: 3"": ""B2B Onboarding Flow"",
+  ""Unnamed: 4"": ""Business verification and documentation""
+}
+```",sheet:Product
+Multi-user account setup,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Multi-user account setup""
+}
+```",sheet:Product
+Role assignment for team members,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Role assignment for team members""
+}
+```",sheet:Product
+Credit limit assessment,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Credit limit assessment""
+}
+```",sheet:Product
+Integration documentation access,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Integration documentation access""
+}
+```",sheet:Product
+API key management,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""API key management""
+}
+```",sheet:Product
+Compliance documentation submission,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Compliance documentation submission""
+}
+```",sheet:Product
+Escrow Services,"### Source Row
+```json
+{
+  ""Unnamed: 3"": ""Escrow Services"",
+  ""Unnamed: 4"": ""Escrow account creation""
+}
+```",sheet:Product
+Multi-signature authorization,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Multi-signature authorization""
+}
+```",sheet:Product
+Release condition management,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Release condition management""
+}
+```",sheet:Product
+Dispute resolution system,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Dispute resolution system""
+}
+```",sheet:Product
+Escrow fee calculator,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Escrow fee calculator""
+}
+```",sheet:Product
+Document verification for large transactions,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Document verification for large transactions""
+}
+```",sheet:Product
+Release schedule management,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Release schedule management""
+}
+```",sheet:Product
+User Interface & Experience,"### Source Row
+```json
+{
+  ""Unnamed: 2"": ""User Interface & Experience"",
+  ""Unnamed: 3"": ""Mobile Features"",
+  ""Unnamed: 4"": ""Native iOS and Android apps""
+}
+```",sheet:Product
+Biometric login,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Biometric login""
+}
+```",sheet:Product
+Low-bandwidth mode,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Low-bandwidth mode""
+}
+```",sheet:Product
+Offline capabilities,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Offline capabilities""
+}
+```",sheet:Product
+Widget support,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Widget support""
+}
+```",sheet:Product
+Quick actions,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Quick actions""
+}
+```",sheet:Product
+App shortcuts,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""App shortcuts""
+}
+```",sheet:Product
+Dark/light mode,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Dark/light mode""
+}
+```",sheet:Product
+Web Features,"### Source Row
+```json
+{
+  ""Unnamed: 3"": ""Web Features"",
+  ""Unnamed: 4"": ""Responsive dashboard""
+}
+```",sheet:Product
+Cross-device synchronization,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Cross-device synchronization""
+}
+```",sheet:Product
+Progressive web app,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Progressive web app""
+}
+```",sheet:Product
+Keyboard shortcuts,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Keyboard shortcuts""
+}
+```",sheet:Product
+Data export capabilities,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Data export capabilities""
+}
+```",sheet:Product
+Custom dashboard layout,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Custom dashboard layout""
+}
+```",sheet:Product
+Multi-screen support,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Multi-screen support""
+}
+```",sheet:Product
+Browser notifications,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Browser notifications""
+}
+```",sheet:Product
+Support,"### Source Row
+```json
+{
+  ""Unnamed: 2"": ""Support"",
+  ""Unnamed: 3"": ""Customer Support"",
+  ""Unnamed: 4"": ""In-app chat support""
+}
+```",sheet:Product
+Ticket creation,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Ticket creation""
+}
+```",sheet:Product
+Video call support,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Video call support""
+}
+```",sheet:Product
+Knowledge base,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Knowledge base""
+}
+```",sheet:Product
+FAQs,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""FAQs""
+}
+```",sheet:Product
+Community forum,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Community forum""
+}
+```",sheet:Product
+Feedback submission,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Feedback submission""
+}
+```",sheet:Product
+Support status tracking,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Support status tracking""
+}
+```",sheet:Product
+ADMINISTRATOR,"### Source Row
+```json
+{
+  ""Unnamed: 1"": ""ADMINISTRATOR"",
+  ""Unnamed: 2"": ""Customer Management"",
+  ""Unnamed: 3"": ""Customer 360° View"",
+  ""Unnamed: 4"": ""Unified customer profile dashboard""
+}
+```",sheet:Product
+Transaction history and patterns,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Transaction history and patterns""
+}
+```",sheet:Product
+Risk profile scoring,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Risk profile scoring""
+}
+```",sheet:Product
+Customer segmentation,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Customer segmentation""
+}
+```",sheet:Product
+Lifetime value tracking,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Lifetime value tracking""
+}
+```",sheet:Product
+Service usage analytics,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Service usage analytics""
+}
+```",sheet:Product
+Customer interaction history,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Customer interaction history""
+}
+```",sheet:Product
+Document repository,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Document repository""
+}
+```",sheet:Product
+Account Management,"### Source Row
+```json
+{
+  ""Unnamed: 3"": ""Account Management"",
+  ""Unnamed: 4"": ""Account status management""
+}
+```",sheet:Product
+Balance monitoring,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Balance monitoring""
+}
+```",sheet:Product
+Transaction limits configuration,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Transaction limits configuration""
+}
+```",sheet:Product
+Fee structure customization,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Fee structure customization""
+}
+```",sheet:Product
+Service access control,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Service access control""
+}
+```",sheet:Product
+Account freezing/unfreezing,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Account freezing/unfreezing""
+}
+```",sheet:Product
+Customer tier management,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Customer tier management""
+}
+```",sheet:Product
+Account closure workflow,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Account closure workflow""
+}
+```",sheet:Product
+Customer Support,"### Source Row
+```json
+{
+  ""Unnamed: 3"": ""Customer Support"",
+  ""Unnamed: 4"": ""Ticket management system""
+}
+```",sheet:Product
+Customer communication history,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Customer communication history""
+}
+```",sheet:Product
+Dispute resolution workflow,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Dispute resolution workflow""
+}
+```",sheet:Product
+Refund processing,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Refund processing""
+}
+```",sheet:Product
+Service request tracking,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Service request tracking""
+}
+```",sheet:Product
+Customer feedback management,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Customer feedback management""
+}
+```",sheet:Product
+SLA monitoring,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""SLA monitoring""
+}
+```",sheet:Product
+Support agent performance tracking,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Support agent performance tracking""
+}
+```",sheet:Product
+Financial Management,"### Source Row
+```json
+{
+  ""Unnamed: 2"": ""Financial Management"",
+  ""Unnamed: 3"": ""Ledger Management"",
+  ""Unnamed: 4"": ""Double-entry accounting system""
+}
+```",sheet:Product
+Real-time balance sheet,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Real-time balance sheet""
+}
+```",sheet:Product
+Profit & loss statements,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Profit & loss statements""
+}
+```",sheet:Product
+Trial balance generation,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Trial balance generation""
+}
+```",sheet:Product
+Journal entry management,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Journal entry management""
+}
+```",sheet:Product
+Account reconciliation,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Account reconciliation""
+}
+```",sheet:Product
+Multi-currency support,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Multi-currency support""
+}
+```",sheet:Product
+Financial year management,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Financial year management""
+}
+```",sheet:Product
+Treasury Management,"### Source Row
+```json
+{
+  ""Unnamed: 3"": ""Treasury Management"",
+  ""Unnamed: 4"": ""Liquidity monitoring""
+}
+```",sheet:Product
+Cash flow forecasting,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Cash flow forecasting""
+}
+```",sheet:Product
+FX position management,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""FX position management""
+}
+```",sheet:Product
+Interest calculation,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Interest calculation""
+}
+```",sheet:Product
+Fund allocation tracking,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Fund allocation tracking""
+}
+```",sheet:Product
+Bank account management,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Bank account management""
+}
+```",sheet:Product
+Investment portfolio tracking,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Investment portfolio tracking""
+}
+```",sheet:Product
+Revenue Management,"### Source Row
+```json
+{
+  ""Unnamed: 3"": ""Revenue Management"",
+  ""Unnamed: 4"": ""Fee collection tracking""
+}
+```",sheet:Product
+Revenue recognition,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Revenue recognition""
+}
+```",sheet:Product
+Commission calculation,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Commission calculation""
+}
+```",sheet:Product
+Promotional discount tracking,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Promotional discount tracking""
+}
+```",sheet:Product
+Refund management,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Refund management""
+}
+```",sheet:Product
+Revenue forecasting,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Revenue forecasting""
+}
+```",sheet:Product
+Profitability analysis,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Profitability analysis""
+}
+```",sheet:Product
+Regulatory Compliance,"### Source Row
+```json
+{
+  ""Unnamed: 2"": ""Regulatory Compliance"",
+  ""Unnamed: 3"": ""Compliance Reporting"",
+  ""Unnamed: 4"": ""Suspicious Activity Reports (SARs)""
+}
+```",sheet:Product
+Currency Transaction Reports (CTRs),"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Currency Transaction Reports (CTRs)""
+}
+```",sheet:Product
+Know Your Customer (KYC) reports,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Know Your Customer (KYC) reports""
+}
+```",sheet:Product
+Anti-Money Laundering (AML) reports,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Anti-Money Laundering (AML) reports""
+}
+```",sheet:Product
+Regulatory examination support,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Regulatory examination support""
+}
+```",sheet:Product
+Compliance training tracking,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Compliance training tracking""
+}
+```",sheet:Product
+Policy violation reports,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Policy violation reports""
+}
+```",sheet:Product
+Risk assessment reports,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Risk assessment reports""
+}
+```",sheet:Product
+Regulatory Requirements,"### Source Row
+```json
+{
+  ""Unnamed: 3"": ""Regulatory Requirements"",
+  ""Unnamed: 4"": ""License management""
+}
+```",sheet:Product
+Regulatory filing calendar,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Regulatory filing calendar""
+}
+```",sheet:Product
+Compliance deadline tracking,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Compliance deadline tracking""
+}
+```",sheet:Product
+Regulatory correspondence,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Regulatory correspondence""
+}
+```",sheet:Product
+Policy document management,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Policy document management""
+}
+```",sheet:Product
+Risk Management,"### Source Row
+```json
+{
+  ""Unnamed: 3"": ""Risk Management"",
+  ""Unnamed: 4"": ""Risk assessment framework""
+}
+```",sheet:Product
+Risk scoring models,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Risk scoring models""
+}
+```",sheet:Product
+Exposure monitoring,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Exposure monitoring""
+}
+```",sheet:Product
+Limit management,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Limit management""
+}
+```",sheet:Product
+Risk reporting dashboard,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Risk reporting dashboard""
+}
+```",sheet:Product
+Incident management,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Incident management""
+}
+```",sheet:Product
+Risk mitigation tracking,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Risk mitigation tracking""
+}
+```",sheet:Product
+Control effectiveness monitoring,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Control effectiveness monitoring""
+}
+```",sheet:Product
+KYC Management,"### Source Row
+```json
+{
+  ""Unnamed: 2"": ""KYC Management"",
+  ""Unnamed: 3"": ""KYC Administration"",
+  ""Unnamed: 4"": ""Manual review system for flagged cases""
+}
+```",sheet:Product
+Blockchain-based KYC data management,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Blockchain-based KYC data management""
+}
+```",sheet:Product
+User verification status monitoring,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""User verification status monitoring""
+}
+```",sheet:Product
+Document validation tools,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Document validation tools""
+}
+```",sheet:Product
+Compliance Management,"### Source Row
+```json
+{
+  ""Unnamed: 3"": ""Compliance Management"",
+  ""Unnamed: 4"": ""AML monitoring tools""
+}
+```",sheet:Product
+Sanctions screening interface,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Sanctions screening interface""
+}
+```",sheet:Product
+Risk assessment dashboard,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Risk assessment dashboard""
+}
+```",sheet:Product
+Regulatory reporting tools,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Regulatory reporting tools""
+}
+```",sheet:Product
+Role-Based Access Control,"### Source Row
+```json
+{
+  ""Unnamed: 2"": ""Role-Based Access Control"",
+  ""Unnamed: 3"": ""Staff Management"",
+  ""Unnamed: 4"": ""Role creation and configuration""
+}
+```",sheet:Product
+Permission assignment,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Permission assignment""
+}
+```",sheet:Product
+Access level management,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Access level management""
+}
+```",sheet:Product
+Staff onboarding workflow,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Staff onboarding workflow""
+}
+```",sheet:Product
+Performance tracking,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Performance tracking""
+}
+```",sheet:Product
+Activity monitoring,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Activity monitoring""
+}
+```",sheet:Product
+Training module assignment,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Training module assignment""
+}
+```",sheet:Product
+Department Management,"### Source Row
+```json
+{
+  ""Unnamed: 3"": ""Department Management"",
+  ""Unnamed: 4"": ""Department creation and structuring""
+}
+```",sheet:Product
+Role hierarchy configuration,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Role hierarchy configuration""
+}
+```",sheet:Product
+Cross-department permission management,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Cross-department permission management""
+}
+```",sheet:Product
+Approval workflow configuration,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Approval workflow configuration""
+}
+```",sheet:Product
+Transaction Management,"### Source Row
+```json
+{
+  ""Unnamed: 2"": ""Transaction Management"",
+  ""Unnamed: 3"": ""Transaction Monitoring"",
+  ""Unnamed: 4"": ""Real-time transaction dashboard""
+}
+```",sheet:Product
+Transaction categorization,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Transaction categorization""
+}
+```",sheet:Product
+High-value transaction alerts,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""High-value transaction alerts""
+}
+```",sheet:Product
+Transaction routing management,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Transaction routing management""
+}
+```",sheet:Product
+Fee calculation verification,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Fee calculation verification""
+}
+```",sheet:Product
+Exchange rate management,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Exchange rate management""
+}
+```",sheet:Product
+Settlement tracking,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Settlement tracking""
+}
+```",sheet:Product
+Batch transaction processing,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Batch transaction processing""
+}
+```",sheet:Product
+Settlement Management,"### Source Row
+```json
+{
+  ""Unnamed: 3"": ""Settlement Management"",
+  ""Unnamed: 4"": ""Settlement cycle management""
+}
+```",sheet:Product
+Settlement reconciliation,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Settlement reconciliation""
+}
+```",sheet:Product
+Payment gateway settlement,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Payment gateway settlement""
+}
+```",sheet:Product
+Partner settlement tracking,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Partner settlement tracking""
+}
+```",sheet:Product
+Settlement dispute resolution,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Settlement dispute resolution""
+}
+```",sheet:Product
+Settlement reporting,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Settlement reporting""
+}
+```",sheet:Product
+Float management,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Float management""
+}
+```",sheet:Product
+Wallet Management,"### Source Row
+```json
+{
+  ""Unnamed: 2"": ""Wallet Management"",
+  ""Unnamed: 3"": ""System Wallet Control"",
+  ""Unnamed: 4"": ""Master wallet monitoring""
+}
+```",sheet:Product
+Virtual account management,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Virtual account management""
+}
+```",sheet:Product
+Wallet balance reconciliation,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Wallet balance reconciliation""
+}
+```",sheet:Product
+Wallet limit management,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Wallet limit management""
+}
+```",sheet:Product
+Wallet type configuration,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Wallet type configuration""
+}
+```",sheet:Product
+Wallet status management,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Wallet status management""
+}
+```",sheet:Product
+Customer Wallet Operations,"### Source Row
+```json
+{
+  ""Unnamed: 3"": ""Customer Wallet Operations"",
+  ""Unnamed: 4"": ""Wallet creation workflow""
+}
+```",sheet:Product
+Balance management,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Balance management""
+}
+```",sheet:Product
+Transaction limits,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Transaction limits""
+}
+```",sheet:Product
+Access control,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Access control""
+}
+```",sheet:Product
+Feature enablement,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Feature enablement""
+}
+```",sheet:Product
+Account linking,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Account linking""
+}
+```",sheet:Product
+Wallet upgrade/downgrade,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Wallet upgrade/downgrade""
+}
+```",sheet:Product
+Closure processing,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Closure processing""
+}
+```",sheet:Product
+Escrow Administration,"### Source Row
+```json
+{
+  ""Unnamed: 2"": ""Escrow Administration"",
+  ""Unnamed: 3"": ""Account Oversight"",
+  ""Unnamed: 4"": ""Monitor all escrow accounts""
+}
+```",sheet:Product
+Review account creation requests,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Review account creation requests""
+}
+```",sheet:Product
+Manage escrow templates,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Manage escrow templates""
+}
+```",sheet:Product
+Configure fee structures,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Configure fee structures""
+}
+```",sheet:Product
+Set transaction limits,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Set transaction limits""
+}
+```",sheet:Product
+Monitor account balances,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Monitor account balances""
+}
+```",sheet:Product
+Track dormant accounts,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Track dormant accounts""
+}
+```",sheet:Product
+Manage interest distributions,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Manage interest distributions""
+}
+```",sheet:Product
+Transaction Management,"### Source Row
+```json
+{
+  ""Unnamed: 3"": ""Transaction Management"",
+  ""Unnamed: 4"": ""Review release requests""
+}
+```",sheet:Product
+Monitor milestone completions,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Monitor milestone completions""
+}
+```",sheet:Product
+Verify supporting documents,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Verify supporting documents""
+}
+```",sheet:Product
+Process manual releases,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Process manual releases""
+}
+```",sheet:Product
+Override automated releases,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Override automated releases""
+}
+```",sheet:Product
+Manage payment schedules,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Manage payment schedules""
+}
+```",sheet:Product
+Track failed transactions,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Track failed transactions""
+}
+```",sheet:Product
+Monitor suspicious activities,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Monitor suspicious activities""
+}
+```",sheet:Product
+Compliance & Risk,"### Source Row
+```json
+{
+  ""Unnamed: 3"": ""Compliance & Risk"",
+  ""Unnamed: 4"": ""KYC verification for escrow parties""
+}
+```",sheet:Product
+Risk assessment of transactions,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Risk assessment of transactions""
+}
+```",sheet:Product
+Regulatory reporting,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Regulatory reporting""
+}
+```",sheet:Product
+Document verification,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Document verification""
+}
+```",sheet:Product
+Sanction screening,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Sanction screening""
+}
+```",sheet:Product
+Transaction monitoring,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Transaction monitoring""
+}
+```",sheet:Product
+Audit trail maintenance,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Audit trail maintenance""
+}
+```",sheet:Product
+Policy enforcement,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Policy enforcement""
+}
+```",sheet:Product
+Dispute Resolution,"### Source Row
+```json
+{
+  ""Unnamed: 3"": ""Dispute Resolution"",
+  ""Unnamed: 4"": ""Review dispute cases""
+}
+```",sheet:Product
+Assign mediators,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Assign mediators""
+}
+```",sheet:Product
+Monitor resolution progress,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Monitor resolution progress""
+}
+```",sheet:Product
+Enforce decisions,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Enforce decisions""
+}
+```",sheet:Product
+Process refunds,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Process refunds""
+}
+```",sheet:Product
+Document case histories,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Document case histories""
+}
+```",sheet:Product
+Generate resolution reports,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Generate resolution reports""
+}
+```",sheet:Product
+Track appeal processes,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Track appeal processes""
+}
+```",sheet:Product
+Financial Operations,"### Source Row
+```json
+{
+  ""Unnamed: 3"": ""Financial Operations"",
+  ""Unnamed: 4"": ""Manage escrow pool accounts""
+}
+```",sheet:Product
+Calculate and distribute interest,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Calculate and distribute interest""
+}
+```",sheet:Product
+Process fee collections,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Process fee collections""
+}
+```",sheet:Product
+Reconcile accounts,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Reconcile accounts""
+}
+```",sheet:Product
+Generate financial reports,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Generate financial reports""
+}
+```",sheet:Product
+Track revenue,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Track revenue""
+}
+```",sheet:Product
+Manage tax reporting,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Manage tax reporting""
+}
+```",sheet:Product
+Monitor float balances,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Monitor float balances""
+}
+```",sheet:Product
+Partner Management,"### Source Row
+```json
+{
+  ""Unnamed: 3"": ""Partner Management"",
+  ""Unnamed: 4"": ""Manage bank relationships""
+}
+```",sheet:Product
+Monitor partner performance,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Monitor partner performance""
+}
+```",sheet:Product
+Track service levels,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Track service levels""
+}
+```",sheet:Product
+Manage API integrations,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Manage API integrations""
+}
+```",sheet:Product
+Configure settlement processes,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Configure settlement processes""
+}
+```",sheet:Product
+Monitor partner fees,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Monitor partner fees""
+}
+```",sheet:Product
+Track partner disputes,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Track partner disputes""
+}
+```",sheet:Product
+Review partner reports,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Review partner reports""
+}
+```",sheet:Product
+Reporting & Analytics,"### Source Row
+```json
+{
+  ""Unnamed: 3"": ""Reporting & Analytics"",
+  ""Unnamed: 4"": ""Generate regulatory reports""
+}
+```",sheet:Product
+Track escrow metrics,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Track escrow metrics""
+}
+```",sheet:Product
+Monitor risk indicators,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Monitor risk indicators""
+}
+```",sheet:Product
+Analyze transaction patterns,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Analyze transaction patterns""
+}
+```",sheet:Product
+Generate compliance reports,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Generate compliance reports""
+}
+```",sheet:Product
+Track dispute statistics,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Track dispute statistics""
+}
+```",sheet:Product
+Monitor service levels,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Monitor service levels""
+}
+```",sheet:Product
+Generate business intelligence,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Generate business intelligence""
+}
+```",sheet:Product
+System Configuration,"### Source Row
+```json
+{
+  ""Unnamed: 3"": ""System Configuration"",
+  ""Unnamed: 4"": ""Configure workflow rules""
+}
+```",sheet:Product
+Set up approval matrices,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Set up approval matrices""
+}
+```",sheet:Product
+Define release conditions,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Define release conditions""
+}
+```",sheet:Product
+Configure notification rules,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Configure notification rules""
+}
+```",sheet:Product
+Set up document templates,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Set up document templates""
+}
+```",sheet:Product
+Manage user permissions,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Manage user permissions""
+}
+```",sheet:Product
+Configure validation rules,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Configure validation rules""
+}
+```",sheet:Product
+Set up integration parameters,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Set up integration parameters""
+}
+```",sheet:Product
+Reporting,"### Source Row
+```json
+{
+  ""Unnamed: 2"": ""Reporting"",
+  ""Unnamed: 3"": ""Financial Reports"",
+  ""Unnamed: 4"": ""Daily settlement reports""
+}
+```",sheet:Product
+Revenue reports,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Revenue reports""
+}
+```",sheet:Product
+Transaction volume reports,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Transaction volume reports""
+}
+```",sheet:Product
+Fee collection reports,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Fee collection reports""
+}
+```",sheet:Product
+Partner settlement reports,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Partner settlement reports""
+}
+```",sheet:Product
+Reconciliation reports,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Reconciliation reports""
+}
+```",sheet:Product
+Tax reports,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Tax reports""
+}
+```",sheet:Product
+Audit reports,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Audit reports""
+}
+```",sheet:Product
+Operational Reports,"### Source Row
+```json
+{
+  ""Unnamed: 3"": ""Operational Reports"",
+  ""Unnamed: 4"": ""System performance reports""
+}
+```",sheet:Product
+User activity reports,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""User activity reports""
+}
+```",sheet:Product
+Customer acquisition reports,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Customer acquisition reports""
+}
+```",sheet:Product
+Service usage reports,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Service usage reports""
+}
+```",sheet:Product
+Error/Exception reports,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Error/Exception reports""
+}
+```",sheet:Product
+SLA compliance reports,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""SLA compliance reports""
+}
+```",sheet:Product
+Partner performance reports,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Partner performance reports""
+}
+```",sheet:Product
+Support ticket reports,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Support ticket reports""
+}
+```",sheet:Product
+Business Intelligence,"### Source Row
+```json
+{
+  ""Unnamed: 3"": ""Business Intelligence"",
+  ""Unnamed: 4"": ""Customer behavior analysis""
+}
+```",sheet:Product
+Market trend analysis,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Market trend analysis""
+}
+```",sheet:Product
+Product performance metrics,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Product performance metrics""
+}
+```",sheet:Product
+Customer segmentation analysis,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Customer segmentation analysis""
+}
+```",sheet:Product
+Churn prediction,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Churn prediction""
+}
+```",sheet:Product
+Revenue forecasting,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Revenue forecasting""
+}
+```",sheet:Product
+Risk analytics,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Risk analytics""
+}
+```",sheet:Product
+Competitive analysis,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Competitive analysis""
+}
+```",sheet:Product
+AI Fraud Detection Features,"### Source Row
+```json
+{
+  ""Unnamed: 2"": ""AI Fraud Detection Features"",
+  ""Unnamed: 3"": ""Real-Time Fraud Monitoring"",
+  ""Unnamed: 4"": ""AI-powered anomaly detection for unusual transaction patterns""
+}
+```",sheet:Product
+Live transaction risk scoring based on machine learning models,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Live transaction risk scoring based on machine learning models""
+}
+```",sheet:Product
+Instant flagging of high-risk transactions for manual review,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Instant flagging of high-risk transactions for manual review""
+}
+```",sheet:Product
+Automated Fraud Rules & Alerts,"### Source Row
+```json
+{
+  ""Unnamed: 3"": ""Automated Fraud Rules & Alerts"",
+  ""Unnamed: 4"": ""Customizable fraud detection rules (e.g., transaction limits, velocity checks)""
+}
+```",sheet:Product
+AI-based behavioral analysis to detect deviations from normal user activity,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""AI-based behavioral analysis to detect deviations from normal user activity""
+}
+```",sheet:Product
+Alerts for rapid or repetitive transactions within short time frames,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Alerts for rapid or repetitive transactions within short time frames""
+}
+```",sheet:Product
+Risk-Based Transaction Scoring,"### Source Row
+```json
+{
+  ""Unnamed: 3"": ""Risk-Based Transaction Scoring"",
+  ""Unnamed: 4"": ""AI assigns risk scores to every transaction based on:""
+}
+```",sheet:Product
+Amount,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Amount""
+}
+```",sheet:Product
+Frequency,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Frequency""
+}
+```",sheet:Product
+Location,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Location""
+}
+```",sheet:Product
+Payment method,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Payment method""
+}
+```",sheet:Product
+User behavior history,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""User behavior history""
+}
+```",sheet:Product
+High-risk transactions are automatically flagged for admin approval,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""High-risk transactions are automatically flagged for admin approval""
+}
+```",sheet:Product
+Pattern & Behavioral Analysis,"### Source Row
+```json
+{
+  ""Unnamed: 3"": ""Pattern & Behavioral Analysis"",
+  ""Unnamed: 4"": ""AI learns user spending patterns and detects deviations""
+}
+```",sheet:Product
+"Identification of device fingerprinting mismatches (e.g., multiple accounts from the same device/IP)","### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Identification of device fingerprinting mismatches (e.g., multiple accounts from the same device/IP)""
+}
+```",sheet:Product
+"Detection of suspicious login behavior (e.g., multiple failed login attempts, logins from different geolocations)","### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Detection of suspicious login behavior (e.g., multiple failed login attempts, logins from different geolocations)""
+}
+```",sheet:Product
+Multi-Factor Authentication Enforcement,"### Source Row
+```json
+{
+  ""Unnamed: 3"": ""Multi-Factor Authentication Enforcement"",
+  ""Unnamed: 4"": ""AI detects unusual login attempts and enforces additional authentication (OTP, biometric)""
+}
+```",sheet:Product
+Adaptive authentication based on user risk profile,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Adaptive authentication based on user risk profile""
+}
+```",sheet:Product
+Suspicious Account Activity Detection,"### Source Row
+```json
+{
+  ""Unnamed: 3"": ""Suspicious Account Activity Detection"",
+  ""Unnamed: 4"": ""Flagging of newly registered accounts making large transactions""
+}
+```",sheet:Product
+Detection of accounts making transactions across unrelated geographies,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Detection of accounts making transactions across unrelated geographies""
+}
+```",sheet:Product
+Alerts for multiple failed KYC attempts,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Alerts for multiple failed KYC attempts""
+}
+```",sheet:Product
+Chargeback & Dispute Prediction,"### Source Row
+```json
+{
+  ""Unnamed: 3"": ""Chargeback & Dispute Prediction"",
+  ""Unnamed: 4"": ""AI predicts high-risk transactions likely to result in chargebacks""
+}
+```",sheet:Product
+Automatic flagging of suspicious refunds and chargeback attempts,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Automatic flagging of suspicious refunds and chargeback attempts""
+}
+```",sheet:Product
+AML Compliance Monitoring,"### Source Row
+```json
+{
+  ""Unnamed: 3"": ""AML Compliance Monitoring"",
+  ""Unnamed: 4"": ""AI cross-checks transactions against global sanctions and watchlists""
+}
+```",sheet:Product
+Monitoring of large transactions against anti-money laundering (AML) thresholds,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Monitoring of large transactions against anti-money laundering (AML) thresholds""
+}
+```",sheet:Product
+Automatic suspicious activity reports (SARs) for regulatory compliance,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Automatic suspicious activity reports (SARs) for regulatory compliance""
+}
+```",sheet:Product
+Machine Learning Fraud Prevention Engine,"### Source Row
+```json
+{
+  ""Unnamed: 3"": ""Machine Learning Fraud Prevention Engine"",
+  ""Unnamed: 4"": ""Continuous improvement of fraud detection models based on new fraud trends""
+}
+```",sheet:Product
+Self-learning AI that refines detection accuracy over time,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Self-learning AI that refines detection accuracy over time""
+}
+```",sheet:Product
+"Automated classification of fraud types (e.g., phishing, identity theft, money laundering)","### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Automated classification of fraud types (e.g., phishing, identity theft, money laundering)""
+}
+```",sheet:Product
+Fraud Analytics & Reporting,"### Source Row
+```json
+{
+  ""Unnamed: 3"": ""Fraud Analytics & Reporting"",
+  ""Unnamed: 4"": ""AI-generated reports on fraud trends, risk levels, and flagged transactions""
+}
+```",sheet:Product
+Dashboard for tracking real-time fraud attempts and resolution status,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Dashboard for tracking real-time fraud attempts and resolution status""
+}
+```",sheet:Product
+"Visual analytics for admin decision-making (graphs, heat maps of fraud-prone regions)","### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Visual analytics for admin decision-making (graphs, heat maps of fraud-prone regions)""
+}
+```",sheet:Product
+Audit Trail,"### Source Row
+```json
+{
+  ""Unnamed: 2"": ""Audit Trail"",
+  ""Unnamed: 3"": ""System Audit"",
+  ""Unnamed: 4"": ""User action logging""
+}
+```",sheet:Product
+System change tracking,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""System change tracking""
+}
+```",sheet:Product
+Configuration modification history,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Configuration modification history""
+}
+```",sheet:Product
+Access attempt monitoring,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Access attempt monitoring""
+}
+```",sheet:Product
+Security event logging,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Security event logging""
+}
+```",sheet:Product
+Data modification tracking,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Data modification tracking""
+}
+```",sheet:Product
+Compliance violation alerts,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Compliance violation alerts""
+}
+```",sheet:Product
+Transaction Audit,"### Source Row
+```json
+{
+  ""Unnamed: 3"": ""Transaction Audit"",
+  ""Unnamed: 4"": ""Complete transaction history""
+}
+```",sheet:Product
+Modification tracking,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Modification tracking""
+}
+```",sheet:Product
+Approval chain documentation,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Approval chain documentation""
+}
+```",sheet:Product
+Document version control,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Document version control""
+}
+```",sheet:Product
+User interaction history,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""User interaction history""
+}
+```",sheet:Product
+System interaction logs,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""System interaction logs""
+}
+```",sheet:Product
+Time-stamped event tracking,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Time-stamped event tracking""
+}
+```",sheet:Product
+System Configuration,"### Source Row
+```json
+{
+  ""Unnamed: 2"": ""System Configuration"",
+  ""Unnamed: 3"": ""Feature Management"",
+  ""Unnamed: 4"": ""Language configuration""
+}
+```",sheet:Product
+Fee structure updates,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Fee structure updates""
+}
+```",sheet:Product
+Service availability management,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Service availability management""
+}
+```",sheet:Product
+Feature flag management,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Feature flag management""
+}
+```",sheet:Product
+Integration Management,"### Source Row
+```json
+{
+  ""Unnamed: 3"": ""Integration Management"",
+  ""Unnamed: 4"": ""Third-party API configuration""
+}
+```",sheet:Product
+Payment gateway settings,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Payment gateway settings""
+}
+```",sheet:Product
+SMS/USSD service management,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""SMS/USSD service management""
+}
+```",sheet:Product
+Blockchain network configuration,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Blockchain network configuration""
+}
+```",sheet:Product
+USER,"### Source Row
+```json
+{
+  ""Unnamed: 1"": ""USER"",
+  ""Unnamed: 2"": ""Account Management"",
+  ""Unnamed: 3"": ""User Registration and KYC"",
+  ""Unnamed: 4"": ""Digital ID verification with AI-powered document scanning""
+}
+```",sheet:MVP
+Facial recognition with liveness detection,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Facial recognition with liveness detection""
+}
+```",sheet:MVP
+Biometric login support,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Biometric login support""
+}
+```",sheet:MVP
+"Multi-language support (English, Pidgin English, Yoruba, French)","### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Multi-language support (English, Pidgin English, Yoruba, French)""
+}
+```",sheet:MVP
+"Multiple account types (Individual, Business, Joint)","### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Multiple account types (Individual, Business, Joint)""
+}
+```",sheet:MVP
+Document upload and verification,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Document upload and verification""
+}
+```",sheet:MVP
+Address verification system,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Address verification system""
+}
+```",sheet:MVP
+Social security/NIN verification,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Social security/NIN verification""
+}
+```",sheet:MVP
+Profile Management,"### Source Row
+```json
+{
+  ""Unnamed: 3"": ""Profile Management"",
+  ""Unnamed: 4"": ""Personal information management""
+}
+```",sheet:MVP
+Transaction history viewing,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Transaction history viewing""
+}
+```",sheet:MVP
+Document storage and management,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Document storage and management""
+}
+```",sheet:MVP
+Biometric authentication setup,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Biometric authentication setup""
+}
+```",sheet:MVP
+Communication preferences,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Communication preferences""
+}
+```",sheet:MVP
+Security settings configuration,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Security settings configuration""
+}
+```",sheet:MVP
+Language preferences,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Language preferences""
+}
+```",sheet:MVP
+Notification management,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Notification management""
+}
+```",sheet:MVP
+Wallet & Payments,"### Source Row
+```json
+{
+  ""Unnamed: 2"": ""Wallet & Payments"",
+  ""Unnamed: 3"": ""Digital Wallet"",
+  ""Unnamed: 4"": ""Multi-currency wallet support""
+}
+```",sheet:MVP
+Real-time balance viewing,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Real-time balance viewing""
+}
+```",sheet:MVP
+Transaction history,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Transaction history""
+}
+```",sheet:MVP
+Virtual card creation,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Virtual card creation""
+}
+```",sheet:MVP
+Statement generation,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Statement generation""
+}
+```",sheet:MVP
+Money Transfer Services,"### Source Row
+```json
+{
+  ""Unnamed: 3"": ""Money Transfer Services"",
+  ""Unnamed: 4"": ""Domestic transfers""
+}
+```",sheet:MVP
+International remittances,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""International remittances""
+}
+```",sheet:MVP
+Security & Control,"### Source Row
+```json
+{
+  ""Unnamed: 2"": ""Security & Control"",
+  ""Unnamed: 3"": ""Account Security"",
+  ""Unnamed: 4"": ""Two-factor authentication""
+}
+```",sheet:MVP
+Security Questions,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Security Questions""
+}
+```",sheet:MVP
+PIN management,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""PIN management""
+}
+```",sheet:MVP
+Transaction limits,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Transaction limits""
+}
+```",sheet:MVP
+Transaction Security,"### Source Row
+```json
+{
+  ""Unnamed: 3"": ""Transaction Security"",
+  ""Unnamed: 4"": ""Transaction notifications""
+}
+```",sheet:MVP
+User Interface & Experience,"### Source Row
+```json
+{
+  ""Unnamed: 2"": ""User Interface & Experience"",
+  ""Unnamed: 3"": ""Mobile Features"",
+  ""Unnamed: 4"": ""Native iOS and Android apps""
+}
+```",sheet:MVP
+Web Features,"### Source Row
+```json
+{
+  ""Unnamed: 3"": ""Web Features"",
+  ""Unnamed: 4"": ""Responsive dashboard""
+}
+```",sheet:MVP
+Cross-device synchronization,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Cross-device synchronization""
+}
+```",sheet:MVP
+Progressive web app,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Progressive web app""
+}
+```",sheet:MVP
+Browser notifications,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Browser notifications""
+}
+```",sheet:MVP
+Support,"### Source Row
+```json
+{
+  ""Unnamed: 2"": ""Support"",
+  ""Unnamed: 3"": ""Customer Support"",
+  ""Unnamed: 4"": ""In-app chat support""
+}
+```",sheet:MVP
+Ticket creation,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Ticket creation""
+}
+```",sheet:MVP
+FAQs,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""FAQs""
+}
+```",sheet:MVP
+Support status tracking,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Support status tracking""
+}
+```",sheet:MVP
+ADMINISTRATOR,"### Source Row
+```json
+{
+  ""Unnamed: 1"": ""ADMINISTRATOR"",
+  ""Unnamed: 2"": ""Customer Management"",
+  ""Unnamed: 3"": ""Customer 360° View"",
+  ""Unnamed: 4"": ""Unified customer profile dashboard""
+}
+```",sheet:MVP
+Customer segmentation,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Customer segmentation""
+}
+```",sheet:MVP
+Lifetime value tracking,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Lifetime value tracking""
+}
+```",sheet:MVP
+Document repository,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Document repository""
+}
+```",sheet:MVP
+Account Management,"### Source Row
+```json
+{
+  ""Unnamed: 3"": ""Account Management"",
+  ""Unnamed: 4"": ""Account status management""
+}
+```",sheet:MVP
+Balance monitoring,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Balance monitoring""
+}
+```",sheet:MVP
+Fee structure customization,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Fee structure customization""
+}
+```",sheet:MVP
+Account freezing/unfreezing,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Account freezing/unfreezing""
+}
+```",sheet:MVP
+Customer tier management,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Customer tier management""
+}
+```",sheet:MVP
+Account closure workflow,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Account closure workflow""
+}
+```",sheet:MVP
+Customer Support,"### Source Row
+```json
+{
+  ""Unnamed: 3"": ""Customer Support"",
+  ""Unnamed: 4"": ""Ticket management system""
+}
+```",sheet:MVP
+Customer communication history,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Customer communication history""
+}
+```",sheet:MVP
+Dispute resolution workflow,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Dispute resolution workflow""
+}
+```",sheet:MVP
+Refund processing,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Refund processing""
+}
+```",sheet:MVP
+Service request tracking,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Service request tracking""
+}
+```",sheet:MVP
+Support agent performance tracking,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Support agent performance tracking""
+}
+```",sheet:MVP
+Financial Management,"### Source Row
+```json
+{
+  ""Unnamed: 2"": ""Financial Management"",
+  ""Unnamed: 3"": ""Ledger Management"",
+  ""Unnamed: 4"": ""Double-entry accounting system""
+}
+```",sheet:MVP
+Real-time balance sheet,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Real-time balance sheet""
+}
+```",sheet:MVP
+Profit & loss statements,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Profit & loss statements""
+}
+```",sheet:MVP
+Trial balance generation,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Trial balance generation""
+}
+```",sheet:MVP
+Journal entry management,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Journal entry management""
+}
+```",sheet:MVP
+Account reconciliation,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Account reconciliation""
+}
+```",sheet:MVP
+Multi-currency support,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Multi-currency support""
+}
+```",sheet:MVP
+Financial year management,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Financial year management""
+}
+```",sheet:MVP
+Treasury Management,"### Source Row
+```json
+{
+  ""Unnamed: 3"": ""Treasury Management"",
+  ""Unnamed: 4"": ""Liquidity monitoring""
+}
+```",sheet:MVP
+Cash flow forecasting,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Cash flow forecasting""
+}
+```",sheet:MVP
+FX position management,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""FX position management""
+}
+```",sheet:MVP
+Interest calculation,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Interest calculation""
+}
+```",sheet:MVP
+Fund allocation tracking,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Fund allocation tracking""
+}
+```",sheet:MVP
+Bank account management,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Bank account management""
+}
+```",sheet:MVP
+Investment portfolio tracking,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Investment portfolio tracking""
+}
+```",sheet:MVP
+Revenue Management,"### Source Row
+```json
+{
+  ""Unnamed: 3"": ""Revenue Management"",
+  ""Unnamed: 4"": ""Fee collection tracking""
+}
+```",sheet:MVP
+Revenue recognition,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Revenue recognition""
+}
+```",sheet:MVP
+Commission calculation,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Commission calculation""
+}
+```",sheet:MVP
+Promotional discount tracking,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Promotional discount tracking""
+}
+```",sheet:MVP
+Refund management,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Refund management""
+}
+```",sheet:MVP
+Revenue forecasting,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Revenue forecasting""
+}
+```",sheet:MVP
+Regulatory Requirements,"### Source Row
+```json
+{
+  ""Unnamed: 3"": ""Regulatory Requirements"",
+  ""Unnamed: 4"": ""License management""
+}
+```",sheet:MVP
+Regulatory filing calendar,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Regulatory filing calendar""
+}
+```",sheet:MVP
+Compliance deadline tracking,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Compliance deadline tracking""
+}
+```",sheet:MVP
+Regulatory correspondence,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Regulatory correspondence""
+}
+```",sheet:MVP
+Policy document management,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Policy document management""
+}
+```",sheet:MVP
+Role-Based Access Control,"### Source Row
+```json
+{
+  ""Unnamed: 2"": ""Role-Based Access Control"",
+  ""Unnamed: 3"": ""Staff Management"",
+  ""Unnamed: 4"": ""Role creation and configuration""
+}
+```",sheet:MVP
+Permission assignment,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Permission assignment""
+}
+```",sheet:MVP
+Access level management,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Access level management""
+}
+```",sheet:MVP
+Staff onboarding workflow,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Staff onboarding workflow""
+}
+```",sheet:MVP
+Performance tracking,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Performance tracking""
+}
+```",sheet:MVP
+Activity monitoring,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Activity monitoring""
+}
+```",sheet:MVP
+Training module assignment,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Training module assignment""
+}
+```",sheet:MVP
+Department Management,"### Source Row
+```json
+{
+  ""Unnamed: 3"": ""Department Management"",
+  ""Unnamed: 4"": ""Department creation and structuring""
+}
+```",sheet:MVP
+Role hierarchy configuration,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Role hierarchy configuration""
+}
+```",sheet:MVP
+Cross-department permission management,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Cross-department permission management""
+}
+```",sheet:MVP
+Approval workflow configuration,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Approval workflow configuration""
+}
+```",sheet:MVP
+Transaction Management,"### Source Row
+```json
+{
+  ""Unnamed: 2"": ""Transaction Management"",
+  ""Unnamed: 3"": ""Transaction Monitoring"",
+  ""Unnamed: 4"": ""Real-time transaction dashboard""
+}
+```",sheet:MVP
+Transaction categorization,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Transaction categorization""
+}
+```",sheet:MVP
+High-value transaction alerts,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""High-value transaction alerts""
+}
+```",sheet:MVP
+Transaction routing management,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Transaction routing management""
+}
+```",sheet:MVP
+Fee calculation verification,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Fee calculation verification""
+}
+```",sheet:MVP
+Exchange rate management,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Exchange rate management""
+}
+```",sheet:MVP
+Settlement tracking,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Settlement tracking""
+}
+```",sheet:MVP
+Batch transaction processing,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Batch transaction processing""
+}
+```",sheet:MVP
+Settlement Management,"### Source Row
+```json
+{
+  ""Unnamed: 3"": ""Settlement Management"",
+  ""Unnamed: 4"": ""Settlement cycle management""
+}
+```",sheet:MVP
+Settlement reconciliation,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Settlement reconciliation""
+}
+```",sheet:MVP
+Payment gateway settlement,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Payment gateway settlement""
+}
+```",sheet:MVP
+Partner settlement tracking,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Partner settlement tracking""
+}
+```",sheet:MVP
+Settlement dispute resolution,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Settlement dispute resolution""
+}
+```",sheet:MVP
+Settlement reporting,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Settlement reporting""
+}
+```",sheet:MVP
+Float management,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Float management""
+}
+```",sheet:MVP
+Wallet Management,"### Source Row
+```json
+{
+  ""Unnamed: 2"": ""Wallet Management"",
+  ""Unnamed: 3"": ""System Wallet Control"",
+  ""Unnamed: 4"": ""Master wallet monitoring""
+}
+```",sheet:MVP
+Virtual account management,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Virtual account management""
+}
+```",sheet:MVP
+Wallet balance reconciliation,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Wallet balance reconciliation""
+}
+```",sheet:MVP
+Wallet status management,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Wallet status management""
+}
+```",sheet:MVP
+Customer Wallet Operations,"### Source Row
+```json
+{
+  ""Unnamed: 3"": ""Customer Wallet Operations"",
+  ""Unnamed: 4"": ""Wallet creation workflow""
+}
+```",sheet:MVP
+Balance management,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Balance management""
+}
+```",sheet:MVP
+Transaction limits,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Transaction limits""
+}
+```",sheet:MVP
+Wallet upgrade/downgrade,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Wallet upgrade/downgrade""
+}
+```",sheet:MVP
+Closure processing,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Closure processing""
+}
+```",sheet:MVP
+Reporting,"### Source Row
+```json
+{
+  ""Unnamed: 2"": ""Reporting"",
+  ""Unnamed: 3"": ""Financial Reports"",
+  ""Unnamed: 4"": ""Daily settlement reports""
+}
+```",sheet:MVP
+Revenue reports,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Revenue reports""
+}
+```",sheet:MVP
+Transaction volume reports,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Transaction volume reports""
+}
+```",sheet:MVP
+Fee collection reports,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Fee collection reports""
+}
+```",sheet:MVP
+Partner settlement reports,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Partner settlement reports""
+}
+```",sheet:MVP
+Reconciliation reports,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Reconciliation reports""
+}
+```",sheet:MVP
+Tax reports,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Tax reports""
+}
+```",sheet:MVP
+Audit reports,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Audit reports""
+}
+```",sheet:MVP
+Operational Reports,"### Source Row
+```json
+{
+  ""Unnamed: 3"": ""Operational Reports"",
+  ""Unnamed: 4"": ""System performance reports""
+}
+```",sheet:MVP
+User activity reports,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""User activity reports""
+}
+```",sheet:MVP
+Customer acquisition reports,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Customer acquisition reports""
+}
+```",sheet:MVP
+Service usage reports,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Service usage reports""
+}
+```",sheet:MVP
+Error/Exception reports,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Error/Exception reports""
+}
+```",sheet:MVP
+SLA compliance reports,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""SLA compliance reports""
+}
+```",sheet:MVP
+Partner performance reports,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Partner performance reports""
+}
+```",sheet:MVP
+Support ticket reports,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Support ticket reports""
+}
+```",sheet:MVP
+Audit Trail,"### Source Row
+```json
+{
+  ""Unnamed: 2"": ""Audit Trail"",
+  ""Unnamed: 3"": ""System Audit"",
+  ""Unnamed: 4"": ""User action logging""
+}
+```",sheet:MVP
+System change tracking,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""System change tracking""
+}
+```",sheet:MVP
+Configuration modification history,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Configuration modification history""
+}
+```",sheet:MVP
+Access attempt monitoring,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Access attempt monitoring""
+}
+```",sheet:MVP
+Security event logging,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Security event logging""
+}
+```",sheet:MVP
+Data modification tracking,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Data modification tracking""
+}
+```",sheet:MVP
+Compliance violation alerts,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Compliance violation alerts""
+}
+```",sheet:MVP
+Transaction Audit,"### Source Row
+```json
+{
+  ""Unnamed: 3"": ""Transaction Audit"",
+  ""Unnamed: 4"": ""Complete transaction history""
+}
+```",sheet:MVP
+Modification tracking,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Modification tracking""
+}
+```",sheet:MVP
+Approval chain documentation,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Approval chain documentation""
+}
+```",sheet:MVP
+Document version control,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Document version control""
+}
+```",sheet:MVP
+User interaction history,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""User interaction history""
+}
+```",sheet:MVP
+System interaction logs,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""System interaction logs""
+}
+```",sheet:MVP
+Time-stamped event tracking,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Time-stamped event tracking""
+}
+```",sheet:MVP
+System Configuration,"### Source Row
+```json
+{
+  ""Unnamed: 2"": ""System Configuration"",
+  ""Unnamed: 3"": ""Feature Management"",
+  ""Unnamed: 4"": ""Language configuration""
+}
+```",sheet:MVP
+Fee structure updates,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Fee structure updates""
+}
+```",sheet:MVP
+Service availability management,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Service availability management""
+}
+```",sheet:MVP
+Feature flag management,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Feature flag management""
+}
+```",sheet:MVP
+Integration Management,"### Source Row
+```json
+{
+  ""Unnamed: 3"": ""Integration Management"",
+  ""Unnamed: 4"": ""Third-party API configuration""
+}
+```",sheet:MVP
+Payment gateway settings,"### Source Row
+```json
+{
+  ""Unnamed: 4"": ""Payment gateway settings""
+}
+```",sheet:MVP
