@@ -1,0 +1,37 @@
+name: ClickUp Sync
+on:
+  issues:
+    types: [opened, closed, reopened, assigned]
+  pull_request:
+    types: [opened, closed, merged]
+  push:
+    branches: [main, develop]
+  workflow_run:
+    workflows: ["CI/CD"]
+    types: [completed]
+
+jobs:
+  sync-clickup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+      
+      - name: Install dependencies
+        run: |
+          cd .github/clickup-sync
+          npm install
+      
+      - name: Run ClickUp Sync
+        env:
+          CLICKUP_API_KEY: ${{ secrets.CLICKUP_API_KEY }}
+          CLICKUP_LIST_ID: ${{ secrets.CLICKUP_LIST_ID || '901212396025' }}
+          CLICKUP_WORKSPACE_ID: ${{ secrets.CLICKUP_WORKSPACE_ID || '9012969940' }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          cd .github/clickup-sync
+          npx tsx index.ts
