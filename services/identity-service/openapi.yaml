@@ -1,0 +1,398 @@
+openapi: 3.0.0
+info:
+  title: Identity Service API
+  description: User authentication, authorization, and identity verification service
+  version: 1.0.0
+  contact:
+    name: API Support
+    email: api@yourplatform.com
+servers:
+  - url: https://api.yourplatform.com/identity/v1
+    description: Production server
+  - url: http://localhost:3001/api/v1
+    description: Development server
+tags:
+  - name: Authentication
+    description: User authentication endpoints
+  - name: Users
+    description: User profile management
+  - name: KYC
+    description: Know Your Customer verification
+  - name: Biometrics
+    description: Biometric authentication
+security:
+  - bearerAuth: []
+paths:
+  /auth/register:
+    post:
+      tags:
+        - Authentication
+      summary: Register new user
+      operationId: registerUser
+      security: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RegisterRequest'
+      responses:
+        201:
+          description: User successfully registered
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AuthResponse'
+        400:
+          $ref: '#/components/responses/BadRequest'
+        409:
+          description: User already exists
+  /auth/login:
+    post:
+      tags:
+        - Authentication
+      summary: User login
+      operationId: loginUser
+      security: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LoginRequest'
+      responses:
+        200:
+          description: Login successful
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AuthResponse'
+        401:
+          description: Invalid credentials
+  /auth/logout:
+    post:
+      tags:
+        - Authentication
+      summary: User logout
+      operationId: logoutUser
+      responses:
+        200:
+          description: Logout successful
+  /auth/refresh:
+    post:
+      tags:
+        - Authentication
+      summary: Refresh access token
+      operationId: refreshToken
+      security: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                refreshToken:
+                  type: string
+      responses:
+        200:
+          description: Token refreshed
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TokenResponse'
+  /auth/2fa/enable:
+    post:
+      tags:
+        - Authentication
+      summary: Enable two-factor authentication
+      operationId: enable2FA
+      responses:
+        200:
+          description: 2FA enabled
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  secret:
+                    type: string
+                  qrCode:
+                    type: string
+  /users/profile:
+    get:
+      tags:
+        - Users
+      summary: Get user profile
+      operationId: getUserProfile
+      responses:
+        200:
+          description: User profile retrieved
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserProfile'
+    put:
+      tags:
+        - Users
+      summary: Update user profile
+      operationId: updateUserProfile
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateProfileRequest'
+      responses:
+        200:
+          description: Profile updated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserProfile'
+  /kyc/upload:
+    post:
+      tags:
+        - KYC
+      summary: Upload KYC document
+      operationId: uploadKYCDocument
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                documentType:
+                  type: string
+                  enum: [passport, drivers_license, national_id]
+                document:
+                  type: string
+                  format: binary
+      responses:
+        200:
+          description: Document uploaded
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/KYCDocument'
+  /kyc/status:
+    get:
+      tags:
+        - KYC
+      summary: Get KYC verification status
+      operationId: getKYCStatus
+      responses:
+        200:
+          description: KYC status retrieved
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/KYCStatus'
+  /biometric/enroll:
+    post:
+      tags:
+        - Biometrics
+      summary: Enroll biometric data
+      operationId: enrollBiometric
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BiometricEnrollRequest'
+      responses:
+        200:
+          description: Biometric enrolled
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+  schemas:
+    RegisterRequest:
+      type: object
+      required:
+        - email
+        - password
+        - accountType
+      properties:
+        email:
+          type: string
+          format: email
+        phone:
+          type: string
+        password:
+          type: string
+          minLength: 8
+        accountType:
+          type: string
+          enum: [individual, business, joint]
+        language:
+          type: string
+          enum: [en, pcm, yo, fr]
+          default: en
+    LoginRequest:
+      type: object
+      required:
+        - username
+        - password
+      properties:
+        username:
+          type: string
+          description: Email or phone number
+        password:
+          type: string
+        deviceId:
+          type: string
+    AuthResponse:
+      type: object
+      properties:
+        accessToken:
+          type: string
+        refreshToken:
+          type: string
+        expiresIn:
+          type: integer
+        user:
+          $ref: '#/components/schemas/UserProfile'
+    TokenResponse:
+      type: object
+      properties:
+        accessToken:
+          type: string
+        expiresIn:
+          type: integer
+    UserProfile:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        email:
+          type: string
+        phone:
+          type: string
+        accountType:
+          type: string
+        status:
+          type: string
+          enum: [pending, active, suspended, closed]
+        kycStatus:
+          type: string
+          enum: [unverified, pending, verified, rejected]
+        createdAt:
+          type: string
+          format: date-time
+        profile:
+          type: object
+          properties:
+            firstName:
+              type: string
+            lastName:
+              type: string
+            dateOfBirth:
+              type: string
+              format: date
+            address:
+              $ref: '#/components/schemas/Address'
+    UpdateProfileRequest:
+      type: object
+      properties:
+        firstName:
+          type: string
+        lastName:
+          type: string
+        dateOfBirth:
+          type: string
+          format: date
+        address:
+          $ref: '#/components/schemas/Address'
+        language:
+          type: string
+    Address:
+      type: object
+      properties:
+        street:
+          type: string
+        city:
+          type: string
+        state:
+          type: string
+        country:
+          type: string
+        postalCode:
+          type: string
+    KYCDocument:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        documentType:
+          type: string
+        documentNumber:
+          type: string
+        status:
+          type: string
+          enum: [pending, verified, rejected]
+        uploadedAt:
+          type: string
+          format: date-time
+    KYCStatus:
+      type: object
+      properties:
+        overallStatus:
+          type: string
+          enum: [unverified, pending, verified, rejected]
+        documents:
+          type: array
+          items:
+            $ref: '#/components/schemas/KYCDocument'
+        requiredDocuments:
+          type: array
+          items:
+            type: string
+    BiometricEnrollRequest:
+      type: object
+      required:
+        - biometricType
+        - data
+      properties:
+        biometricType:
+          type: string
+          enum: [fingerprint, face, voice]
+        data:
+          type: string
+          description: Base64 encoded biometric data
+        deviceInfo:
+          type: object
+    Error:
+      type: object
+      properties:
+        code:
+          type: string
+        message:
+          type: string
+        details:
+          type: object
+  responses:
+    BadRequest:
+      description: Bad request
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+    Unauthorized:
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+    NotFound:
+      description: Not found
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
