@@ -13,27 +13,27 @@ export const generateTokens = (user: User): { accessToken: string; refreshToken:
     throw new Error('JWT secrets not configured');
   }
 
-  const payload: Omit<TokenPayload, 'iat' | 'exp'> = {
+  const payload = {
     user_id: user.id,
     email: user.email,
     account_type: user.account_type,
     status: user.status,
   };
 
-  const accessToken = jwt.sign(payload, jwtSecret, {
+  const accessToken = jwt.sign(payload, jwtSecret as jwt.Secret, {
     expiresIn: jwtExpiresIn,
     issuer: 'identity-service',
     audience: 'platform-users',
-  });
+  } as jwt.SignOptions);
 
   const refreshToken = jwt.sign(
     { user_id: user.id },
-    jwtRefreshSecret,
+    jwtRefreshSecret as jwt.Secret,
     {
       expiresIn: jwtRefreshExpiresIn,
       issuer: 'identity-service',
       audience: 'platform-users',
-    }
+    } as jwt.SignOptions
   );
 
   return { accessToken, refreshToken };

@@ -61,6 +61,7 @@ export interface TokenPayload {
   email: string;
   account_type: string;
   status: string;
+  language?: string;
   iat: number;
   exp: number;
 }

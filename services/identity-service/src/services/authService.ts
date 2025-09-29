@@ -37,10 +37,10 @@ export class AuthService {
       // Create user
       const user = await this.userRepository.create({
         email: data.email,
-        phone: data.phone,
+        phone: data.phone || undefined,
         password_hash: passwordHash,
         account_type: data.account_type,
-        language: data.language
+        language: data.language || undefined
       });
 
       // Generate tokens

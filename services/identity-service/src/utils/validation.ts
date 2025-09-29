@@ -9,7 +9,7 @@ export const handleValidationErrors = (req: Request, res: Response, next: NextFu
   
   if (!errors.isEmpty()) {
     const validationErrors = errors.array().map(error => ({
-      field: error.param,
+      field: 'path' in error ? error.path : 'unknown',
       message: error.msg,
       code: 'VALIDATION_ERROR'
     }));

@@ -56,7 +56,7 @@ export const initializeI18n = async (): Promise<void> => {
 };
 
 export const t = (key: string, options?: any): string => {
-  return i18next.t(key, options);
+  return i18next.t(key, options) as string;
 };
 
 export const getLanguageFromHeader = (acceptLanguage: string = 'en'): string => {
@@ -70,14 +70,16 @@ export const getLanguageFromHeader = (acceptLanguage: string = 'en'): string => 
   
   // Find the first supported language
   for (const lang of languages) {
-    if (supportedLangs.includes(lang)) {
+    if (lang && supportedLangs.includes(lang)) {
       return lang;
     }
     
     // Check language prefix (e.g., 'en-US' -> 'en')
-    const langPrefix = lang.split('-')[0];
-    if (langPrefix && supportedLangs.includes(langPrefix)) {
-      return langPrefix;
+    if (lang) {
+      const langPrefix = lang.split('-')[0];
+      if (langPrefix && supportedLangs.includes(langPrefix)) {
+        return langPrefix;
+      }
     }
   }
   
