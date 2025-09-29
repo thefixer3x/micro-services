@@ -1,0 +1,43 @@
+{
+  "auth": {
+    "registration_successful": "Registration don successful",
+    "login_successful": "Login don successful",
+    "logout_successful": "Logout don successful",
+    "invalid_credentials": "Your details no correct",
+    "user_already_exists": "This user don already exist",
+    "token_expired": "Token don expire",
+    "unauthorized": "You no get access",
+    "token_required": "You need token to enter"
+  },
+  "validation": {
+    "email_required": "Email dey required",
+    "password_required": "Password dey required",
+    "password_min_length": "Password must be at least 8 characters",
+    "invalid_email": "Email format no correct",
+    "phone_invalid": "Phone number no correct",
+    "account_type_required": "Account type dey required",
+    "invalid_account_type": "Account type no correct"
+  },
+  "error": {
+    "internal_server": "Server get problem",
+    "not_found": "Wetin you dey find no dey",
+    "bad_request": "Request no correct",
+    "forbidden": "You no fit access this one"
+  },
+  "kyc": {
+    "upload_successful": "KYC document don upload successful",
+    "invalid_document_type": "Document type no correct",
+    "file_too_large": "File too big pass the limit",
+    "document_required": "Document file dey required"
+  },
+  "profile": {
+    "updated_successfully": "Profile don update successful",
+    "not_found": "User profile no dey"
+  },
+  "biometric": {
+    "enrolled_successfully": "Biometric data don save successful",
+    "verification_successful": "Biometric verification don successful",
+    "verification_failed": "Biometric verification fail",
+    "invalid_biometric_type": "Biometric type no correct"
+  }
+}

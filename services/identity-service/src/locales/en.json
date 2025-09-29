@@ -1,0 +1,43 @@
+{
+  "auth": {
+    "registration_successful": "Registration successful",
+    "login_successful": "Login successful",
+    "logout_successful": "Logout successful",
+    "invalid_credentials": "Invalid credentials",
+    "user_already_exists": "User already exists",
+    "token_expired": "Token has expired",
+    "unauthorized": "Unauthorized access",
+    "token_required": "Authentication token required"
+  },
+  "validation": {
+    "email_required": "Email is required",
+    "password_required": "Password is required",
+    "password_min_length": "Password must be at least 8 characters",
+    "invalid_email": "Invalid email format",
+    "phone_invalid": "Invalid phone number",
+    "account_type_required": "Account type is required",
+    "invalid_account_type": "Invalid account type"
+  },
+  "error": {
+    "internal_server": "Internal server error",
+    "not_found": "Resource not found",
+    "bad_request": "Bad request",
+    "forbidden": "Access forbidden"
+  },
+  "kyc": {
+    "upload_successful": "KYC document uploaded successfully",
+    "invalid_document_type": "Invalid document type",
+    "file_too_large": "File size exceeds maximum limit",
+    "document_required": "Document file is required"
+  },
+  "profile": {
+    "updated_successfully": "Profile updated successfully",
+    "not_found": "User profile not found"
+  },
+  "biometric": {
+    "enrolled_successfully": "Biometric data enrolled successfully",
+    "verification_successful": "Biometric verification successful",
+    "verification_failed": "Biometric verification failed",
+    "invalid_biometric_type": "Invalid biometric type"
+  }
+}
