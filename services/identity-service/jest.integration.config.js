@@ -3,7 +3,7 @@ module.exports = {
   testEnvironment: 'node',
   roots: ['<rootDir>/src'],
   testMatch: [
-    '**/__tests__/**/*.integration.ts',
+    '**/__tests__/**/*.integration.test.ts',
     '**/?(*.)+(integration).test.ts'
   ],
   transform: {
