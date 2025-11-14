@@ -1,0 +1,588 @@
+_format_version: "3.0"
+
+# Services Configuration
+services:
+  # Identity Service
+  - name: identity-service
+    url: http://identity-service:3001
+    protocol: http
+    host: identity-service
+    port: 3001
+    path: /
+    retries: 5
+    connect_timeout: 60000
+    write_timeout: 60000
+    read_timeout: 60000
+    tags:
+      - identity
+      - authentication
+    routes:
+      # Public Auth Routes (No JWT required)
+      - name: auth-public
+        paths:
+          - /api/v1/auth/register
+          - /api/v1/auth/login
+          - /api/v1/auth/refresh
+          - /api/v1/auth/forgot-password
+          - /api/v1/auth/reset-password
+        methods:
+          - POST
+        strip_path: false
+        preserve_host: false
+        tags:
+          - public
+          - auth
+        plugins:
+          - name: cors
+            config:
+              origins:
+                - "*"
+              methods:
+                - GET
+                - POST
+                - PUT
+                - PATCH
+                - DELETE
+                - OPTIONS
+              headers:
+                - Accept
+                - Accept-Version
+                - Content-Length
+                - Content-MD5
+                - Content-Type
+                - Date
+                - Authorization
+              exposed_headers:
+                - X-Auth-Token
+              credentials: true
+              max_age: 3600
+          - name: rate-limiting
+            config:
+              minute: 20
+              hour: 100
+              policy: local
+              fault_tolerant: true
+              hide_client_headers: false
+          - name: request-size-limiting
+            config:
+              allowed_payload_size: 10
+          - name: response-transformer
+            config:
+              add:
+                headers:
+                  - "X-Gateway:Kong"
+                  - "X-Service:identity-service"
+          - name: prometheus
+            config:
+              per_consumer: false
+
+      # Protected Identity Routes (JWT required)
+      - name: identity-protected
+        paths:
+          - /api/v1/users
+          - /api/v1/kyc
+          - /api/v1/biometric
+        strip_path: false
+        preserve_host: false
+        tags:
+          - protected
+          - identity
+        plugins:
+          - name: jwt
+            config:
+              uri_param_names:
+                - jwt
+              claims_to_verify:
+                - exp
+              key_claim_name: kid
+              secret_is_base64: false
+              anonymous: null
+              run_on_preflight: true
+          - name: cors
+            config:
+              origins:
+                - "*"
+              methods:
+                - GET
+                - POST
+                - PUT
+                - PATCH
+                - DELETE
+                - OPTIONS
+              headers:
+                - Accept
+                - Accept-Version
+                - Content-Length
+                - Content-MD5
+                - Content-Type
+                - Date
+                - Authorization
+              exposed_headers:
+                - X-Auth-Token
+              credentials: true
+              max_age: 3600
+          - name: rate-limiting
+            config:
+              minute: 100
+              hour: 1000
+              policy: local
+              fault_tolerant: true
+          - name: response-transformer
+            config:
+              add:
+                headers:
+                  - "X-Gateway:Kong"
+                  - "X-Service:identity-service"
+          - name: prometheus
+            config:
+              per_consumer: true
+
+      # Health Check Route
+      - name: identity-health
+        paths:
+          - /health
+        methods:
+          - GET
+        strip_path: false
+        preserve_host: false
+        tags:
+          - health
+        plugins:
+          - name: cors
+            config:
+              origins:
+                - "*"
+          - name: prometheus
+
+  # Wallet Service
+  - name: wallet-service
+    url: http://wallet-service:3002
+    protocol: http
+    host: wallet-service
+    port: 3002
+    path: /
+    retries: 5
+    connect_timeout: 60000
+    write_timeout: 60000
+    read_timeout: 60000
+    tags:
+      - wallet
+      - finance
+    routes:
+      # Wallet Routes (All protected)
+      - name: wallet-routes
+        paths:
+          - /api/v1/wallets
+          - /api/v1/cards
+          - /api/v1/statements
+        strip_path: false
+        preserve_host: false
+        tags:
+          - protected
+          - wallet
+        plugins:
+          - name: jwt
+            config:
+              claims_to_verify:
+                - exp
+              key_claim_name: kid
+              secret_is_base64: false
+          - name: cors
+            config:
+              origins:
+                - "*"
+              methods:
+                - GET
+                - POST
+                - PUT
+                - PATCH
+                - DELETE
+                - OPTIONS
+              headers:
+                - Accept
+                - Accept-Version
+                - Content-Length
+                - Content-MD5
+                - Content-Type
+                - Date
+                - Authorization
+              credentials: true
+              max_age: 3600
+          - name: rate-limiting
+            config:
+              minute: 100
+              hour: 1000
+              policy: local
+              fault_tolerant: true
+          - name: response-transformer
+            config:
+              add:
+                headers:
+                  - "X-Gateway:Kong"
+                  - "X-Service:wallet-service"
+          - name: prometheus
+            config:
+              per_consumer: true
+
+      # Wallet Health Check
+      - name: wallet-health
+        paths:
+          - /health
+        methods:
+          - GET
+        strip_path: false
+        preserve_host: false
+        tags:
+          - health
+        plugins:
+          - name: cors
+            config:
+              origins:
+                - "*"
+          - name: prometheus
+
+  # Transaction Service
+  - name: transaction-service
+    url: http://transaction-service:3003
+    protocol: http
+    host: transaction-service
+    port: 3003
+    path: /
+    retries: 5
+    connect_timeout: 60000
+    write_timeout: 60000
+    read_timeout: 60000
+    tags:
+      - transaction
+      - payment
+    routes:
+      # Transaction Routes (All protected)
+      - name: transaction-routes
+        paths:
+          - /api/v1/transactions
+          - /api/v1/transfers
+          - /api/v1/settlements
+          - /api/v1/exchange-rates
+        strip_path: false
+        preserve_host: false
+        tags:
+          - protected
+          - transaction
+        plugins:
+          - name: jwt
+            config:
+              claims_to_verify:
+                - exp
+              key_claim_name: kid
+              secret_is_base64: false
+          - name: cors
+            config:
+              origins:
+                - "*"
+              methods:
+                - GET
+                - POST
+                - PUT
+                - PATCH
+                - DELETE
+                - OPTIONS
+              headers:
+                - Accept
+                - Accept-Version
+                - Content-Length
+                - Content-MD5
+                - Content-Type
+                - Date
+                - Authorization
+              credentials: true
+              max_age: 3600
+          - name: rate-limiting
+            config:
+              minute: 50
+              hour: 500
+              policy: local
+              fault_tolerant: true
+          - name: response-transformer
+            config:
+              add:
+                headers:
+                  - "X-Gateway:Kong"
+                  - "X-Service:transaction-service"
+          - name: prometheus
+            config:
+              per_consumer: true
+          # Add request termination for maintenance mode if needed
+          - name: request-termination
+            enabled: false
+            config:
+              status_code: 503
+              message: "Service temporarily unavailable"
+
+      # Transaction Health Check
+      - name: transaction-health
+        paths:
+          - /health
+        methods:
+          - GET
+        strip_path: false
+        preserve_host: false
+        tags:
+          - health
+        plugins:
+          - name: cors
+            config:
+              origins:
+                - "*"
+          - name: prometheus
+
+  # Admin Service
+  - name: admin-service
+    url: http://admin-service:3004
+    protocol: http
+    host: admin-service
+    port: 3004
+    path: /
+    retries: 5
+    connect_timeout: 60000
+    write_timeout: 60000
+    read_timeout: 60000
+    tags:
+      - admin
+      - backoffice
+    routes:
+      # Admin Routes (Protected with stricter rate limits)
+      - name: admin-routes
+        paths:
+          - /api/v1/customers
+          - /api/v1/tickets
+          - /api/v1/reports
+          - /api/v1/audit-logs
+          - /api/v1/admin
+        strip_path: false
+        preserve_host: false
+        tags:
+          - protected
+          - admin
+        plugins:
+          - name: jwt
+            config:
+              claims_to_verify:
+                - exp
+              key_claim_name: kid
+              secret_is_base64: false
+          - name: cors
+            config:
+              origins:
+                - "*"
+              methods:
+                - GET
+                - POST
+                - PUT
+                - PATCH
+                - DELETE
+                - OPTIONS
+              headers:
+                - Accept
+                - Accept-Version
+                - Content-Length
+                - Content-MD5
+                - Content-Type
+                - Date
+                - Authorization
+              credentials: true
+              max_age: 3600
+          - name: rate-limiting
+            config:
+              minute: 200
+              hour: 2000
+              policy: local
+              fault_tolerant: true
+          - name: response-transformer
+            config:
+              add:
+                headers:
+                  - "X-Gateway:Kong"
+                  - "X-Service:admin-service"
+          - name: prometheus
+            config:
+              per_consumer: true
+          # IP restriction for admin endpoints (optional)
+          # - name: ip-restriction
+          #   config:
+          #     allow:
+          #       - 10.0.0.0/8
+          #       - 172.16.0.0/12
+          #       - 192.168.0.0/16
+
+      # Admin Health Check
+      - name: admin-health
+        paths:
+          - /health
+        methods:
+          - GET
+        strip_path: false
+        preserve_host: false
+        tags:
+          - health
+        plugins:
+          - name: cors
+            config:
+              origins:
+                - "*"
+          - name: prometheus
+
+# Global Plugins
+plugins:
+  # Request/Response Logging
+  - name: file-log
+    config:
+      path: /tmp/kong-logs.json
+      reopen: true
+
+  # Prometheus metrics (global)
+  - name: prometheus
+    config:
+      per_consumer: false
+
+  # HTTP Log to external service (optional)
+  # - name: http-log
+  #   config:
+  #     http_endpoint: http://logging-service:8080/logs
+  #     method: POST
+  #     timeout: 10000
+  #     keepalive: 60000
+
+  # Request ID for tracing
+  - name: correlation-id
+    config:
+      header_name: X-Request-ID
+      generator: uuid
+      echo_downstream: true
+
+  # Global rate limiting protection
+  - name: bot-detection
+    enabled: false
+    config:
+      allow:
+        - "curl/*"
+        - "HTTPie/*"
+      deny:
+        - "scrapy/*"
+        - "bot"
+
+# Consumers (JWT credentials)
+consumers:
+  - username: system-service
+    custom_id: system-service-001
+    tags:
+      - service-account
+    jwt_secrets:
+      - key: system-service-key
+        secret: your-super-secret-jwt-key-change-in-production
+        algorithm: HS256
+
+# Upstreams for load balancing
+upstreams:
+  - name: identity-upstream
+    algorithm: round-robin
+    hash_on: none
+    hash_fallback: none
+    healthchecks:
+      active:
+        healthy:
+          interval: 5
+          successes: 2
+        unhealthy:
+          interval: 5
+          http_failures: 3
+          timeouts: 3
+        http_path: /health
+        timeout: 1
+        concurrency: 10
+      passive:
+        healthy:
+          successes: 2
+        unhealthy:
+          http_failures: 3
+          timeouts: 3
+    targets:
+      - target: identity-service:3001
+        weight: 100
+
+  - name: wallet-upstream
+    algorithm: round-robin
+    hash_on: none
+    hash_fallback: none
+    healthchecks:
+      active:
+        healthy:
+          interval: 5
+          successes: 2
+        unhealthy:
+          interval: 5
+          http_failures: 3
+          timeouts: 3
+        http_path: /health
+        timeout: 1
+        concurrency: 10
+      passive:
+        healthy:
+          successes: 2
+        unhealthy:
+          http_failures: 3
+          timeouts: 3
+    targets:
+      - target: wallet-service:3002
+        weight: 100
+
+  - name: transaction-upstream
+    algorithm: round-robin
+    hash_on: none
+    hash_fallback: none
+    healthchecks:
+      active:
+        healthy:
+          interval: 5
+          successes: 2
+        unhealthy:
+          interval: 5
+          http_failures: 3
+          timeouts: 3
+        http_path: /health
+        timeout: 1
+        concurrency: 10
+      passive:
+        healthy:
+          successes: 2
+        unhealthy:
+          http_failures: 3
+          timeouts: 3
+    targets:
+      - target: transaction-service:3003
+        weight: 100
+
+  - name: admin-upstream
+    algorithm: round-robin
+    hash_on: none
+    hash_fallback: none
+    healthchecks:
+      active:
+        healthy:
+          interval: 5
+          successes: 2
+        unhealthy:
+          interval: 5
+          http_failures: 3
+          timeouts: 3
+        http_path: /health
+        timeout: 1
+        concurrency: 10
+      passive:
+        healthy:
+          successes: 2
+        unhealthy:
+          http_failures: 3
+          timeouts: 3
+    targets:
+      - target: admin-service:3004
+        weight: 100

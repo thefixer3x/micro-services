@@ -1,0 +1,81 @@
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+  external_labels:
+    cluster: 'microservices-platform'
+    environment: 'development'
+
+# Alertmanager configuration (optional)
+# alerting:
+#   alertmanagers:
+#     - static_configs:
+#         - targets:
+#             - alertmanager:9093
+
+# Rule files for alerting
+# rule_files:
+#   - "alert_rules.yml"
+
+scrape_configs:
+  # Prometheus self-monitoring
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['localhost:9090']
+        labels:
+          service: 'prometheus'
+
+  # Kong API Gateway Metrics
+  - job_name: 'kong'
+    static_configs:
+      - targets: ['kong-gateway:8001']
+        labels:
+          service: 'kong-gateway'
+    metrics_path: '/metrics'
+    scrape_interval: 10s
+
+  # Identity Service Metrics
+  - job_name: 'identity-service'
+    static_configs:
+      - targets: ['identity-service:3001']
+        labels:
+          service: 'identity-service'
+          tier: 'backend'
+    metrics_path: '/metrics'
+    scrape_interval: 15s
+
+  # Wallet Service Metrics
+  - job_name: 'wallet-service'
+    static_configs:
+      - targets: ['wallet-service:3002']
+        labels:
+          service: 'wallet-service'
+          tier: 'backend'
+    metrics_path: '/metrics'
+    scrape_interval: 15s
+
+  # Transaction Service Metrics
+  - job_name: 'transaction-service'
+    static_configs:
+      - targets: ['transaction-service:3003']
+        labels:
+          service: 'transaction-service'
+          tier: 'backend'
+    metrics_path: '/metrics'
+    scrape_interval: 15s
+
+  # Admin Service Metrics
+  - job_name: 'admin-service'
+    static_configs:
+      - targets: ['admin-service:3004']
+        labels:
+          service: 'admin-service'
+          tier: 'backend'
+    metrics_path: '/metrics'
+    scrape_interval: 15s
+
+  # PostgreSQL Exporter (optional - requires postgres-exporter)
+  # - job_name: 'postgres'
+  #   static_configs:
+  #     - targets: ['postgres-exporter:9187']
+  #       labels:
+  #         service: 'postgresql'
