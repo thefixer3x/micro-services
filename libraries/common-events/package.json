@@ -1,0 +1,30 @@
+{
+  "name": "@platform/common-events",
+  "version": "1.0.0",
+  "description": "Shared event schemas and Kafka utilities for microservices",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "events",
+    "kafka",
+    "messaging",
+    "microservices"
+  ],
+  "author": "Platform Team",
+  "license": "MIT",
+  "dependencies": {
+    "kafkajs": "^2.2.4"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.5",
+    "@types/node": "^20.6.0",
+    "@types/uuid": "^10.0.0",
+    "typescript": "^5.2.2"
+  }
+}
