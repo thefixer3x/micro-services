@@ -20,12 +20,16 @@ export interface IWalletProvider {
   getCustomer(customerId: string): Promise<Customer>;
   updateCustomer(customerId: string, data: UpdateCustomerRequest): Promise<Customer>;
   searchCustomer(criteria: SearchCriteria): Promise<Customer[]>;
+  findCustomerByPhone?(phoneNumber: string): Promise<Customer | null>; // Quick lookup by phone
 
   // Wallet Management
   createWallet(data: CreateWalletRequest): Promise<Wallet>;
+  createCustomerWallet?(data: CreateCustomerWalletRequest): Promise<{ customer: Customer; wallet: Wallet }>; // Combined customer+wallet creation
   getWallet(walletId: string): Promise<Wallet>;
+  getAllWallets?(): Promise<Wallet[]>; // Get all wallets (merchant operation)
   getWalletsByCustomer(customerId: string): Promise<Wallet[]>;
   getWalletBalance(walletId: string): Promise<Balance>;
+  getMerchantWallet?(): Promise<Wallet>; // Get merchant's own wallet
 
   // Transactions
   initiateTransfer(data: TransferRequest): Promise<Transaction>;
@@ -63,8 +67,20 @@ export interface CreateCustomerRequest {
   email: string;
   phoneNumber: string;
   dateOfBirth?: string;
-  address?: Address;
+  bvn?: string; // Bank Verification Number (required for Providus wallet creation)
+  address?: Address | string; // Can be string or Address object
   kycLevel?: 'basic' | 'intermediate' | 'full';
+  metadata?: Record<string, any>;
+}
+
+export interface CreateCustomerWalletRequest {
+  bvn: string; // Required for Providus
+  firstName: string;
+  lastName: string;
+  dateOfBirth: string; // Required for Providus (YYYY-MM-DD format)
+  phoneNumber: string;
+  email: string;
+  address?: string;
   metadata?: Record<string, any>;
 }
 
@@ -128,13 +144,16 @@ export interface Balance {
 
 export interface TransferRequest {
   sourceWalletId: string;
+  sourceCustomerId?: string; // Customer ID (used by Providus for transfers)
   destinationType: 'wallet' | 'bank' | 'card';
   destinationId: string; // wallet ID, account number, or card number
+  destinationCustomerId?: string; // Customer ID for wallet-to-wallet transfers (Providus)
   amount: number;
   currency: string;
   narration?: string;
   reference?: string; // Client-provided idempotency key
-  bankCode?: string; // Required for bank transfers
+  bankCode?: string; // Bank code (mapped to sortCode for Providus)
+  sortCode?: string; // Sort code (Providus uses this instead of bankCode)
   accountNumber?: string; // Required for bank transfers
   accountName?: string;
   metadata?: Record<string, any>;
@@ -169,8 +188,8 @@ export interface Bank {
 export interface BankAccountValidation {
   accountNumber: string;
   accountName: string;
-  bankCode: string;
-  bankName: string;
+  bankCode: string; // Sort code (Providus returns as bankCode)
+  bankName?: string;
   isValid: boolean;
 }
 

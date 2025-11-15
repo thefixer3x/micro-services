@@ -3,6 +3,7 @@ import {
   IWalletProvider,
   AuthResult,
   CreateCustomerRequest,
+  CreateCustomerWalletRequest,
   Customer,
   UpdateCustomerRequest,
   SearchCriteria,
@@ -104,7 +105,7 @@ export class ProvidusProvider extends BaseProvider implements IWalletProvider {
     try {
       const response = await this.request<any>({
         method: 'POST',
-        url: '/auth/refresh',
+        url: '/auth/refresh/token', // Correct endpoint per API docs
         headers: {
           'X-Refresh-Token': this.refreshToken,
         },
@@ -138,6 +139,13 @@ export class ProvidusProvider extends BaseProvider implements IWalletProvider {
     await this.ensureAuthenticated();
 
     try {
+      // Convert address object to string if needed
+      const addressString = typeof data.address === 'string' 
+        ? data.address 
+        : data.address 
+          ? `${data.address.street || ''}, ${data.address.city || ''}, ${data.address.state || ''}, ${data.address.country || ''}`.trim()
+          : undefined;
+
       const response = await this.request<any>({
         method: 'POST',
         url: '/customers',
@@ -147,7 +155,8 @@ export class ProvidusProvider extends BaseProvider implements IWalletProvider {
           email: data.email,
           phone_number: data.phoneNumber,
           date_of_birth: data.dateOfBirth,
-          address: data.address,
+          bvn: data.bvn,
+          address: addressString,
           kyc_level: data.kycLevel,
           metadata: data.metadata,
         },
@@ -158,6 +167,44 @@ export class ProvidusProvider extends BaseProvider implements IWalletProvider {
       return this.mapCustomerResponse(response.data);
     } catch (error) {
       logger.error('[Providus] Failed to create customer:', error);
+      throw error;
+    }
+  }
+
+  /**
+   * Create customer wallet in a single call (Providus API endpoint)
+   * This is the recommended way to create wallets as it's more efficient
+   */
+  async createCustomerWallet(data: CreateCustomerWalletRequest): Promise<{ customer: Customer; wallet: Wallet }> {
+    await this.ensureAuthenticated();
+
+    try {
+      const response = await this.request<any>({
+        method: 'POST',
+        url: '/wallet', // Combined endpoint per API docs
+        data: {
+          bvn: data.bvn,
+          firstName: data.firstName,
+          lastName: data.lastName,
+          dateOfBirth: data.dateOfBirth,
+          phoneNumber: data.phoneNumber,
+          email: data.email,
+          address: data.address,
+          metadata: data.metadata,
+        },
+      });
+
+      logger.info('[Providus] Customer wallet created:', {
+        customerId: response.customer?.id,
+        walletId: response.wallet?.id,
+      });
+
+      return {
+        customer: this.mapCustomerResponse(response.customer),
+        wallet: this.mapWalletResponse(response.wallet),
+      };
+    } catch (error) {
+      logger.error('[Providus] Failed to create customer wallet:', error);
       throw error;
     }
   }
@@ -226,6 +273,32 @@ export class ProvidusProvider extends BaseProvider implements IWalletProvider {
     }
   }
 
+  /**
+   * Find customer by phone number (quick lookup)
+   */
+  async findCustomerByPhone(phoneNumber: string): Promise<Customer | null> {
+    await this.ensureAuthenticated();
+
+    try {
+      const response = await this.request<any>({
+        method: 'GET',
+        url: '/customer/phone',
+        params: {
+          phoneNumber,
+        },
+      });
+
+      if (!response.customer) {
+        return null;
+      }
+
+      return this.mapCustomerResponse(response.customer);
+    } catch (error) {
+      logger.error('[Providus] Failed to find customer by phone:', error);
+      throw error;
+    }
+  }
+
   // ============================================================================
   // Wallet Management
   // ============================================================================
@@ -286,6 +359,44 @@ export class ProvidusProvider extends BaseProvider implements IWalletProvider {
     }
   }
 
+  /**
+   * Get all customer wallets (merchant operation)
+   */
+  async getAllWallets(): Promise<Wallet[]> {
+    await this.ensureAuthenticated();
+
+    try {
+      const response = await this.request<any>({
+        method: 'GET',
+        url: '/wallet', // Per API docs
+      });
+
+      return (response.wallets || []).map(this.mapWalletResponse);
+    } catch (error) {
+      logger.error('[Providus] Failed to get all wallets:', error);
+      throw error;
+    }
+  }
+
+  /**
+   * Get merchant's own wallet
+   */
+  async getMerchantWallet(): Promise<Wallet> {
+    await this.ensureAuthenticated();
+
+    try {
+      const response = await this.request<any>({
+        method: 'GET',
+        url: '/merchant/wallet',
+      });
+
+      return this.mapWalletResponse(response.data);
+    } catch (error) {
+      logger.error('[Providus] Failed to get merchant wallet:', error);
+      throw error;
+    }
+  }
+
   async getWalletBalance(walletId: string): Promise<Balance> {
     await this.ensureAuthenticated();
 
@@ -317,33 +428,70 @@ export class ProvidusProvider extends BaseProvider implements IWalletProvider {
     await this.ensureAuthenticated();
 
     try {
-      const reference = data.reference || this.generateReference('PROV');
+      // Providus API requires customerId for transfers, not walletId
+      // If sourceCustomerId is not provided, we need to look it up from walletId
+      // For now, we'll require it to be passed in the request
+      if (!data.sourceCustomerId) {
+        throw new ProviderError(
+          'sourceCustomerId is required for Providus transfers. Please provide customerId in TransferRequest.',
+          'MISSING_CUSTOMER_ID'
+        );
+      }
 
-      let endpoint = '/transfers';
-      let payload: any = {
-        source_wallet_id: data.sourceWalletId,
-        amount: data.amount,
-        currency: data.currency,
-        narration: data.narration,
-        reference,
-        metadata: data.metadata,
-      };
+      let endpoint: string;
+      let payload: any;
 
-      // Route based on destination type
-      if (data.destinationType === 'bank') {
-        endpoint = '/transfers/bank';
+      // Route based on destination type per Providus API docs
+      if (data.destinationType === 'wallet') {
+        // Customer-to-customer wallet transfer
+        // Endpoint: POST /transfer/wallet (singular, not plural)
+        if (!data.destinationCustomerId) {
+          throw new ProviderError(
+            'destinationCustomerId is required for wallet-to-wallet transfers',
+            'MISSING_DESTINATION_CUSTOMER_ID'
+          );
+        }
+
+        endpoint = '/transfer/wallet'; // Note: singular "transfer"
         payload = {
-          ...payload,
-          account_number: data.accountNumber,
-          bank_code: data.bankCode,
-          account_name: data.accountName,
+          amount: data.amount,
+          fromCustomerId: data.sourceCustomerId,
+          toCustomerId: data.destinationCustomerId,
         };
-      } else if (data.destinationType === 'wallet') {
-        endpoint = '/transfers/wallet';
+      } else if (data.destinationType === 'bank') {
+        // Customer bank transfer
+        // Endpoint: POST /transfer/bank/customer
+        if (!data.accountNumber || !data.accountName) {
+          throw new ProviderError(
+            'accountNumber and accountName are required for bank transfers',
+            'MISSING_BANK_DETAILS'
+          );
+        }
+
+        // Use sortCode if provided, otherwise map bankCode to sortCode
+        const sortCode = data.sortCode || data.bankCode;
+        if (!sortCode) {
+          throw new ProviderError(
+            'sortCode or bankCode is required for bank transfers',
+            'MISSING_SORT_CODE'
+          );
+        }
+
+        endpoint = '/transfer/bank/customer';
         payload = {
-          ...payload,
-          destination_wallet_id: data.destinationId,
+          amount: data.amount,
+          sortCode: sortCode, // Providus uses sortCode, not bankCode
+          narration: data.narration,
+          accountNumber: data.accountNumber,
+          accountName: data.accountName,
+          customerId: data.sourceCustomerId,
+          metadata: data.metadata,
         };
+      } else {
+        throw new ProviderError(
+          `Unsupported destination type: ${data.destinationType}`,
+          'UNSUPPORTED_DESTINATION_TYPE'
+        );
       }
 
       const response = await this.request<any>({
@@ -352,9 +500,17 @@ export class ProvidusProvider extends BaseProvider implements IWalletProvider {
         data: payload,
       });
 
-      logger.info('[Providus] Transfer initiated:', reference);
+      // Map response based on transfer type
+      const transferData = data.destinationType === 'wallet' 
+        ? response.data 
+        : response.transfer;
 
-      return this.mapTransactionResponse(response.data);
+      logger.info('[Providus] Transfer initiated:', {
+        reference: transferData?.reference,
+        type: data.destinationType,
+      });
+
+      return this.mapTransactionResponse(transferData, data);
     } catch (error) {
       logger.error('[Providus] Failed to initiate transfer:', error);
       throw error;
@@ -418,12 +574,13 @@ export class ProvidusProvider extends BaseProvider implements IWalletProvider {
     await this.ensureAuthenticated();
 
     try {
+      // Per API docs: GET /transfer/banks (not /banks)
       const response = await this.request<any>({
         method: 'GET',
-        url: '/banks',
+        url: '/transfer/banks',
       });
 
-      return (response.data || []).map((bank: any) => ({
+      return (response.banks || []).map((bank: any) => ({
         code: bank.code || bank.bank_code,
         name: bank.name || bank.bank_name,
         slug: bank.slug,
@@ -439,21 +596,25 @@ export class ProvidusProvider extends BaseProvider implements IWalletProvider {
     await this.ensureAuthenticated();
 
     try {
+      // Per API docs: GET /transfer/account/details?sortCode=...&accountNumber=...
+      // bankCode is used as sortCode (they're the same thing)
+      const sortCode = bankCode;
+
       const response = await this.request<any>({
-        method: 'POST',
-        url: '/banks/validate-account',
-        data: {
-          account_number: accountNumber,
-          bank_code: bankCode,
+        method: 'GET',
+        url: '/transfer/account/details',
+        params: {
+          sortCode: sortCode,
+          accountNumber: accountNumber,
         },
       });
 
       return {
-        accountNumber,
-        accountName: response.data.account_name,
-        bankCode,
-        bankName: response.data.bank_name,
-        isValid: response.data.is_valid !== false,
+        accountNumber: response.account?.accountNumber || accountNumber,
+        accountName: response.account?.accountName || '',
+        bankCode: response.account?.bankCode || bankCode, // Providus returns it as bankCode
+        bankName: undefined, // Not provided in response
+        isValid: !!response.account?.accountName, // Valid if account name is returned
       };
     } catch (error) {
       logger.error('[Providus] Failed to validate bank account:', error);
@@ -478,58 +639,151 @@ export class ProvidusProvider extends BaseProvider implements IWalletProvider {
   private mapCustomerResponse(data: any): Customer {
     return {
       id: data.id || data.customer_id,
-      providerId: data.provider_id || data.customer_id,
+      providerId: data.provider_id || data.customer_id || data.id,
       firstName: data.first_name || data.firstName,
       lastName: data.last_name || data.lastName,
       email: data.email,
       phoneNumber: data.phone_number || data.phoneNumber,
       dateOfBirth: data.date_of_birth || data.dateOfBirth,
       address: data.address,
-      kycStatus: data.kyc_status || 'pending',
-      kycLevel: data.kyc_level,
-      status: data.status || 'active',
+      kycStatus: this.mapKycStatus(data.kyc_status, data.tier),
+      kycLevel: this.mapKycLevel(data.tier),
+      status: this.mapCustomerStatus(data.status, data.mode),
       createdAt: data.created_at || data.createdAt || new Date().toISOString(),
       updatedAt: data.updated_at || data.updatedAt || new Date().toISOString(),
-      metadata: data.metadata,
+      metadata: {
+        ...data.metadata,
+        bvn: data.bvn,
+        nameMatch: data.nameMatch,
+        BVNFirstName: data.BVNFirstName,
+        BVNLastName: data.BVNLastName,
+        tier: data.tier,
+        mode: data.mode,
+        MerchantId: data.MerchantId,
+        walletId: data.walletId,
+      },
     };
+  }
+
+  private mapKycStatus(kycStatus?: string, tier?: string): Customer['kycStatus'] {
+    if (kycStatus) {
+      if (kycStatus.toLowerCase().includes('verified')) return 'verified';
+      if (kycStatus.toLowerCase().includes('rejected')) return 'rejected';
+    }
+    // Infer from tier
+    if (tier && tier !== 'TIER_0') return 'verified';
+    return 'pending';
+  }
+
+  private mapKycLevel(tier?: string): Customer['kycLevel'] {
+    if (!tier) return undefined;
+    if (tier === 'TIER_1') return 'basic';
+    if (tier === 'TIER_2') return 'intermediate';
+    if (tier === 'TIER_3') return 'full';
+    return 'basic';
+  }
+
+  private mapCustomerStatus(status?: string, mode?: string): Customer['status'] {
+    if (!status) return 'active';
+    const statusLower = status.toLowerCase();
+    if (statusLower === 'active' || statusLower === 'enabled') return 'active';
+    if (statusLower === 'inactive' || statusLower === 'disabled') return 'inactive';
+    if (statusLower === 'suspended' || statusLower === 'frozen') return 'suspended';
+    return 'active';
   }
 
   private mapWalletResponse(data: any): Wallet {
+    // Providus returns bookedBalance (ledger) and availableBalance
+    const bookedBalance = parseFloat(data.bookedBalance || data.ledger_balance || data.ledgerBalance || '0');
+    const availableBalance = parseFloat(data.availableBalance || data.available_balance || '0');
+
     return {
-      id: data.id || data.wallet_id,
-      providerId: data.provider_id || data.wallet_id,
-      customerId: data.customer_id || data.customerId,
+      id: data.id || data.wallet_id || data.walletId,
+      providerId: data.provider_id || data.wallet_id || data.id,
+      customerId: data.customer_id || data.customerId || data.walletId, // walletId sometimes equals customerId in Providus
       accountNumber: data.account_number || data.accountNumber,
       accountName: data.account_name || data.accountName,
       currency: data.currency || 'NGN',
-      walletType: data.wallet_type || data.walletType || 'virtual',
-      status: data.status || 'active',
-      availableBalance: parseFloat(data.available_balance || data.availableBalance || '0'),
-      ledgerBalance: parseFloat(data.ledger_balance || data.ledgerBalance || '0'),
+      walletType: this.mapWalletType(data.walletType, data.wallet_type),
+      status: this.mapWalletStatus(data.status),
+      availableBalance: availableBalance,
+      ledgerBalance: bookedBalance,
       createdAt: data.created_at || data.createdAt || new Date().toISOString(),
       updatedAt: data.updated_at || data.updatedAt || new Date().toISOString(),
-      metadata: data.metadata,
+      metadata: {
+        ...data.metadata,
+        bankName: data.bankName,
+        bankCode: data.bankCode,
+        accountReference: data.accountReference,
+        mode: data.mode,
+        email: data.email,
+      },
     };
   }
 
-  private mapTransactionResponse(data: any): Transaction {
+  private mapWalletType(walletType?: string, wallet_type?: string): Wallet['walletType'] {
+    const type = (walletType || wallet_type || '').toLowerCase();
+    if (type.includes('savings')) return 'savings';
+    if (type.includes('current')) return 'current';
+    return 'virtual'; // Default for Providus customer wallets
+  }
+
+  private mapWalletStatus(status?: string): Wallet['status'] {
+    if (!status) return 'active';
+    const statusLower = status.toLowerCase();
+    if (statusLower === 'active') return 'active';
+    if (statusLower === 'frozen' || statusLower === 'suspended') return 'frozen';
+    if (statusLower === 'inactive' || statusLower === 'closed') return 'inactive';
+    return 'active';
+  }
+
+  private mapTransactionResponse(data: any, transferRequest?: TransferRequest): Transaction {
+    // Handle different response structures from Providus API
+    // Wallet transfer response has: reference, transaction_fee, total, source_customer_wallet, target_customer_wallet
+    // Bank transfer response has: reference, charges, vat, total, sessionId, transactionReference
+    
+    const fee = parseFloat(data.transaction_fee || data.charges || data.fee || '0');
+    const vat = parseFloat(data.vat || '0');
+    const totalAmount = parseFloat(data.total || data.total_amount || data.amount || '0');
+
     return {
-      id: data.id || data.transaction_id,
-      providerId: data.provider_id || data.transaction_id,
+      id: data.id || data.transaction_id || data.transactionReference || data.reference,
+      providerId: data.transactionReference || data.reference || data.id,
       reference: data.reference,
-      sourceWalletId: data.source_wallet_id || data.sourceWalletId,
-      destinationId: data.destination_id || data.destinationId,
-      destinationType: data.destination_type || data.destinationType || 'wallet',
+      sourceWalletId: data.source_customer_wallet || data.source_wallet_id || transferRequest?.sourceWalletId || '',
+      destinationId: data.target_customer_wallet || data.destination_id || transferRequest?.destinationId || '',
+      destinationType: transferRequest?.destinationType || data.destination_type || 'wallet',
       amount: parseFloat(data.amount || '0'),
       currency: data.currency || 'NGN',
-      fee: parseFloat(data.fee || '0'),
-      totalAmount: parseFloat(data.total_amount || data.amount || '0'),
-      status: data.status || 'pending',
-      narration: data.narration,
+      fee: fee + vat, // Include VAT in total fee
+      totalAmount: totalAmount,
+      status: this.mapTransactionStatus(data.status, data.responseCode),
+      narration: data.narration || data.description,
       createdAt: data.created_at || data.createdAt || new Date().toISOString(),
       completedAt: data.completed_at || data.completedAt,
       failureReason: data.failure_reason || data.failureReason,
-      metadata: data.metadata,
+      metadata: {
+        ...data.metadata,
+        sessionId: data.sessionId,
+        transactionReference: data.transactionReference,
+        description: data.description,
+      },
     };
+  }
+
+  private mapTransactionStatus(status?: string, responseCode?: string): Transaction['status'] {
+    if (responseCode === '00' || status === 'SUCCESS' || status === 'completed') {
+      return 'completed';
+    }
+    if (status === 'FAILED' || status === 'failed') {
+      return 'failed';
+    }
+    if (status === 'PENDING' || status === 'pending') {
+      return 'pending';
+    }
+    if (status === 'PROCESSING' || status === 'processing') {
+      return 'processing';
+    }
+    return 'pending';
   }
 }
