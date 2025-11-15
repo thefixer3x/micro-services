@@ -96,12 +96,24 @@ services:
       JWT_EXPIRES_IN: 15m
       JWT_REFRESH_SECRET: your-super-secret-refresh-key-change-in-production
       JWT_REFRESH_EXPIRES_IN: 7d
+      # Event Bus (Kafka)
+      KAFKA_BROKERS: kafka:9092
+      KAFKA_CLIENT_ID: identity-service
+      # Redis Cache
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+      REDIS_PASSWORD: redis_password
     ports:
       - "3001:3001"
     networks:
       - microservices-network
     depends_on:
-      - identity-db
+      identity-db:
+        condition: service_healthy
+      kafka:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
     restart: unless-stopped
     healthcheck:
       test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost:3001/health"]
@@ -155,12 +167,24 @@ services:
       # Service URLs
       IDENTITY_SERVICE_URL: http://identity-service:3001
       TRANSACTION_SERVICE_URL: http://transaction-service:3003
+      # Event Bus (Kafka)
+      KAFKA_BROKERS: kafka:9092
+      KAFKA_CLIENT_ID: wallet-service
+      # Redis Cache
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+      REDIS_PASSWORD: redis_password
     ports:
       - "3002:3002"
     networks:
       - microservices-network
     depends_on:
-      - wallet-db
+      wallet-db:
+        condition: service_healthy
+      kafka:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
     restart: unless-stopped
     healthcheck:
       test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost:3002/health"]
@@ -202,12 +226,24 @@ services:
       DB_NAME: transaction_service
       DB_USER: postgres
       DB_PASSWORD: password
+      # Event Bus (Kafka)
+      KAFKA_BROKERS: kafka:9092
+      KAFKA_CLIENT_ID: transaction-service
+      # Redis Cache
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+      REDIS_PASSWORD: redis_password
     ports:
       - "3003:3003"
     networks:
       - microservices-network
     depends_on:
-      - transaction-db
+      transaction-db:
+        condition: service_healthy
+      kafka:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
     restart: unless-stopped
     healthcheck:
       test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost:3003/health"]
@@ -250,12 +286,24 @@ services:
       DB_USER: postgres
       DB_PASSWORD: password
       DATABASE_URL: postgresql://postgres:password@admin-db:5432/admin_service
+      # Event Bus (Kafka)
+      KAFKA_BROKERS: kafka:9092
+      KAFKA_CLIENT_ID: admin-service
+      # Redis Cache
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+      REDIS_PASSWORD: redis_password
     ports:
       - "3004:3004"
     networks:
       - microservices-network
     depends_on:
-      - admin-db
+      admin-db:
+        condition: service_healthy
+      kafka:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
     restart: unless-stopped
     healthcheck:
       test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost:3004/health"]
@@ -281,6 +329,82 @@ services:
       interval: 10s
       timeout: 5s
       retries: 5
+
+  # Zookeeper (required for Kafka)
+  zookeeper:
+    image: confluentinc/cp-zookeeper:7.5.0
+    container_name: zookeeper
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
+      ZOOKEEPER_SYNC_LIMIT: 2
+    ports:
+      - "2181:2181"
+    volumes:
+      - zookeeper-data:/var/lib/zookeeper/data
+      - zookeeper-logs:/var/lib/zookeeper/log
+    networks:
+      - microservices-network
+    healthcheck:
+      test: ["CMD", "nc", "-z", "localhost", "2181"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+  # Kafka Event Bus
+  kafka:
+    image: confluentinc/cp-kafka:7.5.0
+    container_name: kafka
+    depends_on:
+      zookeeper:
+        condition: service_healthy
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092,PLAINTEXT_HOST://localhost:29092
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
+      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
+      KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
+      KAFKA_AUTO_CREATE_TOPICS_ENABLE: "true"
+      KAFKA_LOG_RETENTION_HOURS: 168
+      KAFKA_LOG_SEGMENT_BYTES: 1073741824
+    ports:
+      - "9092:9092"
+      - "29092:29092"
+    volumes:
+      - kafka-data:/var/lib/kafka/data
+    networks:
+      - microservices-network
+    healthcheck:
+      test: ["CMD", "kafka-broker-api-versions", "--bootstrap-server", "localhost:9092"]
+      interval: 10s
+      timeout: 10s
+      retries: 5
+      start_period: 30s
+    restart: unless-stopped
+
+  # Redis Cache
+  redis:
+    image: redis:7-alpine
+    container_name: redis
+    command: redis-server --appendonly yes --requirepass redis_password
+    environment:
+      REDIS_PASSWORD: redis_password
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+    networks:
+      - microservices-network
+    healthcheck:
+      test: ["CMD", "redis-cli", "--raw", "incr", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
 
   # Prometheus for Metrics
   prometheus:
@@ -333,6 +457,14 @@ volumes:
   transaction-db-data:
     driver: local
   admin-db-data:
+    driver: local
+  zookeeper-data:
+    driver: local
+  zookeeper-logs:
+    driver: local
+  kafka-data:
+    driver: local
+  redis-data:
     driver: local
   prometheus-data:
     driver: local
