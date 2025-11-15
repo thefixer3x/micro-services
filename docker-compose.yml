@@ -143,6 +143,18 @@ services:
       DB_NAME: wallet_service
       DB_USER: postgres
       DB_PASSWORD: password
+      DATABASE_URL: postgresql://postgres:password@wallet-db:5432/wallet_service
+      # Wallet Provider Configuration
+      DEFAULT_WALLET_PROVIDER: providus
+      PROVIDUS_BASE_URL: https://api.xpresswallet.com
+      PROVIDUS_SANDBOX_URL: https://sandbox.api.xpresswallet.com
+      PROVIDUS_USE_SANDBOX: "true"
+      PROVIDUS_CLIENT_ID: ${PROVIDUS_CLIENT_ID:-your-client-id}
+      PROVIDUS_CLIENT_SECRET: ${PROVIDUS_CLIENT_SECRET:-your-client-secret}
+      PROVIDUS_API_KEY: ${PROVIDUS_API_KEY:-your-api-key}
+      # Service URLs
+      IDENTITY_SERVICE_URL: http://identity-service:3001
+      TRANSACTION_SERVICE_URL: http://transaction-service:3003
     ports:
       - "3002:3002"
     networks:
@@ -237,6 +249,7 @@ services:
       DB_NAME: admin_service
       DB_USER: postgres
       DB_PASSWORD: password
+      DATABASE_URL: postgresql://postgres:password@admin-db:5432/admin_service
     ports:
       - "3004:3004"
     networks:
