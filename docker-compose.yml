@@ -249,6 +249,7 @@ services:
       DB_NAME: admin_service
       DB_USER: postgres
       DB_PASSWORD: password
+      DATABASE_URL: postgresql://postgres:password@admin-db:5432/admin_service
     ports:
       - "3004:3004"
     networks:
