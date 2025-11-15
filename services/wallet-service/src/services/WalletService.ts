@@ -333,11 +333,23 @@ export class WalletService {
 
     const result = await this.db.query(query, params);
 
-    // Get total count
-    const countResult = await this.db.query(
-      'SELECT COUNT(*) FROM transactions WHERE source_wallet_id = $1',
-      [walletId]
-    );
+    // Get total count with the same filters
+    let countQuery = 'SELECT COUNT(*) FROM transactions WHERE source_wallet_id = $1';
+    const countParams: any[] = [walletId];
+    let countParamIndex = 2;
+
+    if (options.startDate) {
+      countQuery += ` AND created_at >= $${countParamIndex}`;
+      countParams.push(options.startDate);
+      countParamIndex++;
+    }
+
+    if (options.endDate) {
+      countQuery += ` AND created_at <= $${countParamIndex}`;
+      countParams.push(options.endDate);
+    }
+
+    const countResult = await this.db.query(countQuery, countParams);
 
     const totalRecords = parseInt(countResult.rows[0].count);
     const totalPages = Math.ceil(totalRecords / limit);
