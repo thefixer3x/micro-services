@@ -62,12 +62,23 @@ app.use(express.urlencoded({ extended: true }));
 
 // Health check endpoint
 app.get('/health', (req, res) => {
-  res.json({ 
-    status: 'healthy', 
+  res.json({
+    status: 'healthy',
     service: 'identity-service',
     version: process.env.npm_package_version || '1.0.0',
     timestamp: new Date().toISOString()
   });
+});
+
+// Prometheus metrics endpoint
+import { register } from './utils/metrics';
+app.get('/metrics', async (req, res) => {
+  try {
+    res.set('Content-Type', register.contentType);
+    res.end(await register.metrics());
+  } catch (error) {
+    res.status(500).end();
+  }
 });
 
 // API routes
