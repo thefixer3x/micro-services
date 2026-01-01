@@ -83,9 +83,8 @@ app.get('/metrics', async (_req: Request, res: Response) => {
   }
 });
 
-// API routes
-app.use('/api/v1/transactions', transactionController);
-app.use('/api/v1/transfers', transactionController);
+// API routes - mount at /api/v1, controller handles /transactions and /transfers paths
+app.use('/api/v1', transactionController);
 
 // 404 handler
 app.use((_req: Request, res: Response) => {

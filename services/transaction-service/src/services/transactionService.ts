@@ -1,6 +1,7 @@
 import axios from 'axios';
 import transactionRepository from '../repositories/transactionRepository';
 import feeService from './feeService';
+import { transaction as dbTransaction } from '../database/connection';
 import {
   Transaction,
   TransactionType,
@@ -9,7 +10,8 @@ import {
   TransferResponse,
   FeeCalculationResponse,
   PaginationParams,
-  PaginatedResponse
+  PaginatedResponse,
+  TransactionFee
 } from '../types';
 import logger from '../utils/logger';
 
@@ -58,31 +60,36 @@ export class TransactionService {
       isInternational
     });
 
-    // Create transaction
-    const transaction = await transactionRepository.create({
-      transactionType: TransactionType.TRANSFER,
-      sourceWalletId: request.sourceWalletId,
-      destinationWalletId: request.destinationWalletId,
-      destinationAccountNumber: request.destinationAccountNumber,
-      destinationBankCode: request.destinationBankCode,
-      amount: request.amount,
-      currencyCode: request.currencyCode,
-      feeAmount: feeCalculation.totalFee,
-      narration: request.narration,
-      metadata: { idempotencyKey: request.idempotencyKey }
-    });
-
-    // Record fees
-    const fees = [];
-    for (const fee of feeCalculation.breakdown) {
-      const recordedFee = await transactionRepository.addFee({
-        transactionId: transaction.id,
-        feeType: fee.type,
-        feeAmount: fee.amount,
-        feeCurrency: request.currencyCode
+    // Create transaction and fees atomically within a database transaction
+    const { transaction, fees } = await dbTransaction(async (client) => {
+      // Create transaction
+      const txn = await transactionRepository.createWithClient(client, {
+        transactionType: TransactionType.TRANSFER,
+        sourceWalletId: request.sourceWalletId,
+        destinationWalletId: request.destinationWalletId,
+        destinationAccountNumber: request.destinationAccountNumber,
+        destinationBankCode: request.destinationBankCode,
+        amount: request.amount,
+        currencyCode: request.currencyCode,
+        feeAmount: feeCalculation.totalFee,
+        narration: request.narration,
+        metadata: { idempotencyKey: request.idempotencyKey }
       });
-      fees.push(recordedFee);
-    }
+
+      // Record fees within same transaction
+      const recordedFees: TransactionFee[] = [];
+      for (const fee of feeCalculation.breakdown) {
+        const recordedFee = await transactionRepository.addFeeWithClient(client, {
+          transactionId: txn.id,
+          feeType: fee.type,
+          feeAmount: fee.amount,
+          feeCurrency: request.currencyCode
+        });
+        recordedFees.push(recordedFee);
+      }
+
+      return { transaction: txn, fees: recordedFees };
+    });
 
     logger.info('Transfer created', {
       transactionId: transaction.id,

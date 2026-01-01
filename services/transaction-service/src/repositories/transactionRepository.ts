@@ -1,4 +1,5 @@
 import { v4 as uuidv4 } from 'uuid';
+import { PoolClient } from 'pg';
 import { query, transaction as dbTransaction } from '../database/connection';
 import {
   Transaction,
@@ -50,6 +51,43 @@ export class TransactionRepository {
     );
 
     return this.mapToTransaction(rows[0]);
+  }
+
+  /**
+   * Create transaction within an existing database transaction
+   */
+  async createWithClient(client: PoolClient, data: Partial<Transaction>): Promise<Transaction> {
+    const id = uuidv4();
+    const referenceNumber = generateReferenceNumber();
+
+    const result = await client.query(
+      `INSERT INTO transactions (
+        id, reference_number, transaction_type, source_wallet_id,
+        destination_wallet_id, destination_account_number, destination_bank_code,
+        amount, currency_code, exchange_rate, fee_amount, status, narration,
+        idempotency_key, metadata
+      ) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15)
+      RETURNING *`,
+      [
+        id,
+        referenceNumber,
+        data.transactionType,
+        data.sourceWalletId,
+        data.destinationWalletId,
+        data.destinationAccountNumber,
+        data.destinationBankCode,
+        data.amount,
+        data.currencyCode,
+        data.exchangeRate,
+        data.feeAmount || 0,
+        TransactionStatus.PENDING,
+        data.narration,
+        data.metadata?.idempotencyKey,
+        JSON.stringify(data.metadata || {})
+      ]
+    );
+
+    return this.mapToTransaction(result.rows[0]);
   }
 
   async findById(id: string): Promise<Transaction | null> {
@@ -133,6 +171,20 @@ export class TransactionRepository {
       [id, data.transactionId, data.feeType, data.feeAmount, data.feeCurrency, null]
     );
     return this.mapToFee(rows[0]);
+  }
+
+  /**
+   * Add fee within an existing database transaction
+   */
+  async addFeeWithClient(client: PoolClient, data: Partial<TransactionFee>): Promise<TransactionFee> {
+    const id = uuidv4();
+    const result = await client.query(
+      `INSERT INTO transaction_fees (id, transaction_id, fee_type, fee_amount, fee_currency, description)
+       VALUES ($1, $2, $3, $4, $5, $6)
+       RETURNING *`,
+      [id, data.transactionId, data.feeType, data.feeAmount, data.feeCurrency, null]
+    );
+    return this.mapToFee(result.rows[0]);
   }
 
   async getFeesByTransactionId(transactionId: string): Promise<TransactionFee[]> {
