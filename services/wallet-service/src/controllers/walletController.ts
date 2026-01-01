@@ -12,7 +12,7 @@ const walletService = new WalletService();
 // Create customer
 walletRoutes.post('/customers', async (req: Request, res: Response) => {
   try {
-    const { userId, firstName, lastName, email, phoneNumber, provider } = req.body;
+    const { userId, firstName, lastName, email, phoneNumber, dateOfBirth, bvn, address, provider } = req.body;
 
     if (!userId || !firstName || !lastName || !email || !phoneNumber) {
       return res.status(400).json({
@@ -26,6 +26,9 @@ walletRoutes.post('/customers', async (req: Request, res: Response) => {
       lastName,
       email,
       phoneNumber,
+      dateOfBirth,
+      bvn,
+      address,
       provider,
     });
 
@@ -37,6 +40,43 @@ walletRoutes.post('/customers', async (req: Request, res: Response) => {
     logger.error('Failed to create customer:', error);
     res.status(500).json({
       error: 'Failed to create customer',
+      message: error.message,
+    });
+  }
+});
+
+// Create customer and wallet in one call (recommended for Providus)
+walletRoutes.post('/customers/wallet', async (req: Request, res: Response) => {
+  try {
+    const { userId, bvn, firstName, lastName, dateOfBirth, phoneNumber, email, address, currency, provider } = req.body;
+
+    if (!userId || !bvn || !firstName || !lastName || !dateOfBirth || !phoneNumber || !email) {
+      return res.status(400).json({
+        error: 'Missing required fields',
+        required: ['userId', 'bvn', 'firstName', 'lastName', 'dateOfBirth', 'phoneNumber', 'email'],
+      });
+    }
+
+    const result = await walletService.createCustomerWallet(userId, {
+      bvn,
+      firstName,
+      lastName,
+      dateOfBirth,
+      phoneNumber,
+      email,
+      address,
+      currency,
+      provider,
+    });
+
+    res.status(201).json({
+      success: true,
+      data: result,
+    });
+  } catch (error: any) {
+    logger.error('Failed to create customer wallet:', error);
+    res.status(500).json({
+      error: 'Failed to create customer wallet',
       message: error.message,
     });
   }
@@ -180,11 +220,13 @@ walletRoutes.post('/wallets/:walletId/transfer', async (req: Request, res: Respo
     const {
       destinationType,
       destinationId,
+      destinationWalletId, // For wallet-to-wallet transfers (local wallet ID)
       amount,
       currency,
       narration,
       reference,
       bankCode,
+      sortCode, // Providus uses sortCode (same as bankCode)
       accountNumber,
       accountName,
     } = req.body;
@@ -199,11 +241,13 @@ walletRoutes.post('/wallets/:walletId/transfer', async (req: Request, res: Respo
     const transaction = await walletService.initiateTransfer(walletId, {
       destinationType,
       destinationId,
+      destinationWalletId, // Pass for wallet-to-wallet transfers
       amount,
       currency,
       narration,
       reference,
       bankCode,
+      sortCode: sortCode || bankCode, // Use sortCode if provided, fallback to bankCode
       accountNumber,
       accountName,
     });

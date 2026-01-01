@@ -1,0 +1,306 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches: [main, develop, 'feature/*', 'claude/*']
+  pull_request:
+    branches: [main, develop]
+
+env:
+  NODE_VERSION: '18'
+
+jobs:
+  # Detect which services have changed
+  changes:
+    runs-on: ubuntu-latest
+    outputs:
+      identity: ${{ steps.filter.outputs.identity }}
+      wallet: ${{ steps.filter.outputs.wallet }}
+      admin: ${{ steps.filter.outputs.admin }}
+      transaction: ${{ steps.filter.outputs.transaction }}
+      libraries: ${{ steps.filter.outputs.libraries }}
+      gateway: ${{ steps.filter.outputs.gateway }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dorny/paths-filter@v3
+        id: filter
+        with:
+          filters: |
+            identity:
+              - 'services/identity-service/**'
+            wallet:
+              - 'services/wallet-service/**'
+            admin:
+              - 'services/admin-service/**'
+            transaction:
+              - 'services/transaction-service/**'
+            libraries:
+              - 'libraries/**'
+            gateway:
+              - 'gateway/**'
+
+  # Lint and type-check shared libraries
+  libraries:
+    runs-on: ubuntu-latest
+    needs: changes
+    if: ${{ needs.changes.outputs.libraries == 'true' }}
+    strategy:
+      matrix:
+        library: [common-auth, common-db, common-events, common-utils]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+          cache-dependency-path: libraries/${{ matrix.library }}/package-lock.json
+      - name: Install dependencies
+        working-directory: libraries/${{ matrix.library }}
+        run: npm ci --ignore-scripts || npm install
+      - name: Build
+        working-directory: libraries/${{ matrix.library }}
+        run: npm run build --if-present
+      - name: Test
+        working-directory: libraries/${{ matrix.library }}
+        run: npm test --if-present
+
+  # Identity Service
+  identity-service:
+    runs-on: ubuntu-latest
+    needs: changes
+    if: ${{ needs.changes.outputs.identity == 'true' || needs.changes.outputs.libraries == 'true' }}
+    services:
+      postgres:
+        image: postgres:15-alpine
+        env:
+          POSTGRES_USER: test
+          POSTGRES_PASSWORD: test
+          POSTGRES_DB: identity_test
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+          cache-dependency-path: services/identity-service/package-lock.json
+      - name: Install dependencies
+        working-directory: services/identity-service
+        run: npm ci --ignore-scripts || npm install
+      - name: Lint
+        working-directory: services/identity-service
+        run: npm run lint --if-present
+      - name: Build
+        working-directory: services/identity-service
+        run: npm run build
+      - name: Test
+        working-directory: services/identity-service
+        run: npm test
+        env:
+          DATABASE_URL: postgres://test:test@localhost:5432/identity_test
+          JWT_SECRET: test-secret-key-for-ci
+          JWT_EXPIRY: 1h
+
+  # Wallet Service
+  wallet-service:
+    runs-on: ubuntu-latest
+    needs: changes
+    if: ${{ needs.changes.outputs.wallet == 'true' || needs.changes.outputs.libraries == 'true' }}
+    services:
+      postgres:
+        image: postgres:15-alpine
+        env:
+          POSTGRES_USER: test
+          POSTGRES_PASSWORD: test
+          POSTGRES_DB: wallet_test
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+      redis:
+        image: redis:7-alpine
+        ports:
+          - 6379:6379
+        options: >-
+          --health-cmd "redis-cli ping"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+          cache-dependency-path: services/wallet-service/package-lock.json
+      - name: Install dependencies
+        working-directory: services/wallet-service
+        run: npm ci --ignore-scripts || npm install
+      - name: Lint
+        working-directory: services/wallet-service
+        run: npm run lint --if-present
+      - name: Build
+        working-directory: services/wallet-service
+        run: npm run build
+      - name: Test
+        working-directory: services/wallet-service
+        run: npm test
+        env:
+          DATABASE_URL: postgres://test:test@localhost:5432/wallet_test
+          REDIS_URL: redis://localhost:6379
+
+  # Admin Service
+  admin-service:
+    runs-on: ubuntu-latest
+    needs: changes
+    if: ${{ needs.changes.outputs.admin == 'true' || needs.changes.outputs.libraries == 'true' }}
+    services:
+      postgres:
+        image: postgres:15-alpine
+        env:
+          POSTGRES_USER: test
+          POSTGRES_PASSWORD: test
+          POSTGRES_DB: admin_test
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+          cache-dependency-path: services/admin-service/package-lock.json
+      - name: Install dependencies
+        working-directory: services/admin-service
+        run: npm ci --ignore-scripts || npm install
+      - name: Lint
+        working-directory: services/admin-service
+        run: npm run lint --if-present
+      - name: Build
+        working-directory: services/admin-service
+        run: npm run build --if-present
+      - name: Test
+        working-directory: services/admin-service
+        run: npm test --if-present
+
+  # Transaction Service
+  transaction-service:
+    runs-on: ubuntu-latest
+    needs: changes
+    if: ${{ needs.changes.outputs.transaction == 'true' || needs.changes.outputs.libraries == 'true' }}
+    services:
+      postgres:
+        image: postgres:15-alpine
+        env:
+          POSTGRES_USER: test
+          POSTGRES_PASSWORD: test
+          POSTGRES_DB: transaction_test
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+      redis:
+        image: redis:7-alpine
+        ports:
+          - 6379:6379
+        options: >-
+          --health-cmd "redis-cli ping"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+          cache-dependency-path: services/transaction-service/package-lock.json
+      - name: Install dependencies
+        working-directory: services/transaction-service
+        run: npm ci --ignore-scripts || npm install
+      - name: Lint
+        working-directory: services/transaction-service
+        run: npm run lint --if-present
+      - name: Build
+        working-directory: services/transaction-service
+        run: npm run build
+      - name: Test
+        working-directory: services/transaction-service
+        run: npm test
+        env:
+          DATABASE_URL: postgres://test:test@localhost:5432/transaction_test
+          REDIS_URL: redis://localhost:6379
+
+  # Docker build validation
+  docker-build:
+    runs-on: ubuntu-latest
+    needs: [changes]
+    if: ${{ github.event_name == 'pull_request' }}
+    strategy:
+      matrix:
+        service: [identity-service, wallet-service, transaction-service]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+      - name: Build Docker image
+        uses: docker/build-push-action@v5
+        with:
+          context: ./services/${{ matrix.service }}
+          push: false
+          tags: ${{ matrix.service }}:test
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+  # Gateway configuration validation
+  gateway-validation:
+    runs-on: ubuntu-latest
+    needs: changes
+    if: ${{ needs.changes.outputs.gateway == 'true' }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate Kong configuration
+        run: |
+          docker run --rm -v $(pwd)/gateway:/kong kong:3.5-alpine kong config parse /kong/kong.yml
+
+  # Final status check for branch protection
+  ci-status:
+    runs-on: ubuntu-latest
+    needs: [identity-service, wallet-service, admin-service, transaction-service, libraries, gateway-validation, docker-build]
+    if: always()
+    steps:
+      - name: Check CI Status
+        run: |
+          if [[ "${{ needs.identity-service.result }}" == "failure" ]] || \
+             [[ "${{ needs.wallet-service.result }}" == "failure" ]] || \
+             [[ "${{ needs.admin-service.result }}" == "failure" ]] || \
+             [[ "${{ needs.transaction-service.result }}" == "failure" ]] || \
+             [[ "${{ needs.libraries.result }}" == "failure" ]] || \
+             [[ "${{ needs.gateway-validation.result }}" == "failure" ]] || \
+             [[ "${{ needs.docker-build.result }}" == "failure" ]]; then
+            echo "One or more jobs failed"
+            exit 1
+          fi
+          echo "All CI checks passed!"

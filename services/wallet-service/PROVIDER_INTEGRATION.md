@@ -34,10 +34,22 @@ The Wallet Service uses a **Provider Abstraction Pattern** to support multiple w
 
 ## Currently Supported Providers
 
-1. **Providus Bank (Xpress Wallet)** ✅ Implemented
-   - Base URL: https://api.xpresswallet.com
+1. **Providus Bank (Xpress Wallet)** ✅ Fully Implemented
+   - Base URL: https://api.xpresswallet.com (sandbox/production)
    - Authentication: X-Access-Token / X-Refresh-Token
+   - Endpoint: `/auth/login` (POST), `/auth/refresh/token` (POST)
+   - **Key Features:**
+     - Combined customer+wallet creation (`POST /wallet`)
+     - Customer-to-customer wallet transfers (uses customerId, not walletId)
+     - Bank transfers use `sortCode` (not `bankCode`)
+     - Bank validation via `GET /transfer/account/details`
+     - Merchant wallet operations
    - [Documentation](https://developer.providusbank.com/xpress-wallet-api)
+   - **Important Notes:**
+     - Transfers require `customerId`, not `walletId`
+     - Bank operations use `sortCode` (same as bankCode, different name)
+     - BVN and dateOfBirth required for wallet creation
+     - Combined `createCustomerWallet()` is more efficient than separate calls
 
 2. **Flutterwave** ⏳ Planned
 3. **Paystack** ⏳ Planned
@@ -165,15 +177,19 @@ All providers **must** implement these methods:
 | `getBankList()` | Get supported banks | `Promise<Bank[]>` |
 | `validateBankAccount()` | Validate bank account | `Promise<BankAccountValidation>` |
 
-### Optional Methods
+### Optional Methods (Provider-Specific)
 
-| Method | Description | Returns |
-|--------|-------------|---------|
-| `createVirtualCard()` | Create virtual card | `Promise<VirtualCard>` |
-| `getVirtualCard()` | Get card details | `Promise<VirtualCard>` |
-| `fundVirtualCard()` | Fund card balance | `Promise<CardFundingResult>` |
-| `verifyWebhookSignature()` | Verify webhook signature | `boolean` |
-| `handleWebhook()` | Process webhook payload | `Promise<WebhookHandlingResult>` |
+| Method | Description | Returns | Provider Support |
+|--------|-------------|---------|------------------|
+| `createCustomerWallet()` | Create customer + wallet in one call | `Promise<{customer: Customer, wallet: Wallet}>` | ✅ Providus |
+| `findCustomerByPhone()` | Quick lookup by phone number | `Promise<Customer \| null>` | ✅ Providus |
+| `getAllWallets()` | Get all customer wallets (merchant op) | `Promise<Wallet[]>` | ✅ Providus |
+| `getMerchantWallet()` | Get merchant's own wallet | `Promise<Wallet>` | ✅ Providus |
+| `createVirtualCard()` | Create virtual card | `Promise<VirtualCard>` | ⏳ Planned |
+| `getVirtualCard()` | Get card details | `Promise<VirtualCard>` | ⏳ Planned |
+| `fundVirtualCard()` | Fund card balance | `Promise<CardFundingResult>` | ⏳ Planned |
+| `verifyWebhookSignature()` | Verify webhook signature | `boolean` | ⏳ Planned |
+| `handleWebhook()` | Process webhook payload | `Promise<WebhookHandlingResult>` | ⏳ Planned |
 
 ## BaseProvider Utilities
 
@@ -327,14 +343,26 @@ private mapCustomerResponse(data: any): Customer {
 }
 ```
 
-### 4. Logging
+### 4. Provider-Specific Field Mapping
+
+Some providers use different field names. Always map to standard format:
+
+```typescript
+// Example: Providus uses "sortCode" but we accept "bankCode"
+const sortCode = data.sortCode || data.bankCode; // Map for Providus
+
+// Example: Providus requires customerId for transfers, not walletId
+// WalletService handles this lookup automatically
+```
+
+### 5. Logging
 
 ```typescript
 logger.info('[Flutterwave] Operation successful', { customerId });
 logger.error('[Flutterwave] Operation failed:', error);
 ```
 
-### 5. Configuration Validation
+### 6. Configuration Validation
 
 ```typescript
 constructor(config: ProviderConfig) {
@@ -343,9 +371,74 @@ constructor(config: ProviderConfig) {
 }
 ```
 
+### 7. Customer ID Lookups
+
+For providers that require customerId (like Providus), WalletService automatically:
+- Looks up customerId from walletId
+- Passes both walletId and customerId to provider
+- Handles the mapping transparently
+
 ## Example: Complete Provider Implementation
 
 See `src/providers/providus/ProvidusProvider.ts` for a complete reference implementation.
+
+### Providus-Specific Implementation Notes
+
+1. **Authentication Endpoints:**
+   - Login: `POST /auth/login` (with clientId/clientSecret)
+   - Refresh: `POST /auth/refresh/token` (with X-Refresh-Token header)
+
+2. **Customer + Wallet Creation:**
+   ```typescript
+   // Recommended: Combined endpoint (more efficient)
+   await provider.createCustomerWallet({
+     bvn: "22181029322",
+     firstName: "First",
+     lastName: "User",
+     dateOfBirth: "1992-05-16", // Required, YYYY-MM-DD format
+     phoneNumber: "08020245368",
+     email: "user@example.com",
+     address: "No 10, Street Name",
+     metadata: {}
+   });
+   ```
+
+3. **Transfers:**
+   ```typescript
+   // Wallet-to-wallet: Uses customerId (not walletId)
+   await provider.initiateTransfer({
+     sourceWalletId: "wallet-id",
+     sourceCustomerId: "customer-id", // Required!
+     destinationType: "wallet",
+     destinationCustomerId: "dest-customer-id", // Required!
+     amount: 200,
+     currency: "NGN"
+   });
+
+   // Bank transfer: Uses sortCode (not bankCode)
+   await provider.initiateTransfer({
+     sourceWalletId: "wallet-id",
+     sourceCustomerId: "customer-id", // Required!
+     destinationType: "bank",
+     sortCode: "000013", // Providus uses sortCode
+     accountNumber: "0167421242",
+     accountName: "Account Name",
+     amount: 100,
+     currency: "NGN"
+   });
+   ```
+
+4. **Bank Operations:**
+   ```typescript
+   // Get bank list: GET /transfer/banks (not /banks)
+   const banks = await provider.getBankList();
+
+   // Validate account: GET /transfer/account/details (not POST /banks/validate-account)
+   const validation = await provider.validateBankAccount(
+     "0167421242", // accountNumber
+     "000013"      // bankCode (used as sortCode)
+   );
+   ```
 
 ## Webhooks
 

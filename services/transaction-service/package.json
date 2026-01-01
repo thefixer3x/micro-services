@@ -1,7 +1,7 @@
 {
-  "name": "wallet-service",
+  "name": "transaction-service",
   "version": "1.0.0",
-  "description": "Multi-provider wallet management service supporting Providus Bank, Flutterwave, and other providers",
+  "description": "Payment processing, money transfers, and settlement operations service",
   "main": "dist/index.js",
   "scripts": {
     "start": "node dist/index.js",
@@ -16,10 +16,10 @@
     "lint:fix": "eslint src/**/*.ts --fix"
   },
   "keywords": [
-    "wallet",
+    "transactions",
     "payments",
-    "multi-provider",
-    "providus",
+    "transfers",
+    "settlements",
     "microservice",
     "nodejs",
     "express"
@@ -38,6 +38,7 @@
     "winston": "^3.10.0",
     "uuid": "^9.0.1",
     "ioredis": "^5.3.2",
+    "kafkajs": "^2.2.4",
     "prom-client": "^15.1.0"
   },
   "devDependencies": {

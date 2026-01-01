@@ -21,6 +21,9 @@ export class WalletService {
     lastName: string;
     email: string;
     phoneNumber: string;
+    dateOfBirth?: string;
+    bvn?: string;
+    address?: string;
     provider?: string;
   }) {
     const providerName = data.provider || process.env.DEFAULT_WALLET_PROVIDER || 'providus';
@@ -36,6 +39,9 @@ export class WalletService {
         lastName: data.lastName,
         email: data.email,
         phoneNumber: data.phoneNumber,
+        dateOfBirth: data.dateOfBirth,
+        bvn: data.bvn,
+        address: data.address,
       });
 
       // Store customer data locally
@@ -64,6 +70,124 @@ export class WalletService {
       return result.rows[0];
     } catch (error) {
       logger.error('Failed to create customer:', error);
+      throw error;
+    }
+  }
+
+  /**
+   * Create customer and wallet in a single call (more efficient for Providus)
+   * This uses the combined endpoint which is faster than separate calls
+   */
+  async createCustomerWallet(userId: string, data: {
+    bvn: string;
+    firstName: string;
+    lastName: string;
+    dateOfBirth: string; // YYYY-MM-DD format
+    phoneNumber: string;
+    email: string;
+    address?: string;
+    currency?: string;
+    provider?: string;
+  }) {
+    const providerName = data.provider || process.env.DEFAULT_WALLET_PROVIDER || 'providus';
+    const provider = ProviderFactory.getProvider(providerName);
+
+    try {
+      // Initialize provider if needed
+      await provider.initialize();
+
+      // Check if provider supports combined creation
+      if (!provider.createCustomerWallet) {
+        // Fallback to separate calls
+        const customer = await this.createCustomer(userId, {
+          firstName: data.firstName,
+          lastName: data.lastName,
+          email: data.email,
+          phoneNumber: data.phoneNumber,
+          dateOfBirth: data.dateOfBirth,
+          bvn: data.bvn,
+          address: data.address,
+          provider: providerName,
+        });
+
+        const wallet = await this.createWallet(customer.id, {
+          currency: data.currency,
+          provider: providerName,
+        });
+
+        return { customer, wallet };
+      }
+
+      // Use combined endpoint (more efficient)
+      const result = await provider.createCustomerWallet({
+        bvn: data.bvn,
+        firstName: data.firstName,
+        lastName: data.lastName,
+        dateOfBirth: data.dateOfBirth,
+        phoneNumber: data.phoneNumber,
+        email: data.email,
+        address: data.address,
+      });
+
+      // Store customer locally
+      const customerResult = await this.db.query(
+        `INSERT INTO customers (
+          provider, provider_customer_id, user_id, first_name, last_name,
+          email, phone_number, kyc_status, status, metadata
+        ) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
+        RETURNING *`,
+        [
+          providerName,
+          result.customer.providerId,
+          userId,
+          result.customer.firstName,
+          result.customer.lastName,
+          result.customer.email,
+          result.customer.phoneNumber,
+          result.customer.kycStatus || 'pending',
+          result.customer.status || 'active',
+          JSON.stringify(result.customer.metadata || {}),
+        ]
+      );
+
+      const customer = customerResult.rows[0];
+
+      // Store wallet locally
+      const walletResult = await this.db.query(
+        `INSERT INTO wallets (
+          provider, provider_wallet_id, customer_id, account_number, account_name,
+          currency, wallet_type, status, available_balance, ledger_balance,
+          last_balance_update, metadata
+        ) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12)
+        RETURNING *`,
+        [
+          providerName,
+          result.wallet.providerId,
+          customer.id,
+          result.wallet.accountNumber,
+          result.wallet.accountName,
+          result.wallet.currency,
+          result.wallet.walletType,
+          result.wallet.status,
+          result.wallet.availableBalance,
+          result.wallet.ledgerBalance,
+          new Date(),
+          JSON.stringify(result.wallet.metadata || {}),
+        ]
+      );
+
+      logger.info(`Customer wallet created:`, {
+        userId,
+        customerId: customer.id,
+        walletId: walletResult.rows[0].id,
+      });
+
+      return {
+        customer,
+        wallet: walletResult.rows[0],
+      };
+    } catch (error) {
+      logger.error('Failed to create customer wallet:', error);
       throw error;
     }
   }
@@ -213,11 +337,13 @@ export class WalletService {
   async initiateTransfer(walletId: string, data: {
     destinationType: 'wallet' | 'bank' | 'card';
     destinationId: string;
+    destinationWalletId?: string; // For wallet-to-wallet transfers
     amount: number;
     currency?: string;
     narration?: string;
     reference?: string;
     bankCode?: string;
+    sortCode?: string; // Providus uses sortCode (same as bankCode)
     accountNumber?: string;
     accountName?: string;
   }) {
@@ -231,20 +357,63 @@ export class WalletService {
       throw new Error('Wallet is not active');
     }
 
+    // Get customer to retrieve customerId (required by Providus API)
+    const customer = await this.db.query(
+      'SELECT * FROM customers WHERE id = $1',
+      [wallet.customer_id]
+    );
+
+    if (customer.rows.length === 0) {
+      throw new Error('Customer not found for wallet');
+    }
+
+    const customerData = customer.rows[0];
     const provider = ProviderFactory.getProvider(wallet.provider);
     const reference = data.reference || `TXN-${uuidv4()}`;
 
     try {
+      // For wallet-to-wallet transfers, get destination customer
+      // destinationId can be either walletId (local) or provider walletId
+      let destinationCustomerId: string | undefined;
+      if (data.destinationType === 'wallet') {
+        // Try to find wallet by local ID first
+        let destWallet = await this.getWallet(data.destinationId);
+        
+        // If not found locally, it might be a provider wallet ID
+        // In that case, we'd need to look it up from provider
+        // For now, we'll require destinationWalletId to be passed for clarity
+        if (!destWallet && data.destinationWalletId) {
+          destWallet = await this.getWallet(data.destinationWalletId);
+        }
+        
+        if (destWallet) {
+          const destCustomer = await this.db.query(
+            'SELECT * FROM customers WHERE id = $1',
+            [destWallet.customer_id]
+          );
+          if (destCustomer.rows.length > 0) {
+            destinationCustomerId = destCustomer.rows[0].provider_customer_id;
+          }
+        } else {
+          // If wallet not found locally, destinationId might be provider wallet ID
+          // We'll need to get customer from provider (future enhancement)
+          logger.warn('Destination wallet not found locally, may need provider lookup');
+        }
+      }
+
       // Initiate transfer with provider
       const providerTransaction = await provider.initiateTransfer({
         sourceWalletId: wallet.provider_wallet_id,
+        sourceCustomerId: customerData.provider_customer_id, // Required for Providus
         destinationType: data.destinationType,
         destinationId: data.destinationId,
+        destinationCustomerId: destinationCustomerId, // For wallet-to-wallet transfers
         amount: data.amount,
         currency: data.currency || wallet.currency,
         narration: data.narration,
         reference,
         bankCode: data.bankCode,
+        sortCode: data.sortCode || data.bankCode, // Map bankCode to sortCode for Providus
         accountNumber: data.accountNumber,
         accountName: data.accountName,
       });

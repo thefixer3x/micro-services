@@ -50,6 +50,17 @@ app.get('/health', (req, res) => {
   });
 });
 
+// Prometheus metrics endpoint
+import { register } from './utils/metrics';
+app.get('/metrics', async (req, res) => {
+  try {
+    res.set('Content-Type', register.contentType);
+    res.end(await register.metrics());
+  } catch (error) {
+    res.status(500).end();
+  }
+});
+
 // API routes
 app.use('/api/v1', walletRoutes);
 
