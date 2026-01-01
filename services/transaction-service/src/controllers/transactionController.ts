@@ -1,6 +1,7 @@
 import { Router, Response } from 'express';
 import { body, param, query, validationResult } from 'express-validator';
 import transactionService from '../services/transactionService';
+import feeService from '../services/feeService';
 import { AuthenticatedRequest, authMiddleware, requireRole } from '../middleware/auth';
 import { TransactionType } from '../types';
 import logger from '../utils/logger';
@@ -242,6 +243,256 @@ router.get(
       res.status(500).json({
         success: false,
         error: 'Failed to retrieve statistics'
+      });
+    }
+  }
+);
+
+// ========================================================================
+// Statement Generation
+// ========================================================================
+
+router.get(
+  '/statements/:walletId',
+  authMiddleware,
+  [
+    param('walletId').isUUID().withMessage('Valid wallet ID required'),
+    query('startDate').isISO8601().withMessage('Valid start date required'),
+    query('endDate').isISO8601().withMessage('Valid end date required'),
+    query('format').optional().isIn(['json', 'csv']).withMessage('Format must be json or csv')
+  ],
+  validate,
+  async (req: AuthenticatedRequest, res: Response) => {
+    try {
+      const { walletId } = req.params;
+      const { startDate, endDate, format = 'json' } = req.query;
+
+      const statement = await transactionService.generateStatement(
+        walletId,
+        new Date(startDate as string),
+        new Date(endDate as string)
+      );
+
+      if (format === 'csv') {
+        const csv = generateStatementCsv(statement);
+        res.setHeader('Content-Type', 'text/csv');
+        res.setHeader('Content-Disposition', `attachment; filename=statement_${walletId}_${startDate}_${endDate}.csv`);
+        res.send(csv);
+        return;
+      }
+
+      res.json({
+        success: true,
+        data: statement
+      });
+    } catch (error) {
+      logger.error('Generate statement failed', { error });
+      res.status(500).json({
+        success: false,
+        error: 'Failed to generate statement'
+      });
+    }
+  }
+);
+
+// Helper function to generate CSV
+function generateStatementCsv(statement: any): string {
+  const headers = ['Date', 'Reference', 'Type', 'Description', 'Debit', 'Credit', 'Balance'];
+  const rows = statement.transactions.map((txn: any) => [
+    new Date(txn.created_at).toISOString(),
+    txn.reference,
+    txn.transaction_type,
+    txn.narration || '',
+    txn.direction === 'outbound' ? txn.amount : '',
+    txn.direction === 'inbound' ? txn.amount : '',
+    txn.running_balance || ''
+  ]);
+
+  return [
+    `Statement for Wallet: ${statement.walletId}`,
+    `Period: ${statement.startDate} to ${statement.endDate}`,
+    `Opening Balance: ${statement.openingBalance}`,
+    `Closing Balance: ${statement.closingBalance}`,
+    '',
+    headers.join(','),
+    ...rows.map((row: any[]) => row.join(','))
+  ].join('\n');
+}
+
+// ========================================================================
+// Fee Configuration Admin Endpoints
+// ========================================================================
+
+// List all fee configurations
+router.get(
+  '/admin/fees',
+  authMiddleware,
+  [query('includeInactive').optional().isBoolean().toBoolean()],
+  validate,
+  async (req: AuthenticatedRequest, res: Response) => {
+    try {
+      const includeInactive = req.query.includeInactive === true;
+      const configs = await feeService.listFeeConfigurations(includeInactive);
+
+      res.json({
+        success: true,
+        data: configs
+      });
+    } catch (error) {
+      logger.error('List fee configurations failed', { error });
+      res.status(500).json({
+        success: false,
+        error: 'Failed to retrieve fee configurations'
+      });
+    }
+  }
+);
+
+// Get single fee configuration
+router.get(
+  '/admin/fees/:id',
+  authMiddleware,
+  [param('id').isUUID().withMessage('Valid fee configuration ID required')],
+  validate,
+  async (req: AuthenticatedRequest, res: Response) => {
+    try {
+      const config = await feeService.getFeeConfiguration(req.params.id);
+
+      if (!config) {
+        res.status(404).json({
+          success: false,
+          error: 'Fee configuration not found'
+        });
+        return;
+      }
+
+      res.json({
+        success: true,
+        data: config
+      });
+    } catch (error) {
+      logger.error('Get fee configuration failed', { error });
+      res.status(500).json({
+        success: false,
+        error: 'Failed to retrieve fee configuration'
+      });
+    }
+  }
+);
+
+// Create fee configuration
+router.post(
+  '/admin/fees',
+  authMiddleware,
+  [
+    body('fee_type').isString().notEmpty().withMessage('Fee type required'),
+    body('transaction_type').isString().notEmpty().withMessage('Transaction type required'),
+    body('percentage_fee').isFloat({ min: 0, max: 1 }).withMessage('Percentage fee must be between 0 and 1'),
+    body('minimum_fee').isFloat({ min: 0 }).withMessage('Minimum fee must be >= 0'),
+    body('maximum_fee').optional().isFloat({ min: 0 }),
+    body('flat_fee').optional().isFloat({ min: 0 }),
+    body('currency').optional().isString().isLength({ min: 3, max: 3 })
+  ],
+  validate,
+  async (req: AuthenticatedRequest, res: Response) => {
+    try {
+      const config = await feeService.createFeeConfiguration({
+        fee_type: req.body.fee_type,
+        transaction_type: req.body.transaction_type,
+        percentage_fee: req.body.percentage_fee,
+        minimum_fee: req.body.minimum_fee,
+        maximum_fee: req.body.maximum_fee,
+        flat_fee: req.body.flat_fee,
+        currency: req.body.currency,
+        created_by: req.user?.userId
+      });
+
+      res.status(201).json({
+        success: true,
+        data: config
+      });
+    } catch (error) {
+      logger.error('Create fee configuration failed', { error });
+      res.status(500).json({
+        success: false,
+        error: 'Failed to create fee configuration'
+      });
+    }
+  }
+);
+
+// Update fee configuration
+router.put(
+  '/admin/fees/:id',
+  authMiddleware,
+  [
+    param('id').isUUID().withMessage('Valid fee configuration ID required'),
+    body('percentage_fee').optional().isFloat({ min: 0, max: 1 }),
+    body('minimum_fee').optional().isFloat({ min: 0 }),
+    body('maximum_fee').optional().isFloat({ min: 0 }),
+    body('flat_fee').optional().isFloat({ min: 0 }),
+    body('is_active').optional().isBoolean()
+  ],
+  validate,
+  async (req: AuthenticatedRequest, res: Response) => {
+    try {
+      const config = await feeService.updateFeeConfiguration(req.params.id, {
+        percentage_fee: req.body.percentage_fee,
+        minimum_fee: req.body.minimum_fee,
+        maximum_fee: req.body.maximum_fee,
+        flat_fee: req.body.flat_fee,
+        is_active: req.body.is_active
+      });
+
+      if (!config) {
+        res.status(404).json({
+          success: false,
+          error: 'Fee configuration not found'
+        });
+        return;
+      }
+
+      res.json({
+        success: true,
+        data: config
+      });
+    } catch (error) {
+      logger.error('Update fee configuration failed', { error });
+      res.status(500).json({
+        success: false,
+        error: 'Failed to update fee configuration'
+      });
+    }
+  }
+);
+
+// Deactivate fee configuration
+router.delete(
+  '/admin/fees/:id',
+  authMiddleware,
+  [param('id').isUUID().withMessage('Valid fee configuration ID required')],
+  validate,
+  async (req: AuthenticatedRequest, res: Response) => {
+    try {
+      const success = await feeService.deactivateFeeConfiguration(req.params.id);
+
+      if (!success) {
+        res.status(404).json({
+          success: false,
+          error: 'Fee configuration not found'
+        });
+        return;
+      }
+
+      res.json({
+        success: true,
+        message: 'Fee configuration deactivated'
+      });
+    } catch (error) {
+      logger.error('Deactivate fee configuration failed', { error });
+      res.status(500).json({
+        success: false,
+        error: 'Failed to deactivate fee configuration'
       });
     }
   }

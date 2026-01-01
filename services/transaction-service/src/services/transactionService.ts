@@ -162,6 +162,79 @@ export class TransactionService {
     return transactionRepository.getTransactionStats(walletId);
   }
 
+  async generateStatement(
+    walletId: string,
+    startDate: Date,
+    endDate: Date
+  ): Promise<{
+    walletId: string;
+    startDate: string;
+    endDate: string;
+    openingBalance: number;
+    closingBalance: number;
+    totalCredits: number;
+    totalDebits: number;
+    transactionCount: number;
+    transactions: Transaction[];
+  }> {
+    logger.info('Generating statement', { walletId, startDate, endDate });
+
+    // Get transactions for the period
+    const transactions = await transactionRepository.findByWalletIdAndDateRange(
+      walletId,
+      startDate,
+      endDate
+    );
+
+    // Calculate totals
+    let totalCredits = 0;
+    let totalDebits = 0;
+
+    for (const txn of transactions) {
+      if (txn.direction === 'inbound') {
+        totalCredits += Number(txn.amount);
+      } else {
+        totalDebits += Number(txn.amount) + Number(txn.feeAmount || 0);
+      }
+    }
+
+    // Get opening balance (balance at start of period)
+    const openingBalance = await transactionRepository.getBalanceAtDate(walletId, startDate);
+
+    // Calculate closing balance
+    const closingBalance = openingBalance + totalCredits - totalDebits;
+
+    // Add running balance to transactions
+    let runningBalance = openingBalance;
+    const transactionsWithBalance = transactions.map(txn => {
+      if (txn.direction === 'inbound') {
+        runningBalance += Number(txn.amount);
+      } else {
+        runningBalance -= Number(txn.amount) + Number(txn.feeAmount || 0);
+      }
+      return { ...txn, running_balance: runningBalance };
+    });
+
+    logger.info('Statement generated', {
+      walletId,
+      transactionCount: transactions.length,
+      totalCredits,
+      totalDebits
+    });
+
+    return {
+      walletId,
+      startDate: startDate.toISOString().split('T')[0],
+      endDate: endDate.toISOString().split('T')[0],
+      openingBalance,
+      closingBalance,
+      totalCredits,
+      totalDebits,
+      transactionCount: transactions.length,
+      transactions: transactionsWithBalance
+    };
+  }
+
   private async processTransactionAsync(transactionId: string): Promise<void> {
     try {
       // Update to processing
