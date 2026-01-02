@@ -235,6 +235,51 @@ export class TransactionRepository {
     };
   }
 
+  async findByWalletIdAndDateRange(
+    walletId: string,
+    startDate: Date,
+    endDate: Date
+  ): Promise<Transaction[]> {
+    const rows = await query<Transaction>(
+      `SELECT *,
+        CASE
+          WHEN destination_wallet_id = $1 THEN 'inbound'
+          ELSE 'outbound'
+        END as direction
+       FROM transactions
+       WHERE (source_wallet_id = $1 OR destination_wallet_id = $1)
+         AND created_at >= $2
+         AND created_at <= $3
+         AND status = 'completed'
+       ORDER BY created_at ASC`,
+      [walletId, startDate, endDate]
+    );
+
+    return rows.map(row => ({
+      ...this.mapToTransaction(row),
+      direction: row.direction as 'inbound' | 'outbound'
+    }));
+  }
+
+  async getBalanceAtDate(walletId: string, date: Date): Promise<number> {
+    // Calculate balance based on all completed transactions before the given date
+    const result = await query<{ balance: string }>(
+      `SELECT
+        COALESCE(
+          SUM(CASE WHEN destination_wallet_id = $1 THEN amount ELSE 0 END) -
+          SUM(CASE WHEN source_wallet_id = $1 THEN amount + fee_amount ELSE 0 END),
+          0
+        ) as balance
+       FROM transactions
+       WHERE (source_wallet_id = $1 OR destination_wallet_id = $1)
+         AND created_at < $2
+         AND status = 'completed'`,
+      [walletId, date]
+    );
+
+    return parseFloat(result[0]?.balance || '0');
+  }
+
   private mapToTransaction(row: Record<string, unknown>): Transaction {
     return {
       id: row.id as string,
