@@ -2,6 +2,7 @@ import { Router, Response } from 'express';
 import { body, param, query, validationResult } from 'express-validator';
 import transactionService from '../services/transactionService';
 import feeService from '../services/feeService';
+import alertService from '../services/alertService';
 import { AuthenticatedRequest, authMiddleware, requireRole } from '../middleware/auth';
 import { TransactionType } from '../types';
 import logger from '../utils/logger';
@@ -493,6 +494,181 @@ router.delete(
       res.status(500).json({
         success: false,
         error: 'Failed to deactivate fee configuration'
+      });
+    }
+  }
+);
+
+// ========================================================================
+// Transaction Alerts Endpoints
+// ========================================================================
+
+// Get alerts for a wallet
+router.get(
+  '/alerts/:walletId',
+  authMiddleware,
+  [
+    param('walletId').isUUID().withMessage('Valid wallet ID required'),
+    query('includeAcknowledged').optional().isBoolean().toBoolean(),
+    query('limit').optional().isInt({ min: 1, max: 100 }).toInt()
+  ],
+  validate,
+  async (req: AuthenticatedRequest, res: Response) => {
+    try {
+      const { walletId } = req.params;
+      const includeAcknowledged = req.query.includeAcknowledged === true;
+      const limit = parseInt(req.query.limit as string) || 50;
+
+      const alerts = await alertService.getAlerts(walletId, { includeAcknowledged, limit });
+      const unacknowledgedCount = await alertService.getUnacknowledgedCount(walletId);
+
+      res.json({
+        success: true,
+        data: {
+          alerts,
+          unacknowledged_count: unacknowledgedCount
+        }
+      });
+    } catch (error) {
+      logger.error('Get alerts failed', { error });
+      res.status(500).json({
+        success: false,
+        error: 'Failed to retrieve alerts'
+      });
+    }
+  }
+);
+
+// Acknowledge an alert
+router.post(
+  '/alerts/:alertId/acknowledge',
+  authMiddleware,
+  [param('alertId').isUUID().withMessage('Valid alert ID required')],
+  validate,
+  async (req: AuthenticatedRequest, res: Response) => {
+    try {
+      const { alertId } = req.params;
+      const acknowledgedBy = req.user?.userId || 'system';
+
+      const success = await alertService.acknowledgeAlert(alertId, acknowledgedBy);
+
+      if (!success) {
+        res.status(404).json({
+          success: false,
+          error: 'Alert not found'
+        });
+        return;
+      }
+
+      res.json({
+        success: true,
+        message: 'Alert acknowledged'
+      });
+    } catch (error) {
+      logger.error('Acknowledge alert failed', { error });
+      res.status(500).json({
+        success: false,
+        error: 'Failed to acknowledge alert'
+      });
+    }
+  }
+);
+
+// Get alert configurations for a wallet
+router.get(
+  '/alerts/config/:walletId',
+  authMiddleware,
+  [param('walletId').isUUID().withMessage('Valid wallet ID required')],
+  validate,
+  async (req: AuthenticatedRequest, res: Response) => {
+    try {
+      const { walletId } = req.params;
+      const configs = await alertService.getWalletAlertConfigs(walletId);
+      const defaultThresholds = alertService.getDefaultThresholds('basic');
+
+      res.json({
+        success: true,
+        data: {
+          wallet_configs: configs,
+          default_thresholds: defaultThresholds
+        }
+      });
+    } catch (error) {
+      logger.error('Get alert config failed', { error });
+      res.status(500).json({
+        success: false,
+        error: 'Failed to retrieve alert configuration'
+      });
+    }
+  }
+);
+
+// Set alert configuration for a wallet
+router.put(
+  '/alerts/config/:walletId',
+  authMiddleware,
+  [
+    param('walletId').isUUID().withMessage('Valid wallet ID required'),
+    body('alert_type').isString().isIn(['high_value', 'daily_limit', 'international', 'new_recipient']),
+    body('threshold_amount').optional().isFloat({ min: 0 }),
+    body('daily_limit').optional().isFloat({ min: 0 }),
+    body('is_enabled').optional().isBoolean(),
+    body('notification_channels').optional().isArray()
+  ],
+  validate,
+  async (req: AuthenticatedRequest, res: Response) => {
+    try {
+      const { walletId } = req.params;
+      const { alert_type, threshold_amount, daily_limit, is_enabled, notification_channels } = req.body;
+
+      const config = await alertService.setAlertConfig(walletId, alert_type, {
+        thresholdAmount: threshold_amount,
+        dailyLimit: daily_limit,
+        isEnabled: is_enabled,
+        notificationChannels: notification_channels
+      });
+
+      res.json({
+        success: true,
+        data: config
+      });
+    } catch (error) {
+      logger.error('Set alert config failed', { error });
+      res.status(500).json({
+        success: false,
+        error: 'Failed to update alert configuration'
+      });
+    }
+  }
+);
+
+// Check if 2FA is required for a transaction amount
+router.post(
+  '/alerts/check-2fa',
+  authMiddleware,
+  [
+    body('amount').isFloat({ min: 0 }).withMessage('Amount required'),
+    body('wallet_tier').optional().isString()
+  ],
+  validate,
+  async (req: AuthenticatedRequest, res: Response) => {
+    try {
+      const { amount, wallet_tier = 'basic' } = req.body;
+      const requires2FA = await alertService.requires2FA(amount, wallet_tier);
+
+      res.json({
+        success: true,
+        data: {
+          requires_2fa: requires2FA,
+          amount,
+          wallet_tier
+        }
+      });
+    } catch (error) {
+      logger.error('Check 2FA requirement failed', { error });
+      res.status(500).json({
+        success: false,
+        error: 'Failed to check 2FA requirement'
       });
     }
   }

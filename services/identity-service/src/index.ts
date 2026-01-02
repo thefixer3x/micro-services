@@ -16,6 +16,7 @@ import { userRoutes } from './controllers/userController';
 import { kycRoutes } from './controllers/kycController';
 import { biometricRoutes } from './controllers/biometricController';
 import pinRoutes from './controllers/pinController';
+import securityQuestionsRoutes from './controllers/securityQuestionsController';
 import { initializeDatabase } from './database/connection';
 import { initializeI18n } from './utils/i18n';
 
@@ -88,6 +89,7 @@ app.use('/api/v1/users', userRoutes);
 app.use('/api/v1/kyc', kycRoutes);
 app.use('/api/v1/biometric', biometricRoutes);
 app.use('/api/v1/pin', pinRoutes);
+app.use('/api/v1/security-questions', securityQuestionsRoutes);
 
 // 404 handler
 app.use('*', (req, res) => {
