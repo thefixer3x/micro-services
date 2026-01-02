@@ -41,6 +41,24 @@ router.post(
       const userId = req.user?.user_id;
       const { pin } = req.body;
 
+      // Check if user is locked out before allowing PIN set/reset
+      const lockCheck = await pool.query(
+        'SELECT pin_locked_until FROM users WHERE id = $1',
+        [userId]
+      );
+
+      if (lockCheck.rows.length > 0 && lockCheck.rows[0].pin_locked_until) {
+        const lockedUntil = new Date(lockCheck.rows[0].pin_locked_until);
+        if (lockedUntil > new Date()) {
+          const remainingMinutes = Math.ceil((lockedUntil.getTime() - Date.now()) / 60000);
+          res.status(423).json({
+            success: false,
+            error: `PIN is locked. Try again in ${remainingMinutes} minutes.`
+          });
+          return;
+        }
+      }
+
       // Hash the PIN
       const pinHash = await bcrypt.hash(pin, PIN_SALT_ROUNDS);
 
@@ -193,9 +211,9 @@ router.post(
       const userId = req.user?.user_id;
       const { currentPin, newPin } = req.body;
 
-      // Get current PIN hash
+      // Get current PIN hash and attempt info
       const result = await pool.query(
-        'SELECT pin_hash, pin_locked_until FROM users WHERE id = $1',
+        'SELECT pin_hash, pin_attempts, pin_locked_until FROM users WHERE id = $1',
         [userId]
       );
 
@@ -216,9 +234,12 @@ router.post(
 
       // Check if locked
       if (user.pin_locked_until && new Date(user.pin_locked_until) > new Date()) {
+        const remainingMinutes = Math.ceil(
+          (new Date(user.pin_locked_until).getTime() - Date.now()) / 60000
+        );
         res.status(423).json({
           success: false,
-          error: 'PIN is locked. Please wait before trying again.'
+          error: `PIN is locked. Try again in ${remainingMinutes} minutes.`
         });
         return;
       }
@@ -226,9 +247,26 @@ router.post(
       // Verify current PIN
       const isValid = await bcrypt.compare(currentPin, user.pin_hash);
       if (!isValid) {
+        // Increment attempt counter and potentially lock
+        const newAttempts = (user.pin_attempts || 0) + 1;
+        const lockUntil = newAttempts >= MAX_PIN_ATTEMPTS
+          ? new Date(Date.now() + LOCK_DURATION_MINUTES * 60000)
+          : null;
+
+        await pool.query(
+          'UPDATE users SET pin_attempts = $1, pin_locked_until = $2 WHERE id = $3',
+          [newAttempts, lockUntil, userId]
+        );
+
+        const remainingAttempts = MAX_PIN_ATTEMPTS - newAttempts;
+
+        logger.warn('Invalid PIN attempt during change', { userId, attempts: newAttempts });
+
         res.status(401).json({
           success: false,
-          error: 'Current PIN is incorrect'
+          error: lockUntil
+            ? `Too many attempts. PIN locked for ${LOCK_DURATION_MINUTES} minutes.`
+            : `Current PIN is incorrect. ${remainingAttempts} attempts remaining.`
         });
         return;
       }

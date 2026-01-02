@@ -67,11 +67,12 @@ export class FeeService {
     return DEFAULT_FEE_CONFIGURATIONS[defaultKey] || DEFAULT_FEE_CONFIGURATIONS['payment:default'];
   }
 
-  calculateFees(request: FeeCalculationRequest): FeeCalculationResponse {
+  async calculateFees(request: FeeCalculationRequest): Promise<FeeCalculationResponse> {
     const { transactionType, amount, sourceCurrency, destinationCurrency, isInternational } = request;
 
-    const configKey = this.getConfigKey(transactionType, isInternational);
-    const config = DEFAULT_FEE_CONFIGURATIONS[configKey] || DEFAULT_FEE_CONFIGURATIONS['payment:default'];
+    const feeType = transactionType === TransactionType.TRANSFER ? 'transfer' : transactionType;
+    const txnType = isInternational ? 'international' : 'domestic';
+    const config = await this.getConfig(feeType, txnType, sourceCurrency);
 
     const breakdown: FeeCalculationResponse['breakdown'] = [];
     let totalFee = 0;

@@ -2,6 +2,7 @@ import { Router, Request, Response } from 'express';
 import { getDatabase } from '../database/connection';
 import { v4 as uuidv4 } from 'uuid';
 import { logger } from '../utils/logger';
+import { authMiddleware, AuthenticatedRequest } from '../middleware/auth';
 
 export const adminRoutes = Router();
 
@@ -253,7 +254,7 @@ adminRoutes.get('/audit-logs', async (req: Request, res: Response) => {
 // Feature Flags
 // ========================================================================
 
-adminRoutes.get('/feature-flags', async (req: Request, res: Response) => {
+adminRoutes.get('/feature-flags', authMiddleware, async (req: Request, res: Response) => {
   try {
     const db = getDatabase();
     const result = await db.query('SELECT * FROM feature_flags ORDER BY flag_key ASC');
@@ -268,10 +269,15 @@ adminRoutes.get('/feature-flags', async (req: Request, res: Response) => {
   }
 });
 
-adminRoutes.get('/feature-flags/:key', async (req: Request, res: Response) => {
+adminRoutes.get('/feature-flags/:key', authMiddleware, async (req: Request, res: Response) => {
   try {
     const { key } = req.params;
     const db = getDatabase();
+
+    // Validate key format
+    if (!/^[a-zA-Z0-9_]+$/.test(key)) {
+      return res.status(400).json({ error: 'Invalid flag key format' });
+    }
 
     const result = await db.query('SELECT * FROM feature_flags WHERE flag_key = $1', [key]);
 
@@ -286,10 +292,15 @@ adminRoutes.get('/feature-flags/:key', async (req: Request, res: Response) => {
   }
 });
 
-adminRoutes.post('/feature-flags', async (req: Request, res: Response) => {
+adminRoutes.post('/feature-flags', authMiddleware, async (req: Request, res: Response) => {
   try {
     const { flagKey, flagValue, description, rolloutPercentage, enabledFor, disabledFor, metadata } = req.body;
     const db = getDatabase();
+
+    // Validate key format
+    if (!flagKey || !/^[a-zA-Z0-9_]+$/.test(flagKey)) {
+      return res.status(400).json({ error: 'Invalid flag key format. Use alphanumeric and underscores only.' });
+    }
 
     const result = await db.query(
       `INSERT INTO feature_flags (flag_key, flag_value, description, rollout_percentage, enabled_for, disabled_for, metadata)
@@ -313,11 +324,16 @@ adminRoutes.post('/feature-flags', async (req: Request, res: Response) => {
   }
 });
 
-adminRoutes.put('/feature-flags/:key', async (req: Request, res: Response) => {
+adminRoutes.put('/feature-flags/:key', authMiddleware, async (req: Request, res: Response) => {
   try {
     const { key } = req.params;
     const { flagValue, description, rolloutPercentage, enabledFor, disabledFor, metadata } = req.body;
     const db = getDatabase();
+
+    // Validate key format
+    if (!/^[a-zA-Z0-9_]+$/.test(key)) {
+      return res.status(400).json({ error: 'Invalid flag key format' });
+    }
 
     const updates: string[] = [];
     const params: any[] = [];
@@ -388,10 +404,15 @@ adminRoutes.delete('/feature-flags/:key', async (req: Request, res: Response) =>
 });
 
 // Check if feature is enabled for a user
-adminRoutes.get('/feature-flags/:key/check/:userId', async (req: Request, res: Response) => {
+adminRoutes.get('/feature-flags/:key/check/:userId', authMiddleware, async (req: Request, res: Response) => {
   try {
     const { key, userId } = req.params;
     const db = getDatabase();
+
+    // Validate key format (alphanumeric with underscores)
+    if (!/^[a-zA-Z0-9_]+$/.test(key)) {
+      return res.status(400).json({ error: 'Invalid flag key format' });
+    }
 
     const result = await db.query('SELECT * FROM feature_flags WHERE flag_key = $1', [key]);
 
@@ -400,19 +421,25 @@ adminRoutes.get('/feature-flags/:key/check/:userId', async (req: Request, res: R
     }
 
     const flag = result.rows[0];
-    let isEnabled = flag.flag_value;
-
-    // Check disabled/enabled lists
     const disabledFor = flag.disabled_for || [];
     const enabledFor = flag.enabled_for || [];
 
-    if (disabledFor.includes(userId)) isEnabled = false;
-    if (enabledFor.includes(userId) || enabledFor.includes('all')) isEnabled = true;
+    let isEnabled: boolean;
 
-    // Apply rollout percentage (deterministic based on userId hash)
-    if (flag.rollout_percentage > 0 && flag.rollout_percentage < 100 && !enabledFor.includes(userId)) {
+    // Proper precedence: disabled list > enabled list > rollout > global value
+    if (disabledFor.includes(userId)) {
+      // User explicitly disabled - highest priority
+      isEnabled = false;
+    } else if (enabledFor.includes(userId) || enabledFor.includes('all')) {
+      // User explicitly enabled
+      isEnabled = true;
+    } else if (flag.rollout_percentage > 0 && flag.rollout_percentage < 100) {
+      // Apply rollout percentage (deterministic based on userId hash)
       const hash = userId.split('').reduce((a: number, b: string) => ((a << 5) - a) + b.charCodeAt(0), 0);
       isEnabled = (Math.abs(hash) % 100) < flag.rollout_percentage;
+    } else {
+      // Fall back to global flag value
+      isEnabled = flag.flag_value;
     }
 
     res.json({ success: true, data: { flagKey: key, userId, isEnabled } });

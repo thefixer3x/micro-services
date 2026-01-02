@@ -53,7 +53,7 @@ export class TransactionService {
     }
 
     // Calculate fees
-    const feeCalculation = feeService.calculateFees({
+    const feeCalculation = await feeService.calculateFees({
       transactionType: TransactionType.TRANSFER,
       amount: request.amount,
       sourceCurrency: request.currencyCode,
@@ -150,7 +150,7 @@ export class TransactionService {
     currency: string,
     isInternational: boolean
   ): Promise<FeeCalculationResponse> {
-    return feeService.calculateFees({
+    return await feeService.calculateFees({
       transactionType,
       amount,
       sourceCurrency: currency,

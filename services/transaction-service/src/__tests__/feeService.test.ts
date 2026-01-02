@@ -3,8 +3,8 @@ import { TransactionType } from '../types';
 
 describe('FeeService', () => {
   describe('calculateFees', () => {
-    it('should calculate domestic transfer fees correctly', () => {
-      const result = feeService.calculateFees({
+    it('should calculate domestic transfer fees correctly', async () => {
+      const result = await feeService.calculateFees({
         transactionType: TransactionType.TRANSFER,
         amount: 10000,
         sourceCurrency: 'NGN',
@@ -17,15 +17,15 @@ describe('FeeService', () => {
       expect(result.feeCurrency).toBe('NGN');
     });
 
-    it('should calculate international transfer fees higher than domestic', () => {
-      const domestic = feeService.calculateFees({
+    it('should calculate international transfer fees higher than domestic', async () => {
+      const domestic = await feeService.calculateFees({
         transactionType: TransactionType.TRANSFER,
         amount: 10000,
         sourceCurrency: 'NGN',
         isInternational: false
       });
 
-      const international = feeService.calculateFees({
+      const international = await feeService.calculateFees({
         transactionType: TransactionType.TRANSFER,
         amount: 10000,
         sourceCurrency: 'NGN',
@@ -35,8 +35,8 @@ describe('FeeService', () => {
       expect(international.totalFee).toBeGreaterThan(domestic.totalFee);
     });
 
-    it('should add FX fee for cross-currency transactions', () => {
-      const result = feeService.calculateFees({
+    it('should add FX fee for cross-currency transactions', async () => {
+      const result = await feeService.calculateFees({
         transactionType: TransactionType.TRANSFER,
         amount: 10000,
         sourceCurrency: 'NGN',
@@ -48,8 +48,8 @@ describe('FeeService', () => {
       expect(fxFee).toBeDefined();
     });
 
-    it('should apply minimum fee for small transactions', () => {
-      const result = feeService.calculateFees({
+    it('should apply minimum fee for small transactions', async () => {
+      const result = await feeService.calculateFees({
         transactionType: TransactionType.TRANSFER,
         amount: 100,
         sourceCurrency: 'NGN',
