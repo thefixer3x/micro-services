@@ -560,3 +560,204 @@ adminRoutes.get('/reports/audit-activity', async (req: Request, res: Response) =
     res.status(500).json({ error: error.message });
   }
 });
+
+// ========================================================================
+// RBAC - Role-Based Access Control
+// ========================================================================
+
+import rbacService from '../services/rbacService';
+import customer360Service from '../services/customer360Service';
+
+// List all roles
+adminRoutes.get('/roles', async (req: Request, res: Response) => {
+  try {
+    const includeInactive = req.query.includeInactive === 'true';
+    const roles = await rbacService.getAllRoles(includeInactive);
+    res.json({ success: true, data: roles });
+  } catch (error: any) {
+    logger.error('Failed to get roles:', error);
+    res.status(500).json({ error: error.message });
+  }
+});
+
+// Get role by ID with permissions
+adminRoutes.get('/roles/:id', async (req: Request, res: Response) => {
+  try {
+    const role = await rbacService.getRoleById(req.params.id);
+    if (!role) {
+      return res.status(404).json({ error: 'Role not found' });
+    }
+    res.json({ success: true, data: role });
+  } catch (error: any) {
+    logger.error('Failed to get role:', error);
+    res.status(500).json({ error: error.message });
+  }
+});
+
+// Create role
+adminRoutes.post('/roles', async (req: Request, res: Response) => {
+  try {
+    const { name, displayName, description } = req.body;
+    const role = await rbacService.createRole({ name, displayName, description });
+    res.status(201).json({ success: true, data: role });
+  } catch (error: any) {
+    logger.error('Failed to create role:', error);
+    res.status(500).json({ error: error.message });
+  }
+});
+
+// Update role
+adminRoutes.put('/roles/:id', async (req: Request, res: Response) => {
+  try {
+    const { displayName, description, isActive } = req.body;
+    const role = await rbacService.updateRole(req.params.id, { displayName, description, isActive });
+    if (!role) {
+      return res.status(404).json({ error: 'Role not found' });
+    }
+    res.json({ success: true, data: role });
+  } catch (error: any) {
+    logger.error('Failed to update role:', error);
+    res.status(500).json({ error: error.message });
+  }
+});
+
+// Delete role
+adminRoutes.delete('/roles/:id', async (req: Request, res: Response) => {
+  try {
+    const deleted = await rbacService.deleteRole(req.params.id);
+    if (!deleted) {
+      return res.status(404).json({ error: 'Role not found' });
+    }
+    res.json({ success: true, message: 'Role deleted' });
+  } catch (error: any) {
+    logger.error('Failed to delete role:', error);
+    res.status(500).json({ error: error.message });
+  }
+});
+
+// List all permissions
+adminRoutes.get('/permissions', async (req: Request, res: Response) => {
+  try {
+    const permissions = await rbacService.getAllPermissions();
+    res.json({ success: true, data: permissions });
+  } catch (error: any) {
+    logger.error('Failed to get permissions:', error);
+    res.status(500).json({ error: error.message });
+  }
+});
+
+// Assign permission to role
+adminRoutes.post('/roles/:roleId/permissions/:permissionId', async (req: Request, res: Response) => {
+  try {
+    await rbacService.assignPermissionToRole(req.params.roleId, req.params.permissionId);
+    res.json({ success: true, message: 'Permission assigned' });
+  } catch (error: any) {
+    logger.error('Failed to assign permission:', error);
+    res.status(500).json({ error: error.message });
+  }
+});
+
+// Remove permission from role
+adminRoutes.delete('/roles/:roleId/permissions/:permissionId', async (req: Request, res: Response) => {
+  try {
+    const removed = await rbacService.removePermissionFromRole(req.params.roleId, req.params.permissionId);
+    if (!removed) {
+      return res.status(404).json({ error: 'Permission assignment not found' });
+    }
+    res.json({ success: true, message: 'Permission removed' });
+  } catch (error: any) {
+    logger.error('Failed to remove permission:', error);
+    res.status(500).json({ error: error.message });
+  }
+});
+
+// Get user's roles
+adminRoutes.get('/users/:userId/roles', async (req: Request, res: Response) => {
+  try {
+    const roles = await rbacService.getUserRoles(req.params.userId);
+    res.json({ success: true, data: roles });
+  } catch (error: any) {
+    logger.error('Failed to get user roles:', error);
+    res.status(500).json({ error: error.message });
+  }
+});
+
+// Assign role to user
+adminRoutes.post('/users/:userId/roles/:roleId', async (req: Request, res: Response) => {
+  try {
+    const { assignedBy, expiresAt } = req.body;
+    await rbacService.assignRoleToUser(
+      req.params.userId,
+      req.params.roleId,
+      assignedBy || 'system',
+      expiresAt ? new Date(expiresAt) : undefined
+    );
+    res.json({ success: true, message: 'Role assigned' });
+  } catch (error: any) {
+    logger.error('Failed to assign role:', error);
+    res.status(500).json({ error: error.message });
+  }
+});
+
+// Remove role from user
+adminRoutes.delete('/users/:userId/roles/:roleId', async (req: Request, res: Response) => {
+  try {
+    const removed = await rbacService.removeRoleFromUser(req.params.userId, req.params.roleId);
+    if (!removed) {
+      return res.status(404).json({ error: 'Role assignment not found' });
+    }
+    res.json({ success: true, message: 'Role removed' });
+  } catch (error: any) {
+    logger.error('Failed to remove role:', error);
+    res.status(500).json({ error: error.message });
+  }
+});
+
+// Check user permission
+adminRoutes.get('/users/:userId/permissions/:permission', async (req: Request, res: Response) => {
+  try {
+    const hasPermission = await rbacService.hasPermission(req.params.userId, req.params.permission);
+    res.json({ success: true, data: { hasPermission } });
+  } catch (error: any) {
+    logger.error('Failed to check permission:', error);
+    res.status(500).json({ error: error.message });
+  }
+});
+
+// ========================================================================
+// Customer 360 View
+// ========================================================================
+
+// Get comprehensive customer view
+adminRoutes.get('/customers/:userId/360', async (req: Request, res: Response) => {
+  try {
+    const view = await customer360Service.getCustomer360(req.params.userId);
+    if (!view) {
+      return res.status(404).json({ error: 'Customer not found' });
+    }
+    res.json({ success: true, data: view });
+  } catch (error: any) {
+    logger.error('Failed to get customer 360:', error);
+    res.status(500).json({ error: error.message });
+  }
+});
+
+// Search customers
+adminRoutes.get('/customers/search', async (req: Request, res: Response) => {
+  try {
+    const { email, phone, name, status, kycStatus, limit, offset } = req.query;
+    const result = await customer360Service.searchCustomers({
+      email: email as string,
+      phone: phone as string,
+      name: name as string,
+      status: status as string,
+      kycStatus: kycStatus as string,
+      limit: limit ? parseInt(limit as string) : undefined,
+      offset: offset ? parseInt(offset as string) : undefined
+    });
+    res.json({ success: true, data: result });
+  } catch (error: any) {
+    logger.error('Failed to search customers:', error);
+    res.status(500).json({ error: error.message });
+  }
+});
