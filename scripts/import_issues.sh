@@ -21,31 +21,36 @@ if [ ! -f "$CSV_PATH" ]; then
 fi
 
 echo "Importing issues into $OWNER/$REPO from $CSV_PATH ..."
-# CSV columns: title,body,labels
-tail -n +2 "$CSV_PATH" | while IFS=',' read -r title body labels; do
-  # Handle commas inside fields by using Python to parse CSV robustly
-  python3 - <<'PY'
-import sys, csv, os, json, subprocess, shlex
+
+# Export variables so Python can access them
+export OWNER REPO CSV_PATH
+
+# Use Python to parse CSV robustly (handles commas in fields)
+python3 - <<'PY'
+import csv, os, subprocess
+
 OWNER = os.environ.get("OWNER")
 REPO = os.environ.get("REPO")
 CSV_PATH = os.environ.get("CSV_PATH")
+
 with open(CSV_PATH, newline='', encoding='utf-8') as f:
     reader = csv.DictReader(f)
     for row in reader:
-        title = row.get("title","").strip()
-        body = row.get("body","").strip()
-        labels = [l.strip() for l in (row.get("labels","").split(";")) if l.strip()]
+        title = row.get("title", "").strip()
+        body = row.get("body", "").strip()
+        labels = [l.strip() for l in (row.get("labels", "").split(";")) if l.strip()]
         if not title:
             continue
-        cmd = ["gh","issue","create","-R", f"{OWNER}/{REPO}","-t", title,"-b", body]
-        if labels:
-            for lb in labels:
-                cmd.extend(["-l", lb])
+        cmd = ["gh", "issue", "create", "-R", f"{OWNER}/{REPO}", "-t", title, "-b", body]
+        for lb in labels:
+            cmd.extend(["-l", lb])
         # Create issue
+        print(f"Creating issue: {title}")
         try:
-            subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+            result = subprocess.run(cmd, check=True, capture_output=True, text=True)
+            print(f"  ✓ Created: {result.stdout.strip()}")
         except subprocess.CalledProcessError as e:
-            print("Error creating issue:", e.stdout.decode("utf-8","ignore"))
+            print(f"  ✗ Error: {e.stderr}")
 PY
-done
+
 echo "Done."
