@@ -1,0 +1,839 @@
+[
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Support ticket reports\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:51:35Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzLWw",
+        "name": "sheet:MVP",
+        "description": "MVP features from spreadsheet",
+        "color": "0052CC"
+      }
+    ],
+    "milestone": null,
+    "number": 497,
+    "state": "OPEN",
+    "title": "Support ticket reports",
+    "updatedAt": "2026-01-06T21:51:35Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/497"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Multi-currency support\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:47:45Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzLWw",
+        "name": "sheet:MVP",
+        "description": "MVP features from spreadsheet",
+        "color": "0052CC"
+      }
+    ],
+    "milestone": null,
+    "number": 427,
+    "state": "OPEN",
+    "title": "Multi-currency support",
+    "updatedAt": "2026-01-06T21:47:45Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/427"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Support agent performance tracking\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:47:21Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzLWw",
+        "name": "sheet:MVP",
+        "description": "MVP features from spreadsheet",
+        "color": "0052CC"
+      }
+    ],
+    "milestone": null,
+    "number": 420,
+    "state": "OPEN",
+    "title": "Support agent performance tracking",
+    "updatedAt": "2026-01-06T21:47:21Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/420"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 3\": \"Customer Support\",\n  \"Unnamed: 4\": \"Ticket management system\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:47:03Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzLWw",
+        "name": "sheet:MVP",
+        "description": "MVP features from spreadsheet",
+        "color": "0052CC"
+      }
+    ],
+    "milestone": null,
+    "number": 415,
+    "state": "OPEN",
+    "title": "Customer Support",
+    "updatedAt": "2026-01-06T21:47:03Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/415"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 1\": \"ADMINISTRATOR\",\n  \"Unnamed: 2\": \"Customer Management\",\n  \"Unnamed: 3\": \"Customer 360° View\",\n  \"Unnamed: 4\": \"Unified customer profile dashboard\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:46:27Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzLWw",
+        "name": "sheet:MVP",
+        "description": "MVP features from spreadsheet",
+        "color": "0052CC"
+      }
+    ],
+    "milestone": null,
+    "number": 405,
+    "state": "OPEN",
+    "title": "ADMINISTRATOR",
+    "updatedAt": "2026-01-06T21:46:27Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/405"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Support status tracking\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:46:23Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzLWw",
+        "name": "sheet:MVP",
+        "description": "MVP features from spreadsheet",
+        "color": "0052CC"
+      }
+    ],
+    "milestone": null,
+    "number": 404,
+    "state": "OPEN",
+    "title": "Support status tracking",
+    "updatedAt": "2026-01-06T21:46:23Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/404"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 2\": \"Support\",\n  \"Unnamed: 3\": \"Customer Support\",\n  \"Unnamed: 4\": \"In-app chat support\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:46:13Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzLWw",
+        "name": "sheet:MVP",
+        "description": "MVP features from spreadsheet",
+        "color": "0052CC"
+      }
+    ],
+    "milestone": null,
+    "number": 401,
+    "state": "OPEN",
+    "title": "Support",
+    "updatedAt": "2026-01-06T21:46:13Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/401"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 3\": \"Web Features\",\n  \"Unnamed: 4\": \"Responsive dashboard\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:46:03Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzLWw",
+        "name": "sheet:MVP",
+        "description": "MVP features from spreadsheet",
+        "color": "0052CC"
+      }
+    ],
+    "milestone": null,
+    "number": 397,
+    "state": "OPEN",
+    "title": "Web Features",
+    "updatedAt": "2026-01-06T21:46:03Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/397"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Multi-language support (English, Pidgin English, Yoruba, French)\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:44:50Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzLWw",
+        "name": "sheet:MVP",
+        "description": "MVP features from spreadsheet",
+        "color": "0052CC"
+      }
+    ],
+    "milestone": null,
+    "number": 371,
+    "state": "OPEN",
+    "title": "Multi-language support (English, Pidgin English, Yoruba, French)",
+    "updatedAt": "2026-01-06T21:44:50Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/371"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Biometric login support\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:44:47Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzLWw",
+        "name": "sheet:MVP",
+        "description": "MVP features from spreadsheet",
+        "color": "0052CC"
+      }
+    ],
+    "milestone": null,
+    "number": 370,
+    "state": "OPEN",
+    "title": "Biometric login support",
+    "updatedAt": "2026-01-06T21:44:47Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/370"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Visual analytics for admin decision-making (graphs, heat maps of fraud-prone regions)\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:43:36Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 345,
+    "state": "OPEN",
+    "title": "Visual analytics for admin decision-making (graphs, heat maps of fraud-prone regions)",
+    "updatedAt": "2026-01-06T21:43:36Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/345"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Dashboard for tracking real-time fraud attempts and resolution status\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:43:33Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 344,
+    "state": "OPEN",
+    "title": "Dashboard for tracking real-time fraud attempts and resolution status",
+    "updatedAt": "2026-01-06T21:43:33Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/344"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Support ticket reports\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:41:45Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 305,
+    "state": "OPEN",
+    "title": "Support ticket reports",
+    "updatedAt": "2026-01-06T21:41:45Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/305"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Verify supporting documents\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:38:31Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 236,
+    "state": "OPEN",
+    "title": "Verify supporting documents",
+    "updatedAt": "2026-01-06T21:38:31Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/236"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Risk assessment dashboard\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:36:22Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 184,
+    "state": "OPEN",
+    "title": "Risk assessment dashboard",
+    "updatedAt": "2026-01-06T21:36:22Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/184"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Risk reporting dashboard\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:35:57Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 174,
+    "state": "OPEN",
+    "title": "Risk reporting dashboard",
+    "updatedAt": "2026-01-06T21:35:57Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/174"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Regulatory examination support\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:35:24Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 161,
+    "state": "OPEN",
+    "title": "Regulatory examination support",
+    "updatedAt": "2026-01-06T21:35:24Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/161"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Multi-currency support\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:34:33Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 141,
+    "state": "OPEN",
+    "title": "Multi-currency support",
+    "updatedAt": "2026-01-06T21:34:33Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/141"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Support agent performance tracking\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:34:15Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 134,
+    "state": "OPEN",
+    "title": "Support agent performance tracking",
+    "updatedAt": "2026-01-06T21:34:15Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/134"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 3\": \"Customer Support\",\n  \"Unnamed: 4\": \"Ticket management system\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:33:55Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 127,
+    "state": "OPEN",
+    "title": "Customer Support",
+    "updatedAt": "2026-01-06T21:33:55Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/127"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 1\": \"ADMINISTRATOR\",\n  \"Unnamed: 2\": \"Customer Management\",\n  \"Unnamed: 3\": \"Customer 360° View\",\n  \"Unnamed: 4\": \"Unified customer profile dashboard\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:33:14Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 111,
+    "state": "OPEN",
+    "title": "ADMINISTRATOR",
+    "updatedAt": "2026-01-06T21:33:14Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/111"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Support status tracking\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:33:12Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 110,
+    "state": "OPEN",
+    "title": "Support status tracking",
+    "updatedAt": "2026-01-06T21:33:12Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/110"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Video call support\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:32:58Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 105,
+    "state": "OPEN",
+    "title": "Video call support",
+    "updatedAt": "2026-01-06T21:32:58Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/105"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 2\": \"Support\",\n  \"Unnamed: 3\": \"Customer Support\",\n  \"Unnamed: 4\": \"In-app chat support\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:32:52Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 103,
+    "state": "OPEN",
+    "title": "Support",
+    "updatedAt": "2026-01-06T21:32:52Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/103"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Multi-screen support\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:32:46Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 101,
+    "state": "OPEN",
+    "title": "Multi-screen support",
+    "updatedAt": "2026-01-06T21:32:46Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/101"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Custom dashboard layout\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:32:44Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 100,
+    "state": "OPEN",
+    "title": "Custom dashboard layout",
+    "updatedAt": "2026-01-06T21:32:44Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/100"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 3\": \"Web Features\",\n  \"Unnamed: 4\": \"Responsive dashboard\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:32:31Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 95,
+    "state": "OPEN",
+    "title": "Web Features",
+    "updatedAt": "2026-01-06T21:32:31Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/95"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Widget support\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:32:21Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 91,
+    "state": "OPEN",
+    "title": "Widget support",
+    "updatedAt": "2026-01-06T21:32:21Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/91"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Business analytics dashboard\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:31:32Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 72,
+    "state": "OPEN",
+    "title": "Business analytics dashboard",
+    "updatedAt": "2026-01-06T21:31:32Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/72"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Multi-language support (English, Pidgin English, Yoruba, French)\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:29:12Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 17,
+    "state": "OPEN",
+    "title": "Multi-language support (English, Pidgin English, Yoruba, French)",
+    "updatedAt": "2026-01-06T21:29:12Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/17"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Biometric login support\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:29:09Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 16,
+    "state": "OPEN",
+    "title": "Biometric login support",
+    "updatedAt": "2026-01-06T21:29:09Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/16"
+  }
+]

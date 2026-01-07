@@ -1,0 +1,117 @@
+[
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 3\": \"Integration Management\",\n  \"Unnamed: 4\": \"Third-party API configuration\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:44:30Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 364,
+    "state": "OPEN",
+    "title": "Integration Management",
+    "updatedAt": "2026-01-06T21:44:30Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/364"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Manage API integrations\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:39:58Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 269,
+    "state": "OPEN",
+    "title": "Manage API integrations",
+    "updatedAt": "2026-01-06T21:39:58Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/269"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"API key management\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:31:47Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 78,
+    "state": "OPEN",
+    "title": "API key management",
+    "updatedAt": "2026-01-06T21:31:47Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/78"
+  },
+  {
+    "assignees": [
+      {
+        "id": "U_kgDODB5qWw",
+        "login": "thefixer3x",
+        "name": "The Fixer",
+        "databaseId": 0
+      }
+    ],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "Implement the zero-touch automation between GitHub and ClickUp\n\n## Tasks\n- [ ] Get ClickUp API key\n- [ ] Find ClickUp List ID  \n- [ ] Configure GitHub secrets\n- [ ] Test webhook integration\n- [ ] Deploy automation workflow\n\nThis will enable automatic syncing of issues, PRs, and commits to ClickUp.",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2025-09-11T04:47:58Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBvxFw",
+        "name": "enhancement",
+        "description": "New feature or request",
+        "color": "a2eeef"
+      }
+    ],
+    "milestone": null,
+    "number": 1,
+    "state": "OPEN",
+    "title": "Set up GitHub-ClickUp automation",
+    "updatedAt": "2025-09-29T17:01:03Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/1"
+  }
+]

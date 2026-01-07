@@ -1,0 +1,1892 @@
+[
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 3\": \"Transaction Audit\",\n  \"Unnamed: 4\": \"Complete transaction history\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:51:57Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzLWw",
+        "name": "sheet:MVP",
+        "description": "MVP features from spreadsheet",
+        "color": "0052CC"
+      }
+    ],
+    "milestone": null,
+    "number": 505,
+    "state": "OPEN",
+    "title": "Transaction Audit",
+    "updatedAt": "2026-01-06T21:51:57Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/505"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Transaction volume reports\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:50:39Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzLWw",
+        "name": "sheet:MVP",
+        "description": "MVP features from spreadsheet",
+        "color": "0052CC"
+      }
+    ],
+    "milestone": null,
+    "number": 484,
+    "state": "OPEN",
+    "title": "Transaction volume reports",
+    "updatedAt": "2026-01-06T21:50:39Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/484"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Transaction limits\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:50:19Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzLWw",
+        "name": "sheet:MVP",
+        "description": "MVP features from spreadsheet",
+        "color": "0052CC"
+      }
+    ],
+    "milestone": null,
+    "number": 479,
+    "state": "OPEN",
+    "title": "Transaction limits",
+    "updatedAt": "2026-01-06T21:50:19Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/479"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Payment gateway settlement\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:49:50Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzLWw",
+        "name": "sheet:MVP",
+        "description": "MVP features from spreadsheet",
+        "color": "0052CC"
+      }
+    ],
+    "milestone": null,
+    "number": 468,
+    "state": "OPEN",
+    "title": "Payment gateway settlement",
+    "updatedAt": "2026-01-06T21:49:50Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/468"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Batch transaction processing\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:49:43Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzLWw",
+        "name": "sheet:MVP",
+        "description": "MVP features from spreadsheet",
+        "color": "0052CC"
+      }
+    ],
+    "milestone": null,
+    "number": 465,
+    "state": "OPEN",
+    "title": "Batch transaction processing",
+    "updatedAt": "2026-01-06T21:49:43Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/465"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Transaction routing management\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:49:33Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzLWw",
+        "name": "sheet:MVP",
+        "description": "MVP features from spreadsheet",
+        "color": "0052CC"
+      }
+    ],
+    "milestone": null,
+    "number": 461,
+    "state": "OPEN",
+    "title": "Transaction routing management",
+    "updatedAt": "2026-01-06T21:49:33Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/461"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"High-value transaction alerts\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:49:29Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzLWw",
+        "name": "sheet:MVP",
+        "description": "MVP features from spreadsheet",
+        "color": "0052CC"
+      }
+    ],
+    "milestone": null,
+    "number": 460,
+    "state": "OPEN",
+    "title": "High-value transaction alerts",
+    "updatedAt": "2026-01-06T21:49:29Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/460"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Transaction categorization\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:49:27Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzLWw",
+        "name": "sheet:MVP",
+        "description": "MVP features from spreadsheet",
+        "color": "0052CC"
+      }
+    ],
+    "milestone": null,
+    "number": 459,
+    "state": "OPEN",
+    "title": "Transaction categorization",
+    "updatedAt": "2026-01-06T21:49:27Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/459"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 2\": \"Transaction Management\",\n  \"Unnamed: 3\": \"Transaction Monitoring\",\n  \"Unnamed: 4\": \"Real-time transaction dashboard\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:49:24Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzLWw",
+        "name": "sheet:MVP",
+        "description": "MVP features from spreadsheet",
+        "color": "0052CC"
+      }
+    ],
+    "milestone": null,
+    "number": 458,
+    "state": "OPEN",
+    "title": "Transaction Management",
+    "updatedAt": "2026-01-06T21:49:24Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/458"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Refund management\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:48:31Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzLWw",
+        "name": "sheet:MVP",
+        "description": "MVP features from spreadsheet",
+        "color": "0052CC"
+      }
+    ],
+    "milestone": null,
+    "number": 440,
+    "state": "OPEN",
+    "title": "Refund management",
+    "updatedAt": "2026-01-06T21:48:31Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/440"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Fund allocation tracking\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:48:05Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzLWw",
+        "name": "sheet:MVP",
+        "description": "MVP features from spreadsheet",
+        "color": "0052CC"
+      }
+    ],
+    "milestone": null,
+    "number": 433,
+    "state": "OPEN",
+    "title": "Fund allocation tracking",
+    "updatedAt": "2026-01-06T21:48:05Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/433"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Refund processing\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:47:14Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzLWw",
+        "name": "sheet:MVP",
+        "description": "MVP features from spreadsheet",
+        "color": "0052CC"
+      }
+    ],
+    "milestone": null,
+    "number": 418,
+    "state": "OPEN",
+    "title": "Refund processing",
+    "updatedAt": "2026-01-06T21:47:14Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/418"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 3\": \"Transaction Security\",\n  \"Unnamed: 4\": \"Transaction notifications\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:45:58Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzLWw",
+        "name": "sheet:MVP",
+        "description": "MVP features from spreadsheet",
+        "color": "0052CC"
+      }
+    ],
+    "milestone": null,
+    "number": 395,
+    "state": "OPEN",
+    "title": "Transaction Security",
+    "updatedAt": "2026-01-06T21:45:58Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/395"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Transaction limits\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:45:56Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzLWw",
+        "name": "sheet:MVP",
+        "description": "MVP features from spreadsheet",
+        "color": "0052CC"
+      }
+    ],
+    "milestone": null,
+    "number": 394,
+    "state": "OPEN",
+    "title": "Transaction limits",
+    "updatedAt": "2026-01-06T21:45:56Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/394"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 3\": \"Money Transfer Services\",\n  \"Unnamed: 4\": \"Domestic transfers\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:45:43Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzLWw",
+        "name": "sheet:MVP",
+        "description": "MVP features from spreadsheet",
+        "color": "0052CC"
+      }
+    ],
+    "milestone": null,
+    "number": 389,
+    "state": "OPEN",
+    "title": "Money Transfer Services",
+    "updatedAt": "2026-01-06T21:45:43Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/389"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Transaction history\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:45:34Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzLWw",
+        "name": "sheet:MVP",
+        "description": "MVP features from spreadsheet",
+        "color": "0052CC"
+      }
+    ],
+    "milestone": null,
+    "number": 386,
+    "state": "OPEN",
+    "title": "Transaction history",
+    "updatedAt": "2026-01-06T21:45:34Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/386"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Transaction history viewing\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:45:05Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzLWw",
+        "name": "sheet:MVP",
+        "description": "MVP features from spreadsheet",
+        "color": "0052CC"
+      }
+    ],
+    "milestone": null,
+    "number": 377,
+    "state": "OPEN",
+    "title": "Transaction history viewing",
+    "updatedAt": "2026-01-06T21:45:05Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/377"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Payment gateway settings\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:44:32Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 365,
+    "state": "OPEN",
+    "title": "Payment gateway settings",
+    "updatedAt": "2026-01-06T21:44:32Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/365"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 3\": \"Transaction Audit\",\n  \"Unnamed: 4\": \"Complete transaction history\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:43:57Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 353,
+    "state": "OPEN",
+    "title": "Transaction Audit",
+    "updatedAt": "2026-01-06T21:43:57Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/353"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 3\": \"Fraud Analytics & Reporting\",\n  \"Unnamed: 4\": \"AI-generated reports on fraud trends, risk levels, and flagged transactions\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:43:30Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 343,
+    "state": "OPEN",
+    "title": "Fraud Analytics & Reporting",
+    "updatedAt": "2026-01-06T21:43:30Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/343"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Monitoring of large transactions against anti-money laundering (AML) thresholds\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:43:12Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 338,
+    "state": "OPEN",
+    "title": "Monitoring of large transactions against anti-money laundering (AML) thresholds",
+    "updatedAt": "2026-01-06T21:43:12Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/338"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 3\": \"AML Compliance Monitoring\",\n  \"Unnamed: 4\": \"AI cross-checks transactions against global sanctions and watchlists\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:43:09Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 337,
+    "state": "OPEN",
+    "title": "AML Compliance Monitoring",
+    "updatedAt": "2026-01-06T21:43:09Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/337"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Automatic flagging of suspicious refunds and chargeback attempts\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:43:06Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 336,
+    "state": "OPEN",
+    "title": "Automatic flagging of suspicious refunds and chargeback attempts",
+    "updatedAt": "2026-01-06T21:43:06Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/336"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 3\": \"Chargeback & Dispute Prediction\",\n  \"Unnamed: 4\": \"AI predicts high-risk transactions likely to result in chargebacks\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:43:03Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 335,
+    "state": "OPEN",
+    "title": "Chargeback & Dispute Prediction",
+    "updatedAt": "2026-01-06T21:43:03Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/335"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"High-risk transactions are automatically flagged for admin approval\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:42:39Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 326,
+    "state": "OPEN",
+    "title": "High-risk transactions are automatically flagged for admin approval",
+    "updatedAt": "2026-01-06T21:42:39Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/326"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Payment method\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:42:35Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 324,
+    "state": "OPEN",
+    "title": "Payment method",
+    "updatedAt": "2026-01-06T21:42:35Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/324"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 3\": \"Risk-Based Transaction Scoring\",\n  \"Unnamed: 4\": \"AI assigns risk scores to every transaction based on:\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:42:24Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 320,
+    "state": "OPEN",
+    "title": "Risk-Based Transaction Scoring",
+    "updatedAt": "2026-01-06T21:42:24Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/320"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Alerts for rapid or repetitive transactions within short time frames\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:42:21Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 319,
+    "state": "OPEN",
+    "title": "Alerts for rapid or repetitive transactions within short time frames",
+    "updatedAt": "2026-01-06T21:42:21Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/319"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 3\": \"Automated Fraud Rules & Alerts\",\n  \"Unnamed: 4\": \"Customizable fraud detection rules (e.g., transaction limits, velocity checks)\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:42:16Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 317,
+    "state": "OPEN",
+    "title": "Automated Fraud Rules & Alerts",
+    "updatedAt": "2026-01-06T21:42:16Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/317"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Instant flagging of high-risk transactions for manual review\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:42:13Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 316,
+    "state": "OPEN",
+    "title": "Instant flagging of high-risk transactions for manual review",
+    "updatedAt": "2026-01-06T21:42:13Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/316"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Live transaction risk scoring based on machine learning models\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:42:11Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 315,
+    "state": "OPEN",
+    "title": "Live transaction risk scoring based on machine learning models",
+    "updatedAt": "2026-01-06T21:42:11Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/315"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 2\": \"AI Fraud Detection Features\",\n  \"Unnamed: 3\": \"Real-Time Fraud Monitoring\",\n  \"Unnamed: 4\": \"AI-powered anomaly detection for unusual transaction patterns\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:42:08Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 314,
+    "state": "OPEN",
+    "title": "AI Fraud Detection Features",
+    "updatedAt": "2026-01-06T21:42:08Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/314"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Transaction volume reports\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:41:06Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 292,
+    "state": "OPEN",
+    "title": "Transaction volume reports",
+    "updatedAt": "2026-01-06T21:41:06Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/292"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Analyze transaction patterns\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:40:23Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 277,
+    "state": "OPEN",
+    "title": "Analyze transaction patterns",
+    "updatedAt": "2026-01-06T21:40:23Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/277"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Process refunds\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:39:17Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 254,
+    "state": "OPEN",
+    "title": "Process refunds",
+    "updatedAt": "2026-01-06T21:39:17Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/254"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Transaction monitoring\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:38:58Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 247,
+    "state": "OPEN",
+    "title": "Transaction monitoring",
+    "updatedAt": "2026-01-06T21:38:58Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/247"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Risk assessment of transactions\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:38:49Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 243,
+    "state": "OPEN",
+    "title": "Risk assessment of transactions",
+    "updatedAt": "2026-01-06T21:38:49Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/243"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Track failed transactions\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:38:41Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 240,
+    "state": "OPEN",
+    "title": "Track failed transactions",
+    "updatedAt": "2026-01-06T21:38:41Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/240"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Manage payment schedules\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:38:38Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 239,
+    "state": "OPEN",
+    "title": "Manage payment schedules",
+    "updatedAt": "2026-01-06T21:38:38Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/239"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 3\": \"Transaction Management\",\n  \"Unnamed: 4\": \"Review release requests\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:38:26Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 234,
+    "state": "OPEN",
+    "title": "Transaction Management",
+    "updatedAt": "2026-01-06T21:38:26Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/234"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Set transaction limits\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:38:16Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 230,
+    "state": "OPEN",
+    "title": "Set transaction limits",
+    "updatedAt": "2026-01-06T21:38:16Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/230"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Transaction limits\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:37:51Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 220,
+    "state": "OPEN",
+    "title": "Transaction limits",
+    "updatedAt": "2026-01-06T21:37:51Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/220"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Payment gateway settlement\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:37:19Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 207,
+    "state": "OPEN",
+    "title": "Payment gateway settlement",
+    "updatedAt": "2026-01-06T21:37:19Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/207"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Batch transaction processing\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:37:11Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 204,
+    "state": "OPEN",
+    "title": "Batch transaction processing",
+    "updatedAt": "2026-01-06T21:37:11Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/204"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Transaction routing management\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:37:01Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 200,
+    "state": "OPEN",
+    "title": "Transaction routing management",
+    "updatedAt": "2026-01-06T21:37:01Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/200"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"High-value transaction alerts\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:36:59Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 199,
+    "state": "OPEN",
+    "title": "High-value transaction alerts",
+    "updatedAt": "2026-01-06T21:36:59Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/199"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Transaction categorization\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:36:57Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 198,
+    "state": "OPEN",
+    "title": "Transaction categorization",
+    "updatedAt": "2026-01-06T21:36:57Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/198"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 2\": \"Transaction Management\",\n  \"Unnamed: 3\": \"Transaction Monitoring\",\n  \"Unnamed: 4\": \"Real-time transaction dashboard\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:36:55Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 197,
+    "state": "OPEN",
+    "title": "Transaction Management",
+    "updatedAt": "2026-01-06T21:36:55Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/197"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Currency Transaction Reports (CTRs)\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:35:16Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 158,
+    "state": "OPEN",
+    "title": "Currency Transaction Reports (CTRs)",
+    "updatedAt": "2026-01-06T21:35:16Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/158"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Refund management\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:35:06Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 154,
+    "state": "OPEN",
+    "title": "Refund management",
+    "updatedAt": "2026-01-06T21:35:06Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/154"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Fund allocation tracking\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:34:48Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 147,
+    "state": "OPEN",
+    "title": "Fund allocation tracking",
+    "updatedAt": "2026-01-06T21:34:48Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/147"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Refund processing\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:34:03Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 130,
+    "state": "OPEN",
+    "title": "Refund processing",
+    "updatedAt": "2026-01-06T21:34:03Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/130"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Transaction limits configuration\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:33:40Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 121,
+    "state": "OPEN",
+    "title": "Transaction limits configuration",
+    "updatedAt": "2026-01-06T21:33:40Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/121"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Transaction history and patterns\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:33:17Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 112,
+    "state": "OPEN",
+    "title": "Transaction history and patterns",
+    "updatedAt": "2026-01-06T21:33:17Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/112"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Document verification for large transactions\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:32:04Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 85,
+    "state": "OPEN",
+    "title": "Document verification for large transactions",
+    "updatedAt": "2026-01-06T21:32:04Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/85"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 2\": \"Business Features (B2B)\",\n  \"Unnamed: 3\": \"Business Tools\",\n  \"Unnamed: 4\": \"Bulk payment processing\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:31:24Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 69,
+    "state": "OPEN",
+    "title": "Business Features (B2B)",
+    "updatedAt": "2026-01-06T21:31:24Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/69"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Transaction disputes\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:31:00Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 60,
+    "state": "OPEN",
+    "title": "Transaction disputes",
+    "updatedAt": "2026-01-06T21:31:00Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/60"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Payment confirmation\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:30:58Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 59,
+    "state": "OPEN",
+    "title": "Payment confirmation",
+    "updatedAt": "2026-01-06T21:30:58Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/59"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Transaction verification\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:30:53Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 57,
+    "state": "OPEN",
+    "title": "Transaction verification",
+    "updatedAt": "2026-01-06T21:30:53Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/57"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 3\": \"Transaction Security\",\n  \"Unnamed: 4\": \"Transaction notifications\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:30:46Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 54,
+    "state": "OPEN",
+    "title": "Transaction Security",
+    "updatedAt": "2026-01-06T21:30:46Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/54"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Transaction limits\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:30:40Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 52,
+    "state": "OPEN",
+    "title": "Transaction limits",
+    "updatedAt": "2026-01-06T21:30:40Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/52"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Regular payment setup\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:30:25Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 45,
+    "state": "OPEN",
+    "title": "Regular payment setup",
+    "updatedAt": "2026-01-06T21:30:25Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/45"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Schedule future transfers\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:30:22Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 44,
+    "state": "OPEN",
+    "title": "Schedule future transfers",
+    "updatedAt": "2026-01-06T21:30:22Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/44"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Bulk transfers\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:30:19Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 43,
+    "state": "OPEN",
+    "title": "Bulk transfers",
+    "updatedAt": "2026-01-06T21:30:19Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/43"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 3\": \"Money Transfer Services\",\n  \"Unnamed: 4\": \"Domestic transfers\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:30:14Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 41,
+    "state": "OPEN",
+    "title": "Money Transfer Services",
+    "updatedAt": "2026-01-06T21:30:14Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/41"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Payment limits management\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:30:12Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 40,
+    "state": "OPEN",
+    "title": "Payment limits management",
+    "updatedAt": "2026-01-06T21:30:12Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/40"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Quick payment shortcuts\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:30:07Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 38,
+    "state": "OPEN",
+    "title": "Quick payment shortcuts",
+    "updatedAt": "2026-01-06T21:30:07Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/38"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Recurring payment setup\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:30:04Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 37,
+    "state": "OPEN",
+    "title": "Recurring payment setup",
+    "updatedAt": "2026-01-06T21:30:04Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/37"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Transaction history\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:29:51Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 32,
+    "state": "OPEN",
+    "title": "Transaction history",
+    "updatedAt": "2026-01-06T21:29:51Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/32"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Transaction history viewing\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:29:28Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 23,
+    "state": "OPEN",
+    "title": "Transaction history viewing",
+    "updatedAt": "2026-01-06T21:29:28Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/23"
+  }
+]

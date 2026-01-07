@@ -1,0 +1,1460 @@
+[
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Wallet upgrade/downgrade\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:50:22Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzLWw",
+        "name": "sheet:MVP",
+        "description": "MVP features from spreadsheet",
+        "color": "0052CC"
+      }
+    ],
+    "milestone": null,
+    "number": 480,
+    "state": "OPEN",
+    "title": "Wallet upgrade/downgrade",
+    "updatedAt": "2026-01-06T21:50:22Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/480"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Balance management\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:50:17Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzLWw",
+        "name": "sheet:MVP",
+        "description": "MVP features from spreadsheet",
+        "color": "0052CC"
+      }
+    ],
+    "milestone": null,
+    "number": 478,
+    "state": "OPEN",
+    "title": "Balance management",
+    "updatedAt": "2026-01-06T21:50:17Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/478"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 3\": \"Customer Wallet Operations\",\n  \"Unnamed: 4\": \"Wallet creation workflow\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:50:14Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzLWw",
+        "name": "sheet:MVP",
+        "description": "MVP features from spreadsheet",
+        "color": "0052CC"
+      }
+    ],
+    "milestone": null,
+    "number": 477,
+    "state": "OPEN",
+    "title": "Customer Wallet Operations",
+    "updatedAt": "2026-01-06T21:50:14Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/477"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Wallet status management\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:50:11Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzLWw",
+        "name": "sheet:MVP",
+        "description": "MVP features from spreadsheet",
+        "color": "0052CC"
+      }
+    ],
+    "milestone": null,
+    "number": 476,
+    "state": "OPEN",
+    "title": "Wallet status management",
+    "updatedAt": "2026-01-06T21:50:11Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/476"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Wallet balance reconciliation\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:50:09Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzLWw",
+        "name": "sheet:MVP",
+        "description": "MVP features from spreadsheet",
+        "color": "0052CC"
+      }
+    ],
+    "milestone": null,
+    "number": 475,
+    "state": "OPEN",
+    "title": "Wallet balance reconciliation",
+    "updatedAt": "2026-01-06T21:50:09Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/475"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Virtual account management\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:50:07Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzLWw",
+        "name": "sheet:MVP",
+        "description": "MVP features from spreadsheet",
+        "color": "0052CC"
+      }
+    ],
+    "milestone": null,
+    "number": 474,
+    "state": "OPEN",
+    "title": "Virtual account management",
+    "updatedAt": "2026-01-06T21:50:07Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/474"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 2\": \"Wallet Management\",\n  \"Unnamed: 3\": \"System Wallet Control\",\n  \"Unnamed: 4\": \"Master wallet monitoring\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:50:04Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzLWw",
+        "name": "sheet:MVP",
+        "description": "MVP features from spreadsheet",
+        "color": "0052CC"
+      }
+    ],
+    "milestone": null,
+    "number": 473,
+    "state": "OPEN",
+    "title": "Wallet Management",
+    "updatedAt": "2026-01-06T21:50:04Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/473"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Bank account management\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:48:08Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzLWw",
+        "name": "sheet:MVP",
+        "description": "MVP features from spreadsheet",
+        "color": "0052CC"
+      }
+    ],
+    "milestone": null,
+    "number": 434,
+    "state": "OPEN",
+    "title": "Bank account management",
+    "updatedAt": "2026-01-06T21:48:08Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/434"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Account reconciliation\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:47:42Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzLWw",
+        "name": "sheet:MVP",
+        "description": "MVP features from spreadsheet",
+        "color": "0052CC"
+      }
+    ],
+    "milestone": null,
+    "number": 426,
+    "state": "OPEN",
+    "title": "Account reconciliation",
+    "updatedAt": "2026-01-06T21:47:42Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/426"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Trial balance generation\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:47:34Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzLWw",
+        "name": "sheet:MVP",
+        "description": "MVP features from spreadsheet",
+        "color": "0052CC"
+      }
+    ],
+    "milestone": null,
+    "number": 424,
+    "state": "OPEN",
+    "title": "Trial balance generation",
+    "updatedAt": "2026-01-06T21:47:34Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/424"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Real-time balance sheet\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:47:27Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzLWw",
+        "name": "sheet:MVP",
+        "description": "MVP features from spreadsheet",
+        "color": "0052CC"
+      }
+    ],
+    "milestone": null,
+    "number": 422,
+    "state": "OPEN",
+    "title": "Real-time balance sheet",
+    "updatedAt": "2026-01-06T21:47:27Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/422"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 2\": \"Financial Management\",\n  \"Unnamed: 3\": \"Ledger Management\",\n  \"Unnamed: 4\": \"Double-entry accounting system\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:47:24Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzLWw",
+        "name": "sheet:MVP",
+        "description": "MVP features from spreadsheet",
+        "color": "0052CC"
+      }
+    ],
+    "milestone": null,
+    "number": 421,
+    "state": "OPEN",
+    "title": "Financial Management",
+    "updatedAt": "2026-01-06T21:47:24Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/421"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Account closure workflow\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:47:00Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzLWw",
+        "name": "sheet:MVP",
+        "description": "MVP features from spreadsheet",
+        "color": "0052CC"
+      }
+    ],
+    "milestone": null,
+    "number": 414,
+    "state": "OPEN",
+    "title": "Account closure workflow",
+    "updatedAt": "2026-01-06T21:47:00Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/414"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Account freezing/unfreezing\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:46:52Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzLWw",
+        "name": "sheet:MVP",
+        "description": "MVP features from spreadsheet",
+        "color": "0052CC"
+      }
+    ],
+    "milestone": null,
+    "number": 412,
+    "state": "OPEN",
+    "title": "Account freezing/unfreezing",
+    "updatedAt": "2026-01-06T21:46:52Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/412"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Balance monitoring\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:46:45Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzLWw",
+        "name": "sheet:MVP",
+        "description": "MVP features from spreadsheet",
+        "color": "0052CC"
+      }
+    ],
+    "milestone": null,
+    "number": 410,
+    "state": "OPEN",
+    "title": "Balance monitoring",
+    "updatedAt": "2026-01-06T21:46:45Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/410"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 3\": \"Account Management\",\n  \"Unnamed: 4\": \"Account status management\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:46:41Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzLWw",
+        "name": "sheet:MVP",
+        "description": "MVP features from spreadsheet",
+        "color": "0052CC"
+      }
+    ],
+    "milestone": null,
+    "number": 409,
+    "state": "OPEN",
+    "title": "Account Management",
+    "updatedAt": "2026-01-06T21:46:41Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/409"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Virtual card creation\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:45:37Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzLWw",
+        "name": "sheet:MVP",
+        "description": "MVP features from spreadsheet",
+        "color": "0052CC"
+      }
+    ],
+    "milestone": null,
+    "number": 387,
+    "state": "OPEN",
+    "title": "Virtual card creation",
+    "updatedAt": "2026-01-06T21:45:37Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/387"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Real-time balance viewing\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:45:31Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzLWw",
+        "name": "sheet:MVP",
+        "description": "MVP features from spreadsheet",
+        "color": "0052CC"
+      }
+    ],
+    "milestone": null,
+    "number": 385,
+    "state": "OPEN",
+    "title": "Real-time balance viewing",
+    "updatedAt": "2026-01-06T21:45:31Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/385"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 2\": \"Wallet & Payments\",\n  \"Unnamed: 3\": \"Digital Wallet\",\n  \"Unnamed: 4\": \"Multi-currency wallet support\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:45:27Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzLWw",
+        "name": "sheet:MVP",
+        "description": "MVP features from spreadsheet",
+        "color": "0052CC"
+      }
+    ],
+    "milestone": null,
+    "number": 384,
+    "state": "OPEN",
+    "title": "Wallet & Payments",
+    "updatedAt": "2026-01-06T21:45:27Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/384"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Multiple account types (Individual, Business, Joint)\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:44:52Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzLWw",
+        "name": "sheet:MVP",
+        "description": "MVP features from spreadsheet",
+        "color": "0052CC"
+      }
+    ],
+    "milestone": null,
+    "number": 372,
+    "state": "OPEN",
+    "title": "Multiple account types (Individual, Business, Joint)",
+    "updatedAt": "2026-01-06T21:44:52Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/372"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Detection of accounts making transactions across unrelated geographies\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:42:58Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 333,
+    "state": "OPEN",
+    "title": "Detection of accounts making transactions across unrelated geographies",
+    "updatedAt": "2026-01-06T21:42:58Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/333"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Identification of device fingerprinting mismatches (e.g., multiple accounts from the same device/IP)\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:42:44Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 328,
+    "state": "OPEN",
+    "title": "Identification of device fingerprinting mismatches (e.g., multiple accounts from the same device/IP)",
+    "updatedAt": "2026-01-06T21:42:44Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/328"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Monitor float balances\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:39:47Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 265,
+    "state": "OPEN",
+    "title": "Monitor float balances",
+    "updatedAt": "2026-01-06T21:39:47Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/265"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Reconcile accounts\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:39:35Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 261,
+    "state": "OPEN",
+    "title": "Reconcile accounts",
+    "updatedAt": "2026-01-06T21:39:35Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/261"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 3\": \"Financial Operations\",\n  \"Unnamed: 4\": \"Manage escrow pool accounts\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:39:27Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 258,
+    "state": "OPEN",
+    "title": "Financial Operations",
+    "updatedAt": "2026-01-06T21:39:27Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/258"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Track dormant accounts\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:38:21Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 232,
+    "state": "OPEN",
+    "title": "Track dormant accounts",
+    "updatedAt": "2026-01-06T21:38:21Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/232"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Monitor account balances\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:38:19Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 231,
+    "state": "OPEN",
+    "title": "Monitor account balances",
+    "updatedAt": "2026-01-06T21:38:19Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/231"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Review account creation requests\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:38:09Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 227,
+    "state": "OPEN",
+    "title": "Review account creation requests",
+    "updatedAt": "2026-01-06T21:38:09Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/227"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 2\": \"Escrow Administration\",\n  \"Unnamed: 3\": \"Account Oversight\",\n  \"Unnamed: 4\": \"Monitor all escrow accounts\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:38:06Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 226,
+    "state": "OPEN",
+    "title": "Escrow Administration",
+    "updatedAt": "2026-01-06T21:38:06Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/226"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Wallet upgrade/downgrade\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:38:01Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 224,
+    "state": "OPEN",
+    "title": "Wallet upgrade/downgrade",
+    "updatedAt": "2026-01-06T21:38:01Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/224"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Account linking\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:37:59Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 223,
+    "state": "OPEN",
+    "title": "Account linking",
+    "updatedAt": "2026-01-06T21:37:59Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/223"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Balance management\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:37:49Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 219,
+    "state": "OPEN",
+    "title": "Balance management",
+    "updatedAt": "2026-01-06T21:37:49Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/219"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 3\": \"Customer Wallet Operations\",\n  \"Unnamed: 4\": \"Wallet creation workflow\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:37:47Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 218,
+    "state": "OPEN",
+    "title": "Customer Wallet Operations",
+    "updatedAt": "2026-01-06T21:37:47Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/218"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Wallet status management\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:37:44Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 217,
+    "state": "OPEN",
+    "title": "Wallet status management",
+    "updatedAt": "2026-01-06T21:37:44Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/217"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Wallet type configuration\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:37:41Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 216,
+    "state": "OPEN",
+    "title": "Wallet type configuration",
+    "updatedAt": "2026-01-06T21:37:41Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/216"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Wallet limit management\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:37:39Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 215,
+    "state": "OPEN",
+    "title": "Wallet limit management",
+    "updatedAt": "2026-01-06T21:37:39Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/215"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Wallet balance reconciliation\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:37:36Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 214,
+    "state": "OPEN",
+    "title": "Wallet balance reconciliation",
+    "updatedAt": "2026-01-06T21:37:36Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/214"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Virtual account management\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:37:34Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 213,
+    "state": "OPEN",
+    "title": "Virtual account management",
+    "updatedAt": "2026-01-06T21:37:34Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/213"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 2\": \"Wallet Management\",\n  \"Unnamed: 3\": \"System Wallet Control\",\n  \"Unnamed: 4\": \"Master wallet monitoring\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:37:31Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 212,
+    "state": "OPEN",
+    "title": "Wallet Management",
+    "updatedAt": "2026-01-06T21:37:31Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/212"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Bank account management\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:34:51Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 148,
+    "state": "OPEN",
+    "title": "Bank account management",
+    "updatedAt": "2026-01-06T21:34:51Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/148"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Account reconciliation\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:34:30Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 140,
+    "state": "OPEN",
+    "title": "Account reconciliation",
+    "updatedAt": "2026-01-06T21:34:30Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/140"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Trial balance generation\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:34:25Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 138,
+    "state": "OPEN",
+    "title": "Trial balance generation",
+    "updatedAt": "2026-01-06T21:34:25Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/138"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Real-time balance sheet\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:34:19Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 136,
+    "state": "OPEN",
+    "title": "Real-time balance sheet",
+    "updatedAt": "2026-01-06T21:34:19Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/136"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 2\": \"Financial Management\",\n  \"Unnamed: 3\": \"Ledger Management\",\n  \"Unnamed: 4\": \"Double-entry accounting system\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:34:17Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 135,
+    "state": "OPEN",
+    "title": "Financial Management",
+    "updatedAt": "2026-01-06T21:34:17Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/135"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Account closure workflow\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:33:53Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 126,
+    "state": "OPEN",
+    "title": "Account closure workflow",
+    "updatedAt": "2026-01-06T21:33:53Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/126"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Account freezing/unfreezing\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:33:47Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 124,
+    "state": "OPEN",
+    "title": "Account freezing/unfreezing",
+    "updatedAt": "2026-01-06T21:33:47Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/124"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Balance monitoring\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:33:37Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 120,
+    "state": "OPEN",
+    "title": "Balance monitoring",
+    "updatedAt": "2026-01-06T21:33:37Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/120"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 3\": \"Account Management\",\n  \"Unnamed: 4\": \"Account status management\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:33:35Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 119,
+    "state": "OPEN",
+    "title": "Account Management",
+    "updatedAt": "2026-01-06T21:33:35Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/119"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 3\": \"Escrow Services\",\n  \"Unnamed: 4\": \"Escrow account creation\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:31:52Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 80,
+    "state": "OPEN",
+    "title": "Escrow Services",
+    "updatedAt": "2026-01-06T21:31:52Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/80"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 3\": \"Payment Methods\",\n  \"Unnamed: 4\": \"Bank account linking\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:29:59Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 35,
+    "state": "OPEN",
+    "title": "Payment Methods",
+    "updatedAt": "2026-01-06T21:29:59Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/35"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Virtual card creation\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:29:53Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 33,
+    "state": "OPEN",
+    "title": "Virtual card creation",
+    "updatedAt": "2026-01-06T21:29:53Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/33"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Real-time balance viewing\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:29:48Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 31,
+    "state": "OPEN",
+    "title": "Real-time balance viewing",
+    "updatedAt": "2026-01-06T21:29:48Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/31"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 2\": \"Wallet & Payments\",\n  \"Unnamed: 3\": \"Digital Wallet\",\n  \"Unnamed: 4\": \"Multi-currency wallet support\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:29:46Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 30,
+    "state": "OPEN",
+    "title": "Wallet & Payments",
+    "updatedAt": "2026-01-06T21:29:46Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/30"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Multiple account types (Individual, Business, Joint)\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:29:15Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 18,
+    "state": "OPEN",
+    "title": "Multiple account types (Individual, Business, Joint)",
+    "updatedAt": "2026-01-06T21:29:15Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/18"
+  }
+]

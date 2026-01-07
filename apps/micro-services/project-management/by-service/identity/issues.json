@@ -1,0 +1,1210 @@
+[
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"User interaction history\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:52:07Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzLWw",
+        "name": "sheet:MVP",
+        "description": "MVP features from spreadsheet",
+        "color": "0052CC"
+      }
+    ],
+    "milestone": null,
+    "number": 509,
+    "state": "OPEN",
+    "title": "User interaction history",
+    "updatedAt": "2026-01-06T21:52:07Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/509"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 2\": \"Audit Trail\",\n  \"Unnamed: 3\": \"System Audit\",\n  \"Unnamed: 4\": \"User action logging\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:51:38Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzLWw",
+        "name": "sheet:MVP",
+        "description": "MVP features from spreadsheet",
+        "color": "0052CC"
+      }
+    ],
+    "milestone": null,
+    "number": 498,
+    "state": "OPEN",
+    "title": "Audit Trail",
+    "updatedAt": "2026-01-06T21:51:38Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/498"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"User activity reports\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:51:08Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzLWw",
+        "name": "sheet:MVP",
+        "description": "MVP features from spreadsheet",
+        "color": "0052CC"
+      }
+    ],
+    "milestone": null,
+    "number": 491,
+    "state": "OPEN",
+    "title": "User activity reports",
+    "updatedAt": "2026-01-06T21:51:08Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/491"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 1\": \"ADMINISTRATOR\",\n  \"Unnamed: 2\": \"Customer Management\",\n  \"Unnamed: 3\": \"Customer 360° View\",\n  \"Unnamed: 4\": \"Unified customer profile dashboard\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:46:27Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzLWw",
+        "name": "sheet:MVP",
+        "description": "MVP features from spreadsheet",
+        "color": "0052CC"
+      }
+    ],
+    "milestone": null,
+    "number": 405,
+    "state": "OPEN",
+    "title": "ADMINISTRATOR",
+    "updatedAt": "2026-01-06T21:46:27Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/405"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 2\": \"User Interface & Experience\",\n  \"Unnamed: 3\": \"Mobile Features\",\n  \"Unnamed: 4\": \"Native iOS and Android apps\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:46:01Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzLWw",
+        "name": "sheet:MVP",
+        "description": "MVP features from spreadsheet",
+        "color": "0052CC"
+      }
+    ],
+    "milestone": null,
+    "number": 396,
+    "state": "OPEN",
+    "title": "User Interface & Experience",
+    "updatedAt": "2026-01-06T21:46:01Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/396"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 2\": \"Security & Control\",\n  \"Unnamed: 3\": \"Account Security\",\n  \"Unnamed: 4\": \"Two-factor authentication\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:45:49Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzLWw",
+        "name": "sheet:MVP",
+        "description": "MVP features from spreadsheet",
+        "color": "0052CC"
+      }
+    ],
+    "milestone": null,
+    "number": 391,
+    "state": "OPEN",
+    "title": "Security & Control",
+    "updatedAt": "2026-01-06T21:45:49Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/391"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Biometric authentication setup\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:45:11Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzLWw",
+        "name": "sheet:MVP",
+        "description": "MVP features from spreadsheet",
+        "color": "0052CC"
+      }
+    ],
+    "milestone": null,
+    "number": 379,
+    "state": "OPEN",
+    "title": "Biometric authentication setup",
+    "updatedAt": "2026-01-06T21:45:11Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/379"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 3\": \"Profile Management\",\n  \"Unnamed: 4\": \"Personal information management\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:45:03Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzLWw",
+        "name": "sheet:MVP",
+        "description": "MVP features from spreadsheet",
+        "color": "0052CC"
+      }
+    ],
+    "milestone": null,
+    "number": 376,
+    "state": "OPEN",
+    "title": "Profile Management",
+    "updatedAt": "2026-01-06T21:45:03Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/376"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Biometric login support\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:44:47Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzLWw",
+        "name": "sheet:MVP",
+        "description": "MVP features from spreadsheet",
+        "color": "0052CC"
+      }
+    ],
+    "milestone": null,
+    "number": 370,
+    "state": "OPEN",
+    "title": "Biometric login support",
+    "updatedAt": "2026-01-06T21:44:47Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/370"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 1\": \"USER\",\n  \"Unnamed: 2\": \"Account Management\",\n  \"Unnamed: 3\": \"User Registration and KYC\",\n  \"Unnamed: 4\": \"Digital ID verification with AI-powered document scanning\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:44:41Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzLWw",
+        "name": "sheet:MVP",
+        "description": "MVP features from spreadsheet",
+        "color": "0052CC"
+      }
+    ],
+    "milestone": null,
+    "number": 368,
+    "state": "OPEN",
+    "title": "USER",
+    "updatedAt": "2026-01-06T21:44:41Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/368"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"User interaction history\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:44:08Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 357,
+    "state": "OPEN",
+    "title": "User interaction history",
+    "updatedAt": "2026-01-06T21:44:08Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/357"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 2\": \"Audit Trail\",\n  \"Unnamed: 3\": \"System Audit\",\n  \"Unnamed: 4\": \"User action logging\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:43:39Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 346,
+    "state": "OPEN",
+    "title": "Audit Trail",
+    "updatedAt": "2026-01-06T21:43:39Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/346"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Automated classification of fraud types (e.g., phishing, identity theft, money laundering)\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:43:27Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 342,
+    "state": "OPEN",
+    "title": "Automated classification of fraud types (e.g., phishing, identity theft, money laundering)",
+    "updatedAt": "2026-01-06T21:43:27Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/342"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Alerts for multiple failed KYC attempts\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:43:00Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 334,
+    "state": "OPEN",
+    "title": "Alerts for multiple failed KYC attempts",
+    "updatedAt": "2026-01-06T21:43:00Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/334"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 3\": \"Suspicious Account Activity Detection\",\n  \"Unnamed: 4\": \"Flagging of newly registered accounts making large transactions\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:42:55Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 332,
+    "state": "OPEN",
+    "title": "Suspicious Account Activity Detection",
+    "updatedAt": "2026-01-06T21:42:55Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/332"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Adaptive authentication based on user risk profile\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:42:53Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 331,
+    "state": "OPEN",
+    "title": "Adaptive authentication based on user risk profile",
+    "updatedAt": "2026-01-06T21:42:53Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/331"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 3\": \"Multi-Factor Authentication Enforcement\",\n  \"Unnamed: 4\": \"AI detects unusual login attempts and enforces additional authentication (OTP, biometric)\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:42:50Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 330,
+    "state": "OPEN",
+    "title": "Multi-Factor Authentication Enforcement",
+    "updatedAt": "2026-01-06T21:42:50Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/330"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Detection of suspicious login behavior (e.g., multiple failed login attempts, logins from different geolocations)\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:42:47Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 329,
+    "state": "OPEN",
+    "title": "Detection of suspicious login behavior (e.g., multiple failed login attempts, logins from different geolocations)",
+    "updatedAt": "2026-01-06T21:42:47Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/329"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 3\": \"Pattern & Behavioral Analysis\",\n  \"Unnamed: 4\": \"AI learns user spending patterns and detects deviations\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:42:42Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 327,
+    "state": "OPEN",
+    "title": "Pattern & Behavioral Analysis",
+    "updatedAt": "2026-01-06T21:42:42Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/327"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"User behavior history\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:42:37Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 325,
+    "state": "OPEN",
+    "title": "User behavior history",
+    "updatedAt": "2026-01-06T21:42:37Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/325"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"AI-based behavioral analysis to detect deviations from normal user activity\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:42:19Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 318,
+    "state": "OPEN",
+    "title": "AI-based behavioral analysis to detect deviations from normal user activity",
+    "updatedAt": "2026-01-06T21:42:19Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/318"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"User activity reports\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:41:26Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 299,
+    "state": "OPEN",
+    "title": "User activity reports",
+    "updatedAt": "2026-01-06T21:41:26Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/299"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Manage user permissions\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:40:51Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 287,
+    "state": "OPEN",
+    "title": "Manage user permissions",
+    "updatedAt": "2026-01-06T21:40:51Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/287"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 3\": \"Compliance & Risk\",\n  \"Unnamed: 4\": \"KYC verification for escrow parties\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:38:46Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 242,
+    "state": "OPEN",
+    "title": "Compliance & Risk",
+    "updatedAt": "2026-01-06T21:38:46Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/242"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"User verification status monitoring\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:36:12Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 180,
+    "state": "OPEN",
+    "title": "User verification status monitoring",
+    "updatedAt": "2026-01-06T21:36:12Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/180"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Blockchain-based KYC data management\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:36:09Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 179,
+    "state": "OPEN",
+    "title": "Blockchain-based KYC data management",
+    "updatedAt": "2026-01-06T21:36:09Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/179"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 2\": \"KYC Management\",\n  \"Unnamed: 3\": \"KYC Administration\",\n  \"Unnamed: 4\": \"Manual review system for flagged cases\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:36:07Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 178,
+    "state": "OPEN",
+    "title": "KYC Management",
+    "updatedAt": "2026-01-06T21:36:07Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/178"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Know Your Customer (KYC) reports\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:35:19Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 159,
+    "state": "OPEN",
+    "title": "Know Your Customer (KYC) reports",
+    "updatedAt": "2026-01-06T21:35:19Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/159"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Risk profile scoring\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:33:20Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 113,
+    "state": "OPEN",
+    "title": "Risk profile scoring",
+    "updatedAt": "2026-01-06T21:33:20Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/113"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 1\": \"ADMINISTRATOR\",\n  \"Unnamed: 2\": \"Customer Management\",\n  \"Unnamed: 3\": \"Customer 360° View\",\n  \"Unnamed: 4\": \"Unified customer profile dashboard\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:33:14Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 111,
+    "state": "OPEN",
+    "title": "ADMINISTRATOR",
+    "updatedAt": "2026-01-06T21:33:14Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/111"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Biometric login\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:32:13Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 88,
+    "state": "OPEN",
+    "title": "Biometric login",
+    "updatedAt": "2026-01-06T21:32:13Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/88"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 2\": \"User Interface & Experience\",\n  \"Unnamed: 3\": \"Mobile Features\",\n  \"Unnamed: 4\": \"Native iOS and Android apps\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:32:09Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 87,
+    "state": "OPEN",
+    "title": "User Interface & Experience",
+    "updatedAt": "2026-01-06T21:32:09Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/87"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Multi-signature authorization\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:31:55Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 81,
+    "state": "OPEN",
+    "title": "Multi-signature authorization",
+    "updatedAt": "2026-01-06T21:31:55Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/81"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Multi-user account setup\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:31:38Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 74,
+    "state": "OPEN",
+    "title": "Multi-user account setup",
+    "updatedAt": "2026-01-06T21:31:38Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/74"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Login activity monitoring\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:30:34Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 49,
+    "state": "OPEN",
+    "title": "Login activity monitoring",
+    "updatedAt": "2026-01-06T21:30:34Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/49"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Biometric login\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:30:29Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 47,
+    "state": "OPEN",
+    "title": "Biometric login",
+    "updatedAt": "2026-01-06T21:30:29Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/47"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 2\": \"Security & Control\",\n  \"Unnamed: 3\": \"Account Security\",\n  \"Unnamed: 4\": \"Two-factor authentication\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:30:27Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 46,
+    "state": "OPEN",
+    "title": "Security & Control",
+    "updatedAt": "2026-01-06T21:30:27Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/46"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Biometric authentication setup\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:29:33Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 25,
+    "state": "OPEN",
+    "title": "Biometric authentication setup",
+    "updatedAt": "2026-01-06T21:29:33Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/25"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 3\": \"Profile Management\",\n  \"Unnamed: 4\": \"Personal information management\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:29:25Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 22,
+    "state": "OPEN",
+    "title": "Profile Management",
+    "updatedAt": "2026-01-06T21:29:25Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/22"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Biometric login support\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:29:09Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 16,
+    "state": "OPEN",
+    "title": "Biometric login support",
+    "updatedAt": "2026-01-06T21:29:09Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/16"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 1\": \"USER\",\n  \"Unnamed: 2\": \"Account Management\",\n  \"Unnamed: 3\": \"User Registration and KYC\",\n  \"Unnamed: 4\": \"Digital ID verification with AI-powered document scanning\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:29:04Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 14,
+    "state": "OPEN",
+    "title": "USER",
+    "updatedAt": "2026-01-06T21:29:04Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/14"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "## API Gateway Setup\n\n### Overview\nSet up the API Gateway to handle authentication, rate limiting, and routing for all microservices.\n\n### Tasks\n- [ ] Evaluate Kong vs Nginx vs AWS API Gateway\n- [ ] Set up chosen API Gateway locally\n- [ ] Configure service routing rules\n- [ ] Implement JWT validation middleware\n- [ ] Add rate limiting per endpoint\n- [ ] Configure CORS policies\n- [ ] Set up request/response logging\n- [ ] Add health check endpoints\n- [ ] Configure load balancing\n- [ ] Create gateway documentation\n- [ ] Set up monitoring dashboard\n- [ ] Create Docker compose configuration\n\n### Acceptance Criteria\n- All service endpoints accessible through gateway\n- JWT tokens validated on protected routes\n- Rate limiting prevents abuse\n- Health checks return proper status\n- Logs capture all requests\n- Documentation complete\n\n### Dependencies\n- Identity Service (for JWT validation)\n\n### Estimated Time\n- 1 week\n\n### References\n- [Architecture Doc](ARCHITECTURE.md)\n- [Kong Documentation](https://docs.konghq.com/)",
+    "closedAt": null,
+    "comments": [
+      {
+        "id": "IC_kwDOPtvf087cf8vh",
+        "author": {
+          "login": "thefixer3x"
+        },
+        "authorAssociation": "OWNER",
+        "body": "## 🎉 API Gateway Implementation Status\n\nGreat news! After reviewing the codebase, the API Gateway setup is **essentially complete**. Here's the detailed status:\n\n### ✅ Completed Tasks\n\n| Task | Status | Implementation |\n|------|--------|----------------|\n| Evaluate Kong vs Nginx vs AWS API Gateway | ✅ | Kong selected and configured |\n| Set up chosen API Gateway locally | ✅ | `gateway/kong.yml` + Docker Compose |\n| Configure service routing rules | ✅ | Routes for all 4 services defined |\n| Implement JWT validation middleware | ✅ | JWT plugin configured on protected routes |\n| Add rate limiting per endpoint | ✅ | Different limits per endpoint category |\n| Configure CORS policies | ✅ | Permissive dev config, prod templates ready |\n| Set up request/response logging | ✅ | File-log plugin configured |\n| Add health check endpoints | ✅ | Health checks on all upstream services |\n| Configure load balancing | ✅ | Round-robin with service discovery |\n| Create gateway documentation | ✅ | `gateway/README.md` complete |\n| Create Docker compose configuration | ✅ | Full stack in `docker-compose.yml` |\n\n### ⚠️ Remaining\n| Task | Status | Notes |\n|------|--------|-------|\n| Set up monitoring dashboard | 🔄 | Grafana configured, needs Kong-specific dashboard |\n\n### Key Files\n- `gateway/kong.yml` - Main Kong declarative config\n- `gateway/README.md` - Gateway documentation  \n- `docker-compose.yml` - Full infrastructure including Kong\n\n### Access Points\n- **Proxy**: `http://localhost:8000`\n- **Admin API**: `http://localhost:8001`\n- **Manager GUI**: `http://localhost:8002`\n\n---\n\n**Recommendation**: This issue can be closed once the monitoring dashboard is verified. The core API Gateway functionality is production-ready! 🚀",
+        "createdAt": "2025-12-30T13:31:56Z",
+        "includesCreatedEdit": false,
+        "isMinimized": false,
+        "minimizedReason": "",
+        "reactionGroups": [],
+        "url": "https://github.com/thefixer3x/micro-services/issues/4#issuecomment-3699362785",
+        "viewerDidAuthor": true
+      }
+    ],
+    "createdAt": "2025-10-02T09:22:24Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBvxFw",
+        "name": "enhancement",
+        "description": "New feature or request",
+        "color": "a2eeef"
+      },
+      {
+        "id": "LA_kwDOPtvf088AAAACKB3Vsw",
+        "name": "phase-1",
+        "description": "Phase 1: Foundation services",
+        "color": "0E8A16"
+      },
+      {
+        "id": "LA_kwDOPtvf088AAAACKB3nBw",
+        "name": "infrastructure",
+        "description": "Infrastructure and DevOps",
+        "color": "FEF2C0"
+      }
+    ],
+    "milestone": null,
+    "number": 4,
+    "state": "OPEN",
+    "title": "Phase 1: Setup API Gateway",
+    "updatedAt": "2025-12-30T13:31:56Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/4"
+  },
+  {
+    "assignees": [
+      {
+        "id": "BOT_kgDOC9w8XQ",
+        "login": "Copilot",
+        "name": "",
+        "databaseId": 0
+      }
+    ],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "## Identity Service Implementation\n\n### Overview\nImplement the foundation service for user authentication and KYC verification.\n\n### Tasks\n- [ ] Set up Node.js/Express project structure\n- [ ] Configure PostgreSQL database with migrations\n- [ ] Implement user registration API\n- [ ] Add JWT authentication\n- [ ] Create login/logout endpoints\n- [ ] Add password hashing with bcrypt\n- [ ] Implement basic KYC document upload\n- [ ] Add biometric authentication stub\n- [ ] Create user profile management APIs\n- [ ] Add multi-language support (en, pcm, yo, fr)\n- [ ] Write unit tests (80% coverage)\n- [ ] Add integration tests\n- [ ] Create Dockerfile\n- [ ] Update OpenAPI documentation\n\n### Acceptance Criteria\n- Users can register with email/phone\n- Users can login and receive JWT token\n- Users can upload KYC documents\n- All APIs follow OpenAPI spec\n- Tests pass with >80% coverage\n\n### Dependencies\n- None (foundation service)\n\n### Estimated Time\n- 2 weeks\n\n### References\n- [Service README](services/identity-service/README.md)\n- [OpenAPI Spec](services/identity-service/openapi.yaml)\n- [Architecture Doc](ARCHITECTURE.md)",
+    "closedAt": "2025-10-18T00:00:28Z",
+    "comments": [],
+    "createdAt": "2025-09-11T05:03:39Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBvxFw",
+        "name": "enhancement",
+        "description": "New feature or request",
+        "color": "a2eeef"
+      },
+      {
+        "id": "LA_kwDOPtvf088AAAACKB3Vsw",
+        "name": "phase-1",
+        "description": "Phase 1: Foundation services",
+        "color": "0E8A16"
+      },
+      {
+        "id": "LA_kwDOPtvf088AAAACKB3YWQ",
+        "name": "identity-service",
+        "description": "Related to identity-service",
+        "color": "1D76DB"
+      }
+    ],
+    "milestone": null,
+    "number": 2,
+    "state": "CLOSED",
+    "title": "Phase 1: Implement Identity Service",
+    "updatedAt": "2025-10-18T00:00:28Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/2"
+  }
+]

@@ -1,0 +1,21 @@
+{
+  "total_issues": 501,
+  "open_issues": 500,
+  "closed_issues": 1,
+  "labels": [
+    "enhancement",
+    "identity-service",
+    "infrastructure",
+    "phase-1",
+    "sheet:MVP",
+    "sheet:Product"
+  ],
+  "milestones": [
+    {
+      "name": "No Milestone",
+      "count": 1
+    }
+  ],
+  "latest_update": "2026-01-06T21:52:12Z",
+  "oldest_issue": "2025-09-11T04:47:58Z"
+}

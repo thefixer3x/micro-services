@@ -1,0 +1,1865 @@
+[
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Support ticket reports\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:51:35Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzLWw",
+        "name": "sheet:MVP",
+        "description": "MVP features from spreadsheet",
+        "color": "0052CC"
+      }
+    ],
+    "milestone": null,
+    "number": 497,
+    "state": "OPEN",
+    "title": "Support ticket reports",
+    "updatedAt": "2026-01-06T21:51:35Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/497"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Partner performance reports\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:51:32Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzLWw",
+        "name": "sheet:MVP",
+        "description": "MVP features from spreadsheet",
+        "color": "0052CC"
+      }
+    ],
+    "milestone": null,
+    "number": 496,
+    "state": "OPEN",
+    "title": "Partner performance reports",
+    "updatedAt": "2026-01-06T21:51:32Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/496"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"SLA compliance reports\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:51:29Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzLWw",
+        "name": "sheet:MVP",
+        "description": "MVP features from spreadsheet",
+        "color": "0052CC"
+      }
+    ],
+    "milestone": null,
+    "number": 495,
+    "state": "OPEN",
+    "title": "SLA compliance reports",
+    "updatedAt": "2026-01-06T21:51:29Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/495"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Error/Exception reports\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:51:26Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzLWw",
+        "name": "sheet:MVP",
+        "description": "MVP features from spreadsheet",
+        "color": "0052CC"
+      }
+    ],
+    "milestone": null,
+    "number": 494,
+    "state": "OPEN",
+    "title": "Error/Exception reports",
+    "updatedAt": "2026-01-06T21:51:26Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/494"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Service usage reports\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:51:20Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzLWw",
+        "name": "sheet:MVP",
+        "description": "MVP features from spreadsheet",
+        "color": "0052CC"
+      }
+    ],
+    "milestone": null,
+    "number": 493,
+    "state": "OPEN",
+    "title": "Service usage reports",
+    "updatedAt": "2026-01-06T21:51:20Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/493"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Customer acquisition reports\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:51:12Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzLWw",
+        "name": "sheet:MVP",
+        "description": "MVP features from spreadsheet",
+        "color": "0052CC"
+      }
+    ],
+    "milestone": null,
+    "number": 492,
+    "state": "OPEN",
+    "title": "Customer acquisition reports",
+    "updatedAt": "2026-01-06T21:51:12Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/492"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 3\": \"Operational Reports\",\n  \"Unnamed: 4\": \"System performance reports\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:51:05Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzLWw",
+        "name": "sheet:MVP",
+        "description": "MVP features from spreadsheet",
+        "color": "0052CC"
+      }
+    ],
+    "milestone": null,
+    "number": 490,
+    "state": "OPEN",
+    "title": "Operational Reports",
+    "updatedAt": "2026-01-06T21:51:05Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/490"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Audit reports\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:51:01Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzLWw",
+        "name": "sheet:MVP",
+        "description": "MVP features from spreadsheet",
+        "color": "0052CC"
+      }
+    ],
+    "milestone": null,
+    "number": 489,
+    "state": "OPEN",
+    "title": "Audit reports",
+    "updatedAt": "2026-01-06T21:51:01Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/489"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Tax reports\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:50:58Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzLWw",
+        "name": "sheet:MVP",
+        "description": "MVP features from spreadsheet",
+        "color": "0052CC"
+      }
+    ],
+    "milestone": null,
+    "number": 488,
+    "state": "OPEN",
+    "title": "Tax reports",
+    "updatedAt": "2026-01-06T21:50:58Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/488"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Reconciliation reports\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:50:52Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzLWw",
+        "name": "sheet:MVP",
+        "description": "MVP features from spreadsheet",
+        "color": "0052CC"
+      }
+    ],
+    "milestone": null,
+    "number": 487,
+    "state": "OPEN",
+    "title": "Reconciliation reports",
+    "updatedAt": "2026-01-06T21:50:52Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/487"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Partner settlement reports\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:50:47Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzLWw",
+        "name": "sheet:MVP",
+        "description": "MVP features from spreadsheet",
+        "color": "0052CC"
+      }
+    ],
+    "milestone": null,
+    "number": 486,
+    "state": "OPEN",
+    "title": "Partner settlement reports",
+    "updatedAt": "2026-01-06T21:50:47Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/486"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Fee collection reports\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:50:43Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzLWw",
+        "name": "sheet:MVP",
+        "description": "MVP features from spreadsheet",
+        "color": "0052CC"
+      }
+    ],
+    "milestone": null,
+    "number": 485,
+    "state": "OPEN",
+    "title": "Fee collection reports",
+    "updatedAt": "2026-01-06T21:50:43Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/485"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Revenue reports\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:50:34Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzLWw",
+        "name": "sheet:MVP",
+        "description": "MVP features from spreadsheet",
+        "color": "0052CC"
+      }
+    ],
+    "milestone": null,
+    "number": 483,
+    "state": "OPEN",
+    "title": "Revenue reports",
+    "updatedAt": "2026-01-06T21:50:34Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/483"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 2\": \"Reporting\",\n  \"Unnamed: 3\": \"Financial Reports\",\n  \"Unnamed: 4\": \"Daily settlement reports\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:50:30Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzLWw",
+        "name": "sheet:MVP",
+        "description": "MVP features from spreadsheet",
+        "color": "0052CC"
+      }
+    ],
+    "milestone": null,
+    "number": 482,
+    "state": "OPEN",
+    "title": "Reporting",
+    "updatedAt": "2026-01-06T21:50:30Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/482"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Settlement reporting\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:49:59Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzLWw",
+        "name": "sheet:MVP",
+        "description": "MVP features from spreadsheet",
+        "color": "0052CC"
+      }
+    ],
+    "milestone": null,
+    "number": 471,
+    "state": "OPEN",
+    "title": "Settlement reporting",
+    "updatedAt": "2026-01-06T21:49:59Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/471"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Multi-currency support\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:47:45Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzLWw",
+        "name": "sheet:MVP",
+        "description": "MVP features from spreadsheet",
+        "color": "0052CC"
+      }
+    ],
+    "milestone": null,
+    "number": 427,
+    "state": "OPEN",
+    "title": "Multi-currency support",
+    "updatedAt": "2026-01-06T21:47:45Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/427"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Support agent performance tracking\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:47:21Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzLWw",
+        "name": "sheet:MVP",
+        "description": "MVP features from spreadsheet",
+        "color": "0052CC"
+      }
+    ],
+    "milestone": null,
+    "number": 420,
+    "state": "OPEN",
+    "title": "Support agent performance tracking",
+    "updatedAt": "2026-01-06T21:47:21Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/420"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 3\": \"Customer Support\",\n  \"Unnamed: 4\": \"Ticket management system\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:47:03Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzLWw",
+        "name": "sheet:MVP",
+        "description": "MVP features from spreadsheet",
+        "color": "0052CC"
+      }
+    ],
+    "milestone": null,
+    "number": 415,
+    "state": "OPEN",
+    "title": "Customer Support",
+    "updatedAt": "2026-01-06T21:47:03Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/415"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Support status tracking\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:46:23Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzLWw",
+        "name": "sheet:MVP",
+        "description": "MVP features from spreadsheet",
+        "color": "0052CC"
+      }
+    ],
+    "milestone": null,
+    "number": 404,
+    "state": "OPEN",
+    "title": "Support status tracking",
+    "updatedAt": "2026-01-06T21:46:23Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/404"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 2\": \"Support\",\n  \"Unnamed: 3\": \"Customer Support\",\n  \"Unnamed: 4\": \"In-app chat support\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:46:13Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzLWw",
+        "name": "sheet:MVP",
+        "description": "MVP features from spreadsheet",
+        "color": "0052CC"
+      }
+    ],
+    "milestone": null,
+    "number": 401,
+    "state": "OPEN",
+    "title": "Support",
+    "updatedAt": "2026-01-06T21:46:13Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/401"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 3\": \"Web Features\",\n  \"Unnamed: 4\": \"Responsive dashboard\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:46:03Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzLWw",
+        "name": "sheet:MVP",
+        "description": "MVP features from spreadsheet",
+        "color": "0052CC"
+      }
+    ],
+    "milestone": null,
+    "number": 397,
+    "state": "OPEN",
+    "title": "Web Features",
+    "updatedAt": "2026-01-06T21:46:03Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/397"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Multi-language support (English, Pidgin English, Yoruba, French)\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:44:50Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzLWw",
+        "name": "sheet:MVP",
+        "description": "MVP features from spreadsheet",
+        "color": "0052CC"
+      }
+    ],
+    "milestone": null,
+    "number": 371,
+    "state": "OPEN",
+    "title": "Multi-language support (English, Pidgin English, Yoruba, French)",
+    "updatedAt": "2026-01-06T21:44:50Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/371"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Visual analytics for admin decision-making (graphs, heat maps of fraud-prone regions)\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:43:36Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 345,
+    "state": "OPEN",
+    "title": "Visual analytics for admin decision-making (graphs, heat maps of fraud-prone regions)",
+    "updatedAt": "2026-01-06T21:43:36Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/345"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Dashboard for tracking real-time fraud attempts and resolution status\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:43:33Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 344,
+    "state": "OPEN",
+    "title": "Dashboard for tracking real-time fraud attempts and resolution status",
+    "updatedAt": "2026-01-06T21:43:33Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/344"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Automatic suspicious activity reports (SARs) for regulatory compliance\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:43:16Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 339,
+    "state": "OPEN",
+    "title": "Automatic suspicious activity reports (SARs) for regulatory compliance",
+    "updatedAt": "2026-01-06T21:43:16Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/339"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Support ticket reports\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:41:45Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 305,
+    "state": "OPEN",
+    "title": "Support ticket reports",
+    "updatedAt": "2026-01-06T21:41:45Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/305"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Partner performance reports\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:41:42Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 304,
+    "state": "OPEN",
+    "title": "Partner performance reports",
+    "updatedAt": "2026-01-06T21:41:42Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/304"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"SLA compliance reports\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:41:39Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 303,
+    "state": "OPEN",
+    "title": "SLA compliance reports",
+    "updatedAt": "2026-01-06T21:41:39Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/303"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Error/Exception reports\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:41:36Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 302,
+    "state": "OPEN",
+    "title": "Error/Exception reports",
+    "updatedAt": "2026-01-06T21:41:36Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/302"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Service usage reports\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:41:32Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 301,
+    "state": "OPEN",
+    "title": "Service usage reports",
+    "updatedAt": "2026-01-06T21:41:32Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/301"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Customer acquisition reports\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:41:29Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 300,
+    "state": "OPEN",
+    "title": "Customer acquisition reports",
+    "updatedAt": "2026-01-06T21:41:29Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/300"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 3\": \"Operational Reports\",\n  \"Unnamed: 4\": \"System performance reports\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:41:23Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 298,
+    "state": "OPEN",
+    "title": "Operational Reports",
+    "updatedAt": "2026-01-06T21:41:23Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/298"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Audit reports\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:41:20Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 297,
+    "state": "OPEN",
+    "title": "Audit reports",
+    "updatedAt": "2026-01-06T21:41:20Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/297"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Tax reports\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:41:17Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 296,
+    "state": "OPEN",
+    "title": "Tax reports",
+    "updatedAt": "2026-01-06T21:41:17Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/296"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Reconciliation reports\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:41:15Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 295,
+    "state": "OPEN",
+    "title": "Reconciliation reports",
+    "updatedAt": "2026-01-06T21:41:15Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/295"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Partner settlement reports\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:41:12Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 294,
+    "state": "OPEN",
+    "title": "Partner settlement reports",
+    "updatedAt": "2026-01-06T21:41:12Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/294"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Fee collection reports\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:41:09Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 293,
+    "state": "OPEN",
+    "title": "Fee collection reports",
+    "updatedAt": "2026-01-06T21:41:09Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/293"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Revenue reports\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:41:03Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 291,
+    "state": "OPEN",
+    "title": "Revenue reports",
+    "updatedAt": "2026-01-06T21:41:03Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/291"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 2\": \"Reporting\",\n  \"Unnamed: 3\": \"Financial Reports\",\n  \"Unnamed: 4\": \"Daily settlement reports\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:41:00Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 290,
+    "state": "OPEN",
+    "title": "Reporting",
+    "updatedAt": "2026-01-06T21:41:00Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/290"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Generate compliance reports\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:40:26Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 278,
+    "state": "OPEN",
+    "title": "Generate compliance reports",
+    "updatedAt": "2026-01-06T21:40:26Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/278"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 3\": \"Reporting & Analytics\",\n  \"Unnamed: 4\": \"Generate regulatory reports\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:40:15Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 274,
+    "state": "OPEN",
+    "title": "Reporting & Analytics",
+    "updatedAt": "2026-01-06T21:40:15Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/274"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Review partner reports\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:40:12Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 273,
+    "state": "OPEN",
+    "title": "Review partner reports",
+    "updatedAt": "2026-01-06T21:40:12Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/273"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Manage tax reporting\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:39:44Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 264,
+    "state": "OPEN",
+    "title": "Manage tax reporting",
+    "updatedAt": "2026-01-06T21:39:44Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/264"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Generate financial reports\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:39:38Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 262,
+    "state": "OPEN",
+    "title": "Generate financial reports",
+    "updatedAt": "2026-01-06T21:39:38Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/262"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Generate resolution reports\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:39:22Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 256,
+    "state": "OPEN",
+    "title": "Generate resolution reports",
+    "updatedAt": "2026-01-06T21:39:22Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/256"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Regulatory reporting\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:38:51Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 244,
+    "state": "OPEN",
+    "title": "Regulatory reporting",
+    "updatedAt": "2026-01-06T21:38:51Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/244"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Verify supporting documents\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:38:31Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 236,
+    "state": "OPEN",
+    "title": "Verify supporting documents",
+    "updatedAt": "2026-01-06T21:38:31Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/236"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Settlement reporting\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:37:26Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 210,
+    "state": "OPEN",
+    "title": "Settlement reporting",
+    "updatedAt": "2026-01-06T21:37:26Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/210"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Regulatory reporting tools\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:36:25Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 185,
+    "state": "OPEN",
+    "title": "Regulatory reporting tools",
+    "updatedAt": "2026-01-06T21:36:25Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/185"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Risk assessment dashboard\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:36:22Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 184,
+    "state": "OPEN",
+    "title": "Risk assessment dashboard",
+    "updatedAt": "2026-01-06T21:36:22Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/184"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Risk reporting dashboard\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:35:57Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 174,
+    "state": "OPEN",
+    "title": "Risk reporting dashboard",
+    "updatedAt": "2026-01-06T21:35:57Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/174"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Risk assessment reports\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:35:31Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 164,
+    "state": "OPEN",
+    "title": "Risk assessment reports",
+    "updatedAt": "2026-01-06T21:35:31Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/164"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Policy violation reports\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:35:29Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 163,
+    "state": "OPEN",
+    "title": "Policy violation reports",
+    "updatedAt": "2026-01-06T21:35:29Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/163"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Regulatory examination support\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:35:24Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 161,
+    "state": "OPEN",
+    "title": "Regulatory examination support",
+    "updatedAt": "2026-01-06T21:35:24Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/161"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Anti-Money Laundering (AML) reports\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:35:21Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 160,
+    "state": "OPEN",
+    "title": "Anti-Money Laundering (AML) reports",
+    "updatedAt": "2026-01-06T21:35:21Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/160"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 2\": \"Regulatory Compliance\",\n  \"Unnamed: 3\": \"Compliance Reporting\",\n  \"Unnamed: 4\": \"Suspicious Activity Reports (SARs)\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:35:13Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 157,
+    "state": "OPEN",
+    "title": "Regulatory Compliance",
+    "updatedAt": "2026-01-06T21:35:13Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/157"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Multi-currency support\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:34:33Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 141,
+    "state": "OPEN",
+    "title": "Multi-currency support",
+    "updatedAt": "2026-01-06T21:34:33Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/141"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Support agent performance tracking\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:34:15Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 134,
+    "state": "OPEN",
+    "title": "Support agent performance tracking",
+    "updatedAt": "2026-01-06T21:34:15Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/134"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 3\": \"Customer Support\",\n  \"Unnamed: 4\": \"Ticket management system\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:33:55Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 127,
+    "state": "OPEN",
+    "title": "Customer Support",
+    "updatedAt": "2026-01-06T21:33:55Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/127"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Support status tracking\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:33:12Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 110,
+    "state": "OPEN",
+    "title": "Support status tracking",
+    "updatedAt": "2026-01-06T21:33:12Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/110"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Video call support\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:32:58Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 105,
+    "state": "OPEN",
+    "title": "Video call support",
+    "updatedAt": "2026-01-06T21:32:58Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/105"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 2\": \"Support\",\n  \"Unnamed: 3\": \"Customer Support\",\n  \"Unnamed: 4\": \"In-app chat support\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:32:52Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 103,
+    "state": "OPEN",
+    "title": "Support",
+    "updatedAt": "2026-01-06T21:32:52Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/103"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Multi-screen support\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:32:46Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 101,
+    "state": "OPEN",
+    "title": "Multi-screen support",
+    "updatedAt": "2026-01-06T21:32:46Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/101"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Custom dashboard layout\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:32:44Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 100,
+    "state": "OPEN",
+    "title": "Custom dashboard layout",
+    "updatedAt": "2026-01-06T21:32:44Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/100"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 3\": \"Web Features\",\n  \"Unnamed: 4\": \"Responsive dashboard\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:32:31Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 95,
+    "state": "OPEN",
+    "title": "Web Features",
+    "updatedAt": "2026-01-06T21:32:31Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/95"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Widget support\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:32:21Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 91,
+    "state": "OPEN",
+    "title": "Widget support",
+    "updatedAt": "2026-01-06T21:32:21Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/91"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Business analytics dashboard\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:31:32Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 72,
+    "state": "OPEN",
+    "title": "Business analytics dashboard",
+    "updatedAt": "2026-01-06T21:31:32Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/72"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Suspicious activity reporting\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:30:51Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 56,
+    "state": "OPEN",
+    "title": "Suspicious activity reporting",
+    "updatedAt": "2026-01-06T21:30:51Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/56"
+  },
+  {
+    "assignees": [],
+    "author": {
+      "id": "U_kgDODB5qWw",
+      "is_bot": false,
+      "login": "thefixer3x",
+      "name": "The Fixer"
+    },
+    "body": "### Source Row\n```json\n{\n  \"Unnamed: 4\": \"Multi-language support (English, Pidgin English, Yoruba, French)\"\n}\n```",
+    "closedAt": null,
+    "comments": [],
+    "createdAt": "2026-01-06T21:29:12Z",
+    "labels": [
+      {
+        "id": "LA_kwDOPtvf088AAAACKBzXPw",
+        "name": "sheet:Product",
+        "description": "Product features from spreadsheet",
+        "color": "5319E7"
+      }
+    ],
+    "milestone": null,
+    "number": 17,
+    "state": "OPEN",
+    "title": "Multi-language support (English, Pidgin English, Yoruba, French)",
+    "updatedAt": "2026-01-06T21:29:12Z",
+    "url": "https://github.com/thefixer3x/micro-services/issues/17"
+  }
+]
