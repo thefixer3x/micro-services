@@ -1,0 +1,107 @@
+ .navbar{
+    padding: 10px 9rem;
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+}
+
+.navbar img{
+    width: 60px;
+}
+
+.navbar .navbar-link{
+
+  font-size: 14px;
+  padding: 0px;
+  margin: 0px 10px;
+}
+
+.navbar .navbar-link:hover{
+  color: rgb(87, 232, 24);
+}
+
+  .navbar .buttons{
+    display: flex;
+    gap: 10px;
+  }
+
+  .navbar .register{
+    background: rgb(87, 232, 24);
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-transform: capitalize;
+    color: black;
+  }
+
+  .navbar .register:hover{
+    background-color: rgb(87, 232, 24);
+  }
+
+  .navbar .login{
+  
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: transparent;
+  
+    text-transform: capitalize;
+    margin-left: 180px !important;
+  }
+
+  .navbar .login:hover{
+    background: rgb(87, 232, 24);
+    padding: 10px 20px;
+    border-radius: 20px;
+  } 
+
+
+ 
+
+
+a{
+    text-decoration: none;
+}
+
+.navbar .mobile-toggle{
+  display: none;
+}
+
+@media (max-width:1024px){
+  .navbar .login{
+        margin-left: 70px !important;
+    }
+  }
+
+@media (max-width:912px){
+  .navbar .login{
+        margin-left: 5px !important;
+    }
+
+    .navbar .navbar-link{
+      margin-bottom: 10px;
+    }
+
+    .navbar .mobile-toggle{
+      display: flex;
+
+    }
+
+    .navbar .desktop-toggle{
+      display: none;
+    }
+  }
+
+@media (max-width:700px){
+  .navbar .login{
+        margin-left: 5px !important;
+    }
+
+  .navbar .navbar-link{
+    margin-bottom: 10px;
+  }
+
+    .navbar .buttons{
+      margin-top: 20px;
+    }
+
+    
+}

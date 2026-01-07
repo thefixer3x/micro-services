@@ -1,0 +1,99 @@
+.impacts {
+    font-family: 'Outfit', serif;
+    margin: 0;
+    padding: 0;
+    /* background: linear-gradient(to right, #0f2027, #203a43, #2c5364); */
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+}
+.impacts .container {
+    max-width: 1100px;
+    padding: 50px;
+    background: linear-gradient(to right, #0f2714, #3b6c32, rgb(77, 156, 43));
+    /* background: rgba(255, 255, 255, 0.1); */
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    /* backdrop-filter: blur(10px); */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.impacts .container h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    
+    text-align: center;
+}
+
+.impacts h2::after {
+    content: '';
+    width: 120px;
+    height: 5px;
+    /* background: #e67e22; */
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 2px;
+    text-align: center;
+}
+.impacts .section-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.impacts .section {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.impacts .section::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transition: all 0.5s;
+}
+.impacts .section:hover::before {
+    top: -20px;
+    left: -20px;
+    width: 150px;
+    height: 150px;
+}
+.impacts .section:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+.impacts .section h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    /* color: rgb(243, 243, 98); */
+    color: black;
+}
+.impacts .section p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: white;
+}
+
+@media (max-width:912px){
+    .impacts{
+        min-height: 60vh;
+    }
+}

@@ -1,0 +1,109 @@
+        /* General Styling */
+
+        .grizzen-accessibility {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+            padding: 60px 20px;
+        }
+        
+        .accessibility-container {
+            text-align: center;
+            max-width: 900px;
+        }
+        
+        .grizzen-accessibility h2 {
+            font-size: 36px;
+            font-weight: bold;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+        
+        .grizzen-accessibility p {
+            font-size: 16px;
+            color: #cbd5e1;
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin: auto;
+            line-height: 1.6;
+        }
+        
+        /* Accessibility Cards */
+        .accessibility-content {
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            flex-wrap: wrap;
+        }
+        
+        .accessibility-item {
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 15px;
+            width: 100%;
+            max-width: 350px;
+            text-align: center;
+            transition: all 0.4s ease;
+            box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1);
+            
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        /* Hover Animation */
+        .accessibility-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(255, 255, 255, 0.15);
+        }
+        
+        /* Icons */
+        /* .accessibility-icon img {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 15px;
+            filter: invert(90%);
+        } */
+        
+        .accessibility-item h3 {
+            font-size: 22px;
+            color: #f8fafc;
+            margin-bottom: 10px;
+        }
+        
+        .accessibility-item p {
+            font-size: 16px;
+            color: #e2e8f0;
+            line-height: 1.6;
+            max-width: 300px;
+            margin: auto;
+        }
+
+
+        
+        /* Responsive Design */
+
+
+
+        @media (max-width: 912px) {
+            .grizzen-accessibility{
+                min-height: 50vh !important;
+            }
+
+            .accessibility-item {
+                backdrop-filter:none;
+            }
+        }
+        @media (max-width: 768px) {
+            .accessibility-content {
+                flex-direction: column;
+                align-items: center;
+            }
+        
+            .accessibility-item {
+                width: 90%;
+            }
+        }

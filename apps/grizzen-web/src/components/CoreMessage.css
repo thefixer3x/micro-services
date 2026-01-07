@@ -1,0 +1,190 @@
+   /* core messages */
+   h2, h3 , p{
+    color: black;
+  }
+   .core{
+    padding: 30px 50px;
+   }
+
+   .core .core-right{
+    padding-left: 50px;
+   }
+
+   .core .core-content .innovation img{
+    width: 380px;
+    height: 380px;
+    border-radius: 100%;
+   }
+
+   .core .market-content img{
+    width: 380px;
+    height: 380px;
+    border-radius: 100%;
+    /* border: 20px solid rgb(246, 90, 90); */
+   }
+
+   .core .core-content{
+     display: flex;
+     align-items: center;
+     padding: 0px 10px;
+     justify-content: center;
+   }
+
+   .core .market-content{
+      display: flex;
+      align-items: center;
+      padding: 0px 10px;
+      justify-content: center;
+   }
+
+   .core .core-content .trust img{
+    width: 400px;
+    margin-top: -140px;
+   }
+
+   .core .market-content .market{
+    padding-left: 50px;
+   }
+
+   .core .core-content p,  .core .core-content h2{
+    width: 600px;
+   }
+
+   .core .core-content h2, .core .market-content h2{
+    font-size: 36px;
+   }
+
+   .core .core-content p, .core .market-content p{
+    font-size: 16px;
+   }
+
+  
+
+   @media (max-width:1024px){
+    .core{
+      padding: 10px;
+    }
+    .core .core-right{
+      padding-left: 0px;
+     }
+    .core .core-content{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 20px 0px;
+      gap: 20px;
+    }
+
+    .core .market-content{
+      align-items: center;
+      gap: 20px;
+      margin: 100px 0px;
+    }
+
+    .core .core-content .innovation img{
+      width: 350px;
+      height: 350px;
+      border-radius: 100%;
+     }
+     
+     .core .market-content .core-right img{
+      width: 350px;
+      height: 350px;
+      border-radius: 100%;
+      /* border: 20px solid rgb(246, 90, 90); */
+     }
+
+     .core .core-content .trust img{
+      width: 400px;
+      margin-top: -140px;
+     }
+  
+  
+  
+     .core .core-content p,  .core .core-content h2, 
+     .core .market-content p,  .core .market-content h2{
+      width: 350px;
+     }
+
+     .core .core-content h2,  .core .market-content h2{
+      font-size: 42px;
+     }
+  
+     .core .core-content p, .core .market-content p{
+      font-size: 18px;
+     }
+
+   }
+
+   @media (max-width:700px){
+    .core .core-right{
+      padding-left: 0px;
+     }
+    .core .core-content{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 20px 0px;
+    }
+
+    .core .core-content .innovation img{
+      width: 300px;
+      height: 300px;
+      border-radius: 100%;
+     }
+     
+     .core .market-content .core-right img{
+      width: 300px;
+      height: 300px;
+      border-radius: 100%;
+      /* border: 20px solid rgb(246, 90, 90); */
+     }
+
+     .core .core-content .trust img{
+      width: 350px;
+      margin-top: -140px;
+     }
+  
+     .core .market-content .market{
+      padding-left: 0px;
+     }
+     .core .market-content{
+      flex-direction: column-reverse;
+  }
+  
+     .core .core-content p,  .core .core-content h2, 
+     .core .market-content p,  .core .market-content h2{
+      width: 250px;
+     }
+
+     .core .core-content h2,  .core .market-content h2{
+      font-size: 32px;
+     }
+  
+     .core .core-content p, .core .market-content p{
+      font-size: 16px;
+     }
+
+    
+   }
+
+   @media (max-width:344){
+    .core .core-content .innovation img{
+      width: 250px;
+      height: 250px;
+     }
+     
+     .core .market-content .core-right img{
+      width: 250px;
+      height: 250px;
+      border-radius: 100%;
+      /* border: 20px solid rgb(246, 90, 90); */
+     }
+
+     .core .core-content .trust img{
+      width: 300px;
+      margin-top: -140px;
+     }
+  
+   }

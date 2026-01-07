@@ -1,0 +1,11 @@
+{
+  "enabledMcpjsonServers": [
+    "supabase",
+    "supabase2"
+  ],
+  "permissions": {
+    "additionalDirectories": [
+      "/Users/seyederick/DevOps/_project_folders/micro-services"
+    ]
+  }
+}
