@@ -1,21 +1,26 @@
-import './apidocs.css'
+import "./apidocs.css";
 
-const apidocs = () =>{
-    return (
-        <div>
-            <section class="api-integration">
+const apidocs = () => {
+  return (
+    <div>
+      <section class="api-integration">
         <div class="container">
-            <div class="api-text">
-                <h2>Automate Your Payouts with Our REST API</h2>
-                <p>Integrate grizzen directly into your platform with our developer-friendly API. 
-                   Trigger payouts, manage recipients, and track transactions programmatically.</p>
-                <a href="#" class="cta-button">Explore API Docs</a>
-            </div>
-    
-            <div class="api-code">
-                <pre>
-                    <code>
-                        {`fetch('https://api.grizzen.com/v1/transfer', {
+          <div class="api-text">
+            <h2>Automate Your Payouts with Our REST API</h2>
+            <p>
+              Integrate grizzen directly into your platform with our
+              developer-friendly API. Trigger payouts, manage recipients, and
+              track transactions programmatically.
+            </p>
+            <a href="#" class="cta-button">
+              Explore API Docs
+            </a>
+          </div>
+
+          <div class="api-code">
+            <pre>
+              <code>
+                {`fetch('https://api.grizzen.com/v1/transfer', {
                             method: 'POST',
                             headers: {
                                 'Content-Type': 'application/json',
@@ -30,15 +35,13 @@ const apidocs = () =>{
                         .then(response => response.json())
                         .then(data => console.log(data))
                         .catch(error => console.error(error));`}
-                    </code>
-                </pre>
-            </div>
+              </code>
+            </pre>
+          </div>
         </div>
-    </section>
-    
-        </div>
-    )
-}
+      </section>
+    </div>
+  );
+};
 
-
-export default apidocs
+export default apidocs;

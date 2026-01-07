@@ -1,220 +1,243 @@
-import './Home.css';
-import WhyUs from "../components/WhyUs"
-import africalink from "../assets/africatoworld2.jpg"
+import "./Home.css";
+import WhyUs from "../components/WhyUs";
+import africalink from "../assets/africatoworld2.jpg";
 
-import Security from "../components/Security"
-import Core from "../components/CoreMessage"
-import Accessible from '../components/accessible';
-import Apidocs from '../components/apidocs';
-import Impacts from '../components/impacts';
-import Testimony from '../components/testimony';
+import Security from "../components/Security";
+import Core from "../components/CoreMessage";
+import Accessible from "../components/accessible";
+import Apidocs from "../components/apidocs";
+import Impacts from "../components/impacts";
+import Testimony from "../components/testimony";
 
 const Home = () => {
+  return (
+    <div>
+      <div className="main">
+        <div class="hero" id="hero">
+          <div class=" column left">
+            <h1 className="herodesktop">Simplify How Your Team Gets Paid</h1>
+            {/* <h1 className="heromobile">Simplify How Your Team Gets Paid</h1> */}
+            <p>
+              {" "}
+              Power your business with <br></br>
+              <strong>grizzen</strong>, the seamless platform for paying teams,
+              freelancers, and vendors <br></br>globally, with complete
+              transparency.
+            </p>
+            <div class="button">
+              <a href="">Start Sending Now</a>
+            </div>
+          </div>
 
-  
+          <div class="column right">
+            <img src={africalink} alt="heroimage" />
+          </div>
+        </div>
 
-    return (
-        <div>
-            <div className="main">
-                <div class="hero" id="hero" >
-                    <div class=" column left">
-                        <h1 className="herodesktop">Simplify How Your Team Gets Paid</h1>
-                        {/* <h1 className="heromobile">Simplify How Your Team Gets Paid</h1> */}
-                        <p> Power your business with <br></br><strong>grizzen</strong>, the seamless platform for 
-                            paying teams, freelancers, and vendors <br></br>globally, with complete transparency.</p>
-                        <div class="button">
-                            <a href="">Start Sending Now</a>
-                        </div>
-                    </div>
+        {/* core message */}
 
-                    <div class="column right" >
-                        <img src={africalink} alt="heroimage"/>
-                    </div>
-                </div>
+        {/* how it works */}
+        <Core />
 
-                {/* core message */}
+        <Accessible />
+        {/* call to action */}
 
-                
+        <div className="call-to-action">
+          <div className="call-to-action-sub">
+            <h1 className="">
+              Unlock Your Global <br />
+              Potential Today
+            </h1>
+            <div className="call-button">
+              <a href="">Unlock</a>
+            </div>
+          </div>
+        </div>
 
+        <Security />
+        <section className="how-it-works" id="how">
+          <div className="left">
+            <h2 className="">Manage Global Team Payroll & Payments</h2>
+            <p>
+              Whether you're managing remote contractors, paying international
+              vendors, or handling subscription disbursements, grizzen scales
+              with your business.
+            </p>
+            <p className="">
+              grizzen's intuitive platform handles complex payment scenarios
+              with ease, giving you control, visibility, and peace of mind.
+              Here's how it works.
+            </p>
 
-                {/* how it works */}
-                <Core/>
+            <div class="button">
+              <a href="">Start Now</a>
+            </div>
+          </div>
+          <div className="right">
+            <div className="step">
+              <div className="right-header">
+                <h5>1</h5>
+                <h4>Sign up</h4>
+              </div>
+              <p>
+                Connect your business data and set up payment routes in minutes.
+                No lengthy onboarding—just instant access to global payouts.
+              </p>
+            </div>
+            <div className="step bg-fill">
+              <div className="right-header">
+                <h5>2</h5>
+                <h4>Pay Teams Globally</h4>
+              </div>
 
-                <Accessible/>
-                  {/* call to action */}
-                
-                  <div className='call-to-action'>
-                    <div className="call-to-action-sub">
-                        <h1 className=''>Unlock Your Global <br />Potential Today</h1>
-                        <div className="call-button">
-                            <a href="">Unlock</a>
-                        </div>
-                    </div>
-                </div>
+              <p>
+                Pay contractors, freelancers, and vendors across 100+ countries.
+                Specify amounts in any currency, approve with one click, and
+                funds arrive instantly. No middlemen, no delays.
+              </p>
+            </div>
+            <div className="step bg-fill">
+              <div className="right-header">
+                <h5>3</h5>
+                <h4>Track Your Transactions</h4>
+              </div>
 
+              <p>
+                Real-time dashboards show you exactly where every payment
+                is—from approval to settlement. Automated reports keep everyone
+                aligned and compliant.
+              </p>
+            </div>
 
-                <Security/>
-                <section className="how-it-works" id="how">
-                    <div className="left">
-                        <h2 className=''>Manage Global Team Payroll & Payments</h2>
-                        <p>
-                        Whether you're managing remote contractors, paying international vendors, or handling subscription disbursements, 
-                        grizzen scales with your business.
-                        </p>
-                        <p className=''>grizzen's intuitive platform handles complex payment scenarios with ease, 
-                            giving you control, visibility, and peace of mind. 
-                            Here's how it works.
-                        </p>
+            <div className="step">
+              <div className="right-header">
+                <h5>4</h5>
+                <h4>Enjoy Global Reach</h4>
+              </div>
 
-                       
-                        <div class="button">
-                            <a href="">Start Now</a>
-                        </div>
-                    </div>
-                    <div className="right">
-                        <div className='step'>
-                            <div className="right-header">
-                                <h5>1</h5>
-                                <h4>Sign up</h4>
-                            </div>
-                            <p>Connect your business data and set up payment routes in minutes. 
-                                No lengthy onboarding—just instant access to global payouts.</p>
-                        </div>
-                        <div className='step bg-fill'>
-                            <div className="right-header">
-                                <h5>2</h5>
-                                <h4>Pay Teams Globally</h4>
-                            </div>
-                            
-                            <p>Pay contractors, freelancers, and vendors across 100+ countries. 
-                                Specify amounts in any currency, approve with one click, and funds arrive instantly. 
-                                No middlemen, no delays.
-                            </p>
-                        </div>
-                        <div className='step bg-fill'>
-                            <div className="right-header">
-                                <h5>3</h5>
-                                <h4>Track Your Transactions</h4>
-                            </div>
-                            
-                            <p>Real-time dashboards show you exactly where every payment is—from approval to settlement. 
-                                Automated reports keep everyone aligned and compliant.
-                            </p>
-                        </div>
+              <p>
+                Connect payouts to your accounting system. Automate recurring
+                payments for subscriptions and retainers. Scale from 10 team
+                members to 1,000 without breaking a sweat.
+              </p>
+            </div>
+          </div>
+        </section>
 
-                        <div className='step'>
-                            <div className="right-header">
-                                <h5>4</h5>
-                                <h4>Enjoy Global Reach</h4>
-                            </div>
-                            
-                            <p>Connect payouts to your accounting system. Automate recurring payments for subscriptions and retainers. 
-                                Scale from 10 team members to 1,000 without breaking a sweat.
-                            </p>
-                        </div>
-                       
-                    </div>
-                </section>
+        <Impacts />
 
-               
-                <Impacts/>
+        {/* feature */}
+        <section class="features " id="features">
+          <h2 className="features-heading" data-aos="fade-up">
+            - Built for Modern Team Payments
+          </h2>
+          <p className="features-subheading">
+            grizzen's platform gives you enterprise-grade control without the
+            enterprise overhead—perfect for startups to mid-market teams.
+          </p>
+          <div class="features-contents">
+            <div class="content" data-aos="fade-up">
+              <div class="content-header">
+                <i class="fa fa-credit-card"></i>
+                <h4>Real-Time Payments</h4>
+              </div>
+              <p>
+                Process payouts in seconds, not weeks. grizzen handles
+                everything from currency conversion to local banking compliance,
+                so your team gets paid on time, every time.
+              </p>
+            </div>
 
-                {/* feature */}
-                <section class="features " id="features">
-                    <h2 className='features-heading' data-aos="fade-up">- Built for Modern Team Payments</h2>
-                    <p className='features-subheading'>
-                    grizzen's platform gives you enterprise-grade control without the enterprise overhead—perfect for startups to mid-market teams.
-                    </p>
-                    <div class="features-contents">
-                        <div class="content" data-aos="fade-up">
-                            <div class="content-header">
-                                <i class="fa fa-credit-card"></i>
-                                <h4>Real-Time Payments</h4>
-                            </div>
-                            <p>Process payouts in seconds, not weeks. grizzen handles everything from currency conversion to local banking compliance, 
-                                so your team gets paid on time, every time.</p>
-                        </div>
+            <div class="content" data-aos="fade-up">
+              <div class="content-header">
+                <i class="fa fa-code" aria-hidden="true"></i>
+                <h4>API-Driven Integration</h4>
+              </div>
+              <p>
+                Connect grizzen to your payroll, accounting, or billing system.
+                Our REST APIs make it simple to automate contractor payments,
+                vendor settlements, and subscription payouts from day one.
+              </p>
+            </div>
+          </div>
 
-                        <div class="content" data-aos="fade-up">
-                            <div class="content-header">
-                                <i class="fa fa-code" aria-hidden="true"></i>
-                                <h4>API-Driven Integration</h4>
-                            </div>
-                            <p>Connect grizzen to your payroll, accounting, or billing system. Our REST APIs make it simple to automate 
-                                contractor payments, vendor settlements, and subscription payouts from day one.</p>
-                        </div>
-                    </div>
+          <div class="features-contents">
+            <div class="content" data-aos="fade-up">
+              <div class="content-header">
+                <i class="fa fa-globe" aria-hidden="true"></i>
+                <h4>Global AML/KYC Compliant</h4>
+              </div>
+              <p>
+                We adhere to the highest international standards for Anti-Money
+                Laundering (AML) and Know Your Customer (KYC) regulations,
+                ensuring every transaction is secure and compliant with global
+                financial rules.
+              </p>
+            </div>
 
-                    <div class="features-contents">
-                        <div class="content" data-aos="fade-up">
-                            <div class="content-header">
-                                <i class="fa fa-globe" aria-hidden="true"></i>
-                                <h4>Global AML/KYC Compliant</h4>
-                            </div>
-                            <p>We adhere to the highest international standards 
-                                for Anti-Money Laundering (AML) and Know Your Customer (KYC) regulations, 
-                                ensuring every transaction is secure and compliant with global 
-                                financial rules.</p>
-                        </div>
-                
+            <div class="content" data-aos="fade-up">
+              <div class="content-header">
+                <i class="fa fa-lock" aria-hidden="true"></i>
+                <h4>Advanced Fraud Prevention</h4>
+              </div>
+              <p>
+                Multi-factor authentication, transaction monitoring, and
+                encryption keep your payment data safe. We comply with SOC 2,
+                GDPR, and local financial regulations in every country you
+                operate.
+              </p>
+            </div>
+          </div>
 
-                        <div class="content" data-aos="fade-up">
-                            <div class="content-header">
-                                <i class="fa fa-lock" aria-hidden="true"></i>
-                                <h4>Advanced Fraud 
-                                    Prevention</h4>
-                            </div>
-                            <p>Multi-factor authentication, transaction monitoring, and encryption keep your payment data safe. 
-                                We comply with SOC 2, GDPR, and local financial regulations in every country you operate.</p>
-                        </div>
-                    </div>
+          <div class="features-contents">
+            <div class="content" data-aos="fade-up">
+              <div class="content-header">
+                <i class="fa fa-desktop" aria-hidden="true"></i>
+                <h4>Multi-Currency Support</h4>
+              </div>
+              <p>
+                Pay in USD, EUR, GBP, INR, or any of 100+ currencies. Clients
+                and contractors work in their preferred currency; grizzen
+                handles the rest with fair, transparent rates.
+              </p>
+            </div>
 
-                    <div class="features-contents">
-                        <div class="content" data-aos="fade-up">
-                            <div class="content-header">
-                                <i class="fa fa-desktop" aria-hidden="true"></i>
-                                <h4>Multi-Currency Support</h4>
-                            </div>
-                            <p>Pay in USD, EUR, GBP, INR, or any of 100+ currencies. Clients and contractors work in their preferred currency; 
-                                grizzen handles the rest with fair, transparent rates.
-                            </p>
-                        </div>
+            <div class="content" data-aos="fade-up">
+              <div class="content-header">
+                <i class="fa fa-usd" aria-hidden="true"></i>
+                <h4>Lower & Transparent Fees</h4>
+              </div>
+              <p>
+                No hidden fees, no markup surprises. You see the exact cost
+                before every payment. Our pricing scales with you—startups pay
+                less, enterprises get volume discounts.
+              </p>
+            </div>
+          </div>
+        </section>
 
-                        <div class="content" data-aos="fade-up">
-                            <div class="content-header">
-                                <i class="fa fa-usd" aria-hidden="true"></i>
-                                <h4>Lower & Transparent Fees</h4>
-                            </div>
-                            <p>No hidden fees, no markup surprises. You see the exact cost before every payment. 
-                                Our pricing scales with you—startups pay less, enterprises get volume discounts.
-                            </p>
-                        </div>
-                    </div>
-                </section>
+        {/* why choose us */}
 
+        <Apidocs />
 
-                {/* why choose us */}
-               
-                <Apidocs/>
+        <WhyUs />
 
-               <WhyUs/>
-            
-                <Testimony/>
-               <div className='last-call-to-action'>
-                    
-                        <div>
-                        <h1 className=''>Pay Your Global Team Today</h1>
-                            <p>Join hundreds of companies simplifying how they pay contractors, vendors, and team members worldwide. 
-                                Sign up free and start paying in minutes.</p>
-                        </div>
-                        <div className="call-button">
-                            <a href="">Request A Demo</a>
-                        </div>
-                   
-                </div>
+        <Testimony />
+        <div className="last-call-to-action">
+          <div>
+            <h1 className="">Pay Your Global Team Today</h1>
+            <p>
+              Join hundreds of companies simplifying how they pay contractors,
+              vendors, and team members worldwide. Sign up free and start paying
+              in minutes.
+            </p>
+          </div>
+          <div className="call-button">
+            <a href="">Request A Demo</a>
+          </div>
+        </div>
 
-
-                {/* <div class="take-action">
+        {/* <div class="take-action">
                     <div class="take-action-content">
                         <h1 data-aos="fade-up">Unlock Your Global Potential Today</h1>
                         <p data-aos="fade-up">grizzen is shaping the next frontier of digital 
@@ -228,7 +251,7 @@ const Home = () => {
                     </div>
                 </div> */}
 
-                {/* <div class="next-action">
+        {/* <div class="next-action">
                     <div class="text-content column">
                         <h2 data-aos="fade-right">- Securely Transfer Money From Any Country </h2>
                         <p data-aos="fade-right">We Outsmart cybercriminals and leave them empty-handed by implementing strong security measures, 
@@ -643,11 +666,9 @@ const Home = () => {
                         <img src={securityimg} alt=""/>
                     </div>
                 </div> */}
+      </div>
+    </div>
+  );
+};
 
-            </div>
-        </div>
-    )  
-} 
-
-export default  Home
-
+export default Home;
