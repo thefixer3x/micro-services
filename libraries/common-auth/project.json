@@ -1,0 +1,44 @@
+{
+    "name": "@platform/common-auth",
+    "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+    "sourceRoot": "apps/micro-services/libraries/common-auth/src",
+    "projectType": "library",
+    "tags": [
+        "scope:libraries",
+        "type:utility"
+    ],
+    "targets": {
+        "build": {
+            "executor": "@nx/js:tsc",
+            "outputs": [
+                "{options.outputPath}"
+            ],
+            "options": {
+                "outputPath": "dist/apps/micro-services/libraries/common-auth",
+                "main": "apps/micro-services/libraries/common-auth/src/index.ts",
+                "tsConfig": "apps/micro-services/libraries/common-auth/tsconfig.lib.json",
+                "assets": [
+                    "apps/micro-services/libraries/common-auth/*.md"
+                ]
+            }
+        },
+        "lint": {
+            "executor": "@nx/eslint:lint",
+            "options": {
+                "lintFilePatterns": [
+                    "apps/micro-services/libraries/common-auth/**/*.ts"
+                ]
+            }
+        },
+        "test": {
+            "executor": "@nx/jest:jest",
+            "outputs": [
+                "{workspaceRoot}/coverage/{projectRoot}"
+            ],
+            "options": {
+                "jestConfig": "apps/micro-services/libraries/common-auth/jest.config.js",
+                "passWithNoTests": true
+            }
+        }
+    }
+}

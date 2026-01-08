@@ -1,0 +1,1 @@
+{"last_found_secrets": [{"name": "PostgreSQL URI - commit://staged/docs/SUPABASE_PROJECT_ANALYSIS.md", "match": "b5bbcedd7db6c8f009f88b0c864bdaf31d597ece2ca9c72cffb0c57e0538dfad"}, {"name": "JSON Web Token - commit://staged/services/wallet-service/src/__tests__/integration-setup.ts", "match": "de9da8868fc1c4daf2883459bf981258a11396d6d69734e52c6292e3e92872ea"}]}

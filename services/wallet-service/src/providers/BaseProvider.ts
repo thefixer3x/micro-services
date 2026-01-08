@@ -21,7 +21,7 @@ export abstract class BaseProvider implements Partial<IWalletProvider> {
   protected httpClient: AxiosInstance;
   protected config: ProviderConfig;
   protected accessToken?: string;
-  protected refreshToken?: string;
+  protected storedRefreshToken?: string;
   protected tokenExpiresAt?: number;
 
   abstract readonly name: string;
@@ -53,8 +53,8 @@ export abstract class BaseProvider implements Partial<IWalletProvider> {
           config.headers['X-Access-Token'] = this.accessToken;
         }
 
-        if (this.refreshToken) {
-          config.headers['X-Refresh-Token'] = this.refreshToken;
+        if (this.storedRefreshToken) {
+          config.headers['X-Refresh-Token'] = this.storedRefreshToken;
         }
 
         // Add API key if configured
@@ -89,7 +89,7 @@ export abstract class BaseProvider implements Partial<IWalletProvider> {
         }
 
         if (refreshToken) {
-          this.refreshToken = refreshToken;
+          this.storedRefreshToken = refreshToken;
           logger.debug(`[${this.name}] Refresh token updated`);
         }
 

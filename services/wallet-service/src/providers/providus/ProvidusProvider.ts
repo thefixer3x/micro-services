@@ -77,7 +77,7 @@ export class ProvidusProvider extends BaseProvider implements IWalletProvider {
       });
 
       this.accessToken = response.accessToken || response.access_token;
-      this.refreshToken = response.refreshToken || response.refresh_token;
+      this.storedRefreshToken = response.refreshToken || response.refresh_token;
 
       if (response.expiresIn) {
         this.setTokenExpiry(response.expiresIn);
@@ -86,8 +86,8 @@ export class ProvidusProvider extends BaseProvider implements IWalletProvider {
       logger.info('[Providus] Authentication successful');
 
       return {
-        accessToken: this.accessToken,
-        refreshToken: this.refreshToken,
+        accessToken: this.accessToken!,
+        refreshToken: this.storedRefreshToken,
         expiresIn: response.expiresIn,
         tokenType: response.tokenType || 'Bearer',
       };
@@ -98,7 +98,7 @@ export class ProvidusProvider extends BaseProvider implements IWalletProvider {
   }
 
   async refreshToken(): Promise<AuthResult> {
-    if (!this.refreshToken) {
+    if (!this.storedRefreshToken) {
       throw new ProviderError('No refresh token available', 'NO_REFRESH_TOKEN');
     }
 
@@ -107,7 +107,7 @@ export class ProvidusProvider extends BaseProvider implements IWalletProvider {
         method: 'POST',
         url: '/auth/refresh/token', // Correct endpoint per API docs
         headers: {
-          'X-Refresh-Token': this.refreshToken,
+          'X-Refresh-Token': this.storedRefreshToken,
         },
       });
 
@@ -120,8 +120,8 @@ export class ProvidusProvider extends BaseProvider implements IWalletProvider {
       logger.info('[Providus] Token refreshed successfully');
 
       return {
-        accessToken: this.accessToken,
-        refreshToken: this.refreshToken,
+        accessToken: this.accessToken!,
+        refreshToken: this.storedRefreshToken,
         expiresIn: response.expiresIn,
       };
     } catch (error) {
@@ -352,7 +352,7 @@ export class ProvidusProvider extends BaseProvider implements IWalletProvider {
         url: `/customers/${customerId}/wallets`,
       });
 
-      return (response.data || []).map(this.mapWalletResponse);
+      return (response.data || []).map((w: any) => this.mapWalletResponse(w));
     } catch (error) {
       logger.error('[Providus] Failed to get customer wallets:', error);
       throw error;
@@ -371,7 +371,7 @@ export class ProvidusProvider extends BaseProvider implements IWalletProvider {
         url: '/wallet', // Per API docs
       });
 
-      return (response.wallets || []).map(this.mapWalletResponse);
+      return (response.wallets || []).map((w: any) => this.mapWalletResponse(w));
     } catch (error) {
       logger.error('[Providus] Failed to get all wallets:', error);
       throw error;
@@ -683,7 +683,7 @@ export class ProvidusProvider extends BaseProvider implements IWalletProvider {
     return 'basic';
   }
 
-  private mapCustomerStatus(status?: string, mode?: string): Customer['status'] {
+  private mapCustomerStatus(status?: string, _mode?: string): Customer['status'] {
     if (!status) return 'active';
     const statusLower = status.toLowerCase();
     if (statusLower === 'active' || statusLower === 'enabled') return 'active';

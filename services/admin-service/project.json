@@ -1,0 +1,50 @@
+{
+    "name": "@platform/admin-service",
+    "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+    "sourceRoot": "apps/micro-services/services/admin-service/src",
+    "projectType": "application",
+    "tags": [
+        "scope:services",
+        "type:microservice"
+    ],
+    "targets": {
+        "build": {
+            "executor": "@nx/js:tsc",
+            "outputs": [
+                "{options.outputPath}"
+            ],
+            "options": {
+                "outputPath": "dist/apps/micro-services/services/admin-service",
+                "main": "apps/micro-services/services/admin-service/src/index.ts",
+                "tsConfig": "apps/micro-services/services/admin-service/tsconfig.json",
+                "assets": [
+                    "apps/micro-services/services/admin-service/*.md"
+                ]
+            }
+        },
+        "serve": {
+            "executor": "@nx/js:node",
+            "options": {
+                "buildTarget": "@platform/admin-service:build"
+            }
+        },
+        "lint": {
+            "executor": "@nx/eslint:lint",
+            "options": {
+                "lintFilePatterns": [
+                    "apps/micro-services/services/admin-service/**/*.ts"
+                ]
+            }
+        },
+        "test": {
+            "executor": "@nx/jest:jest",
+            "outputs": [
+                "{workspaceRoot}/coverage/{projectRoot}"
+            ],
+            "options": {
+                "jestConfig": "apps/micro-services/services/admin-service/jest.config.js",
+                "passWithNoTests": true
+            }
+        }
+    }
+}
