@@ -1,0 +1,911 @@
+openapi: 3.1.0
+info:
+  title: Seftec Unified Finance API
+  description: |
+    Unified API for wallet management, transfers, payments, cards, and KYC verification.
+
+    ## Authentication
+    All requests require an API key passed in the `X-API-Key` header.
+
+    ## Idempotency
+    For POST requests, include an `Idempotency-Key` header to prevent duplicate operations.
+    The key must be unique per request and will be valid for 24 hours.
+
+    ## Webhooks
+    Register webhook endpoints to receive real-time notifications for:
+    - `transfer.completed`, `transfer.failed`
+    - `payment.successful`, `payment.failed`
+    - `wallet.credited`, `wallet.debited`
+    - `kyc.verified`, `kyc.failed`
+
+    ## Rate Limits
+    Rate limits depend on your tier:
+    - Starter: 60 req/min, 500 req/hour
+    - Growth: 120 req/min, 2000 req/hour
+    - Business: 300 req/min, 10000 req/hour
+    - Enterprise: Custom
+
+  version: "1.0.0"
+  contact:
+    name: Seftec API Support
+    email: api-support@seftechub.com
+    url: https://developers.seftechub.com
+  license:
+    name: Proprietary
+    url: https://seftechub.com/terms
+
+servers:
+  - url: https://api.seftechub.com/v1
+    description: Production
+  - url: https://sandbox.seftechub.com/v1
+    description: Sandbox (test mode)
+
+security:
+  - ApiKeyAuth: []
+
+tags:
+  - name: Capabilities
+    description: Discover what's enabled for your project
+  - name: Wallets
+    description: Wallet management operations
+  - name: Transfers
+    description: Fund transfers (wallet-to-wallet, wallet-to-bank)
+  - name: Payments
+    description: Accept payments (cards, bank transfers, USSD)
+  - name: Cards
+    description: Virtual card issuance and management
+  - name: KYC
+    description: Identity verification
+  - name: Webhooks
+    description: Event notifications
+
+paths:
+  /capabilities:
+    get:
+      operationId: getCapabilities
+      tags: [Capabilities]
+      summary: Get project capabilities
+      description: |
+        Returns what features are enabled for your project and current limits.
+        Use this to determine what APIs you can call.
+      responses:
+        "200":
+          description: Project capabilities
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Capabilities"
+              example:
+                success: true
+                data:
+                  wallet: { enabled: true }
+                  transfers: { enabled: true, currencies: [NGN, USD], daily_limit: 10000000 }
+                  payments: { enabled: true, channels: [card, bank_transfer, ussd] }
+                  cards: { enabled: false }
+                  kyc: { enabled: true, types: [bvn, nin, phone] }
+                  webhooks: { enabled: true }
+                  rate_limit: { requests_per_minute: 100, requests_per_hour: 1000 }
+                  tier: growth
+
+  /wallets:
+    post:
+      operationId: createWallet
+      tags: [Wallets]
+      summary: Create a wallet
+      description: |
+        Creates a new wallet for a customer. Each customer can have multiple wallets
+        in different currencies.
+      parameters:
+        - $ref: "#/components/parameters/IdempotencyKey"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [customer_id, currency]
+              properties:
+                customer_id:
+                  type: string
+                  format: uuid
+                  description: Your customer's unique identifier
+                currency:
+                  $ref: "#/components/schemas/Currency"
+                type:
+                  type: string
+                  enum: [personal, business, savings]
+                  default: personal
+                metadata:
+                  type: object
+                  additionalProperties: true
+            example:
+              customer_id: "cust_abc123"
+              currency: "NGN"
+              type: "personal"
+              metadata:
+                source: "mobile_app"
+      responses:
+        "201":
+          description: Wallet created
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/WalletResponse"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "409":
+          $ref: "#/components/responses/Conflict"
+
+    get:
+      operationId: listWallets
+      tags: [Wallets]
+      summary: List wallets
+      parameters:
+        - name: customer_id
+          in: query
+          schema:
+            type: string
+        - $ref: "#/components/parameters/Limit"
+        - $ref: "#/components/parameters/Cursor"
+      responses:
+        "200":
+          description: List of wallets
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/WalletListResponse"
+
+  /wallets/{wallet_id}:
+    get:
+      operationId: getWallet
+      tags: [Wallets]
+      summary: Get wallet details
+      parameters:
+        - name: wallet_id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Wallet details
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/WalletResponse"
+        "404":
+          $ref: "#/components/responses/NotFound"
+
+  /wallets/{wallet_id}/balance:
+    get:
+      operationId: getWalletBalance
+      tags: [Wallets]
+      summary: Get wallet balance
+      parameters:
+        - name: wallet_id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Wallet balance
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BalanceResponse"
+
+  /transfers:
+    post:
+      operationId: createTransfer
+      tags: [Transfers]
+      summary: Initiate a transfer
+      description: |
+        Initiate a transfer from a wallet to another wallet or bank account.
+        Transfers are processed asynchronously. Use webhooks to receive status updates.
+      parameters:
+        - $ref: "#/components/parameters/IdempotencyKey"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [source_wallet_id, amount, currency, destination]
+              properties:
+                source_wallet_id:
+                  type: string
+                  description: Source wallet ID
+                amount:
+                  type: number
+                  minimum: 1
+                  description: Amount in minor units (kobo for NGN)
+                currency:
+                  $ref: "#/components/schemas/Currency"
+                destination:
+                  oneOf:
+                    - $ref: "#/components/schemas/WalletDestination"
+                    - $ref: "#/components/schemas/BankDestination"
+                narration:
+                  type: string
+                  maxLength: 100
+                reference:
+                  type: string
+                  description: Your unique reference (auto-generated if not provided)
+                metadata:
+                  type: object
+            examples:
+              wallet_transfer:
+                summary: Wallet to Wallet
+                value:
+                  source_wallet_id: "wal_abc123"
+                  amount: 50000
+                  currency: "NGN"
+                  destination:
+                    type: "wallet"
+                    wallet_id: "wal_xyz789"
+                  narration: "Payment for services"
+              bank_transfer:
+                summary: Wallet to Bank
+                value:
+                  source_wallet_id: "wal_abc123"
+                  amount: 100000
+                  currency: "NGN"
+                  destination:
+                    type: "bank"
+                    account_number: "0123456789"
+                    bank_code: "058"
+                    account_name: "John Doe"
+                  narration: "Withdrawal"
+      responses:
+        "202":
+          description: Transfer initiated
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/TransferResponse"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "402":
+          description: Insufficient funds
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+
+    get:
+      operationId: listTransfers
+      tags: [Transfers]
+      summary: List transfers
+      parameters:
+        - name: wallet_id
+          in: query
+          schema:
+            type: string
+        - name: status
+          in: query
+          schema:
+            $ref: "#/components/schemas/TransactionStatus"
+        - $ref: "#/components/parameters/Limit"
+        - $ref: "#/components/parameters/Cursor"
+      responses:
+        "200":
+          description: List of transfers
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/TransferListResponse"
+
+  /transfers/{transfer_id}:
+    get:
+      operationId: getTransfer
+      tags: [Transfers]
+      summary: Get transfer status
+      parameters:
+        - name: transfer_id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Transfer details
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/TransferResponse"
+
+  /payments:
+    post:
+      operationId: initializePayment
+      tags: [Payments]
+      summary: Initialize a payment
+      description: |
+        Initialize a payment to collect money from a customer.
+        Returns payment details including authorization URL for redirect-based payments.
+      parameters:
+        - $ref: "#/components/parameters/IdempotencyKey"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [amount, currency, email]
+              properties:
+                amount:
+                  type: number
+                  minimum: 100
+                currency:
+                  $ref: "#/components/schemas/Currency"
+                email:
+                  type: string
+                  format: email
+                reference:
+                  type: string
+                callback_url:
+                  type: string
+                  format: uri
+                channels:
+                  type: array
+                  items:
+                    type: string
+                    enum: [card, bank, ussd, qr, mobile_money, bank_transfer]
+                metadata:
+                  type: object
+            example:
+              amount: 250000
+              currency: "NGN"
+              email: "customer@example.com"
+              callback_url: "https://yourapp.com/payment/callback"
+              channels: ["card", "bank_transfer"]
+      responses:
+        "201":
+          description: Payment initialized
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/PaymentInitResponse"
+
+  /payments/{payment_id}/verify:
+    post:
+      operationId: verifyPayment
+      tags: [Payments]
+      summary: Verify a payment
+      parameters:
+        - name: payment_id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Payment verification result
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/PaymentVerifyResponse"
+
+  /kyc/verify:
+    post:
+      operationId: verifyIdentity
+      tags: [KYC]
+      summary: Verify identity
+      description: |
+        Submit identity verification. Supports BVN, NIN, phone, and other verification types.
+      parameters:
+        - $ref: "#/components/parameters/IdempotencyKey"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [type, value]
+              properties:
+                type:
+                  type: string
+                  enum: [bvn, nin, phone, passport, drivers_license]
+                value:
+                  type: string
+                  description: The value to verify (BVN number, phone number, etc.)
+                first_name:
+                  type: string
+                last_name:
+                  type: string
+                date_of_birth:
+                  type: string
+                  format: date
+            example:
+              type: "bvn"
+              value: "22222222222"
+              first_name: "John"
+              last_name: "Doe"
+      responses:
+        "200":
+          description: Verification result
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/VerificationResponse"
+
+  /webhooks:
+    post:
+      operationId: createWebhook
+      tags: [Webhooks]
+      summary: Register webhook endpoint
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [url]
+              properties:
+                url:
+                  type: string
+                  format: uri
+                events:
+                  type: array
+                  items:
+                    type: string
+                  description: Events to receive (empty = all)
+                description:
+                  type: string
+            example:
+              url: "https://yourapp.com/webhooks/seftec"
+              events: ["transfer.completed", "transfer.failed", "payment.successful"]
+      responses:
+        "201":
+          description: Webhook registered
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/WebhookResponse"
+
+    get:
+      operationId: listWebhooks
+      tags: [Webhooks]
+      summary: List webhook endpoints
+      responses:
+        "200":
+          description: List of webhooks
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/WebhookListResponse"
+
+  /webhooks/{webhook_id}:
+    delete:
+      operationId: deleteWebhook
+      tags: [Webhooks]
+      summary: Delete webhook endpoint
+      parameters:
+        - name: webhook_id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "204":
+          description: Webhook deleted
+
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: X-API-Key
+      description: Your project API key
+
+  parameters:
+    IdempotencyKey:
+      name: Idempotency-Key
+      in: header
+      required: false
+      schema:
+        type: string
+      description: Unique key to prevent duplicate operations (recommended for POST requests)
+
+    Limit:
+      name: limit
+      in: query
+      schema:
+        type: integer
+        minimum: 1
+        maximum: 100
+        default: 20
+
+    Cursor:
+      name: cursor
+      in: query
+      schema:
+        type: string
+      description: Pagination cursor from previous response
+
+  schemas:
+    Currency:
+      type: string
+      enum: [NGN, USD, GBP, EUR, GHS, KES, ZAR]
+
+    TransactionStatus:
+      type: string
+      enum: [pending, processing, success, failed, reversed]
+
+    WalletDestination:
+      type: object
+      required: [type, wallet_id]
+      properties:
+        type:
+          type: string
+          enum: [wallet]
+        wallet_id:
+          type: string
+
+    BankDestination:
+      type: object
+      required: [type, account_number, bank_code]
+      properties:
+        type:
+          type: string
+          enum: [bank]
+        account_number:
+          type: string
+        bank_code:
+          type: string
+        account_name:
+          type: string
+
+    Wallet:
+      type: object
+      properties:
+        id:
+          type: string
+        customer_id:
+          type: string
+        type:
+          type: string
+        currency:
+          $ref: "#/components/schemas/Currency"
+        status:
+          type: string
+          enum: [active, frozen, suspended, closed]
+        account_number:
+          type: string
+        account_name:
+          type: string
+        bank_name:
+          type: string
+        created_at:
+          type: string
+          format: date-time
+
+    Balance:
+      type: object
+      properties:
+        available:
+          type: number
+          description: Available for spending/transfer
+        ledger:
+          type: number
+          description: Total including pending
+        reserved:
+          type: number
+          description: Reserved for pending operations
+        currency:
+          $ref: "#/components/schemas/Currency"
+        last_updated:
+          type: string
+          format: date-time
+
+    Transfer:
+      type: object
+      properties:
+        id:
+          type: string
+        reference:
+          type: string
+        amount:
+          type: number
+        fee:
+          type: number
+        currency:
+          $ref: "#/components/schemas/Currency"
+        status:
+          $ref: "#/components/schemas/TransactionStatus"
+        source_wallet_id:
+          type: string
+        destination:
+          type: object
+        narration:
+          type: string
+        created_at:
+          type: string
+          format: date-time
+        completed_at:
+          type: string
+          format: date-time
+
+    Capabilities:
+      type: object
+      properties:
+        wallet:
+          type: object
+          properties:
+            enabled:
+              type: boolean
+        transfers:
+          type: object
+          properties:
+            enabled:
+              type: boolean
+            currencies:
+              type: array
+              items:
+                $ref: "#/components/schemas/Currency"
+            daily_limit:
+              type: number
+            per_transfer_limit:
+              type: number
+        payments:
+          type: object
+          properties:
+            enabled:
+              type: boolean
+            channels:
+              type: array
+              items:
+                type: string
+        cards:
+          type: object
+          properties:
+            enabled:
+              type: boolean
+        kyc:
+          type: object
+          properties:
+            enabled:
+              type: boolean
+            types:
+              type: array
+              items:
+                type: string
+        webhooks:
+          type: object
+          properties:
+            enabled:
+              type: boolean
+        rate_limit:
+          type: object
+          properties:
+            requests_per_minute:
+              type: integer
+            requests_per_hour:
+              type: integer
+        tier:
+          type: string
+
+    Error:
+      type: object
+      required: [success, error]
+      properties:
+        success:
+          type: boolean
+          enum: [false]
+        error:
+          type: object
+          required: [code, message]
+          properties:
+            code:
+              type: string
+              description: Machine-readable error code
+            message:
+              type: string
+              description: Human-readable error message
+            details:
+              type: object
+        meta:
+          type: object
+          properties:
+            request_id:
+              type: string
+
+    # Response wrappers
+    WalletResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+        data:
+          $ref: "#/components/schemas/Wallet"
+        meta:
+          type: object
+          properties:
+            request_id:
+              type: string
+
+    WalletListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+        data:
+          type: array
+          items:
+            $ref: "#/components/schemas/Wallet"
+        meta:
+          type: object
+          properties:
+            cursor:
+              type: string
+            has_more:
+              type: boolean
+
+    BalanceResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+        data:
+          $ref: "#/components/schemas/Balance"
+
+    TransferResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+        data:
+          $ref: "#/components/schemas/Transfer"
+
+    TransferListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+        data:
+          type: array
+          items:
+            $ref: "#/components/schemas/Transfer"
+
+    PaymentInitResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+        data:
+          type: object
+          properties:
+            id:
+              type: string
+            reference:
+              type: string
+            authorization_url:
+              type: string
+              format: uri
+            access_code:
+              type: string
+            expires_at:
+              type: string
+              format: date-time
+
+    PaymentVerifyResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+        data:
+          type: object
+          properties:
+            id:
+              type: string
+            reference:
+              type: string
+            status:
+              $ref: "#/components/schemas/TransactionStatus"
+            amount:
+              type: number
+            currency:
+              $ref: "#/components/schemas/Currency"
+            channel:
+              type: string
+            paid_at:
+              type: string
+              format: date-time
+
+    VerificationResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+        data:
+          type: object
+          properties:
+            type:
+              type: string
+            status:
+              type: string
+              enum: [verified, failed, pending]
+            match:
+              type: boolean
+            confidence:
+              type: number
+            data:
+              type: object
+
+    WebhookResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+        data:
+          type: object
+          properties:
+            id:
+              type: string
+            url:
+              type: string
+            events:
+              type: array
+              items:
+                type: string
+            secret:
+              type: string
+              description: Use this to verify webhook signatures
+            status:
+              type: string
+
+    WebhookListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+        data:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: string
+              url:
+                type: string
+              events:
+                type: array
+                items:
+                  type: string
+              status:
+                type: string
+
+  responses:
+    BadRequest:
+      description: Invalid request
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Error"
+          example:
+            success: false
+            error:
+              code: "INVALID_REQUEST"
+              message: "Invalid request body"
+              details:
+                field: "amount"
+                issue: "must be positive"
+
+    NotFound:
+      description: Resource not found
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Error"
+          example:
+            success: false
+            error:
+              code: "NOT_FOUND"
+              message: "Wallet not found"
+
+    Conflict:
+      description: Conflict (e.g., duplicate idempotency key)
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Error"
