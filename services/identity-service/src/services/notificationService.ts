@@ -1,6 +1,9 @@
 import { v4 as uuidv4 } from 'uuid';
 import { getDatabase } from '../database/connection';
 import { logger } from '../utils/logger';
+import { PushProviderExtended, EmailProviderExtended, SMSProviderExtended, PushBatchResult, EmailDeliveryResult, SMSDeliveryResult } from '../providers/types';
+import { NotificationProviderFactory } from '../providers/NotificationProviderFactory';
+import { RetryQueueService } from './RetryQueueService';
 
 interface NotificationTemplate {
   id: string;
@@ -63,33 +66,73 @@ export interface SMSProvider {
 }
 
 // ========================================================================
-// Stub Providers for Development
+// Stub Providers for Development (Extended Interfaces)
 // ========================================================================
 
-class StubPushProvider implements PushProvider {
+class StubPushProvider implements PushProviderExtended {
   name = 'stub-push';
 
   async send(token: string, title: string, body: string, data?: Record<string, unknown>) {
     logger.info('STUB PUSH', { token: token.slice(0, 20) + '...', title, body, data });
     return true;
   }
+
+  async sendBatch(notifications: Array<{
+    token: string;
+    title: string;
+    body: string;
+    data?: Record<string, unknown>;
+  }>): Promise<PushBatchResult> {
+    logger.info('STUB PUSH BATCH', { count: notifications.length });
+    return {
+      results: notifications.map(() => ({ success: true })),
+      successCount: notifications.length,
+      failureCount: 0
+    };
+  }
 }
 
-class StubEmailProvider implements EmailProvider {
+class StubEmailProvider implements EmailProviderExtended {
   name = 'stub-email';
 
   async send(to: string, subject: string, body: string) {
     logger.info('STUB EMAIL', { to, subject, bodyLength: body.length });
     return true;
   }
+
+  async sendWithTracking(
+    to: string,
+    subject: string,
+    body: string,
+    html?: string,
+    options?: { replyTo?: string; senderName?: string }
+  ): Promise<EmailDeliveryResult> {
+    logger.info('STUB EMAIL WITH TRACKING', { to, subject, bodyLength: body.length, hasHtml: !!html });
+    return {
+      success: true,
+      externalMessageId: `stub-${Date.now()}`
+    };
+  }
 }
 
-class StubSMSProvider implements SMSProvider {
+class StubSMSProvider implements SMSProviderExtended {
   name = 'stub-sms';
 
   async send(phone: string, message: string) {
     logger.info('STUB SMS', { phone, messageLength: message.length });
     return true;
+  }
+
+  async sendWithTracking(
+    phone: string,
+    message: string,
+    options?: { senderId?: string }
+  ): Promise<SMSDeliveryResult> {
+    logger.info('STUB SMS WITH TRACKING', { phone, messageLength: message.length });
+    return {
+      success: true,
+      externalMessageId: `stub-sms-${Date.now()}`
+    };
   }
 }
 
@@ -99,34 +142,28 @@ class StubSMSProvider implements SMSProvider {
 
 export class NotificationService {
   private db = getDatabase();
-  private pushProvider: PushProvider;
-  private emailProvider: EmailProvider;
-  private smsProvider: SMSProvider;
+  private providerFactory?: NotificationProviderFactory;
+  private retryQueue = new RetryQueueService();
   private templateCache: Map<string, NotificationTemplate> = new Map();
 
-  constructor(
-    pushProvider?: PushProvider,
-    emailProvider?: EmailProvider,
-    smsProvider?: SMSProvider
-  ) {
-    this.pushProvider = pushProvider || new StubPushProvider();
-    this.emailProvider = emailProvider || new StubEmailProvider();
-    this.smsProvider = smsProvider || new StubSMSProvider();
+  constructor(providerFactory?: NotificationProviderFactory) {
+    this.providerFactory = providerFactory;
   }
 
-  setPushProvider(provider: PushProvider): void {
-    this.pushProvider = provider;
-    logger.info('Push provider changed', { provider: provider.name });
+  // ========================================================================
+  // Provider Management
+  // ========================================================================
+
+  private getPushProvider() {
+    return this.providerFactory?.getPushProvider() || new StubPushProvider();
   }
 
-  setEmailProvider(provider: EmailProvider): void {
-    this.emailProvider = provider;
-    logger.info('Email provider changed', { provider: provider.name });
+  private getEmailProvider() {
+    return this.providerFactory?.getEmailProvider() || new StubEmailProvider();
   }
 
-  setSMSProvider(provider: SMSProvider): void {
-    this.smsProvider = provider;
-    logger.info('SMS provider changed', { provider: provider.name });
+  private getSMSProvider() {
+    return this.providerFactory?.getSMSProvider() || new StubSMSProvider();
   }
 
   // ========================================================================
@@ -298,21 +335,44 @@ export class NotificationService {
     }
 
     try {
-      const results = await Promise.all(
-        tokens.map(token =>
-          this.pushProvider.send(token, notification.title, notification.body, {
-            notificationId: notification.id,
-            actionType: notification.actionType,
-            ...notification.actionData
-          })
-        )
-      );
+      const pushProvider = this.getPushProvider();
+      const batchResult = await pushProvider.sendBatch(tokens.map(token => ({
+        token,
+        title: notification.title,
+        body: notification.body,
+        data: {
+          notificationId: notification.id,
+          actionType: notification.actionType,
+          ...notification.actionData
+        }
+      })));
 
-      const success = results.some(r => r);
-      await this.updateChannelStatus(notification.id, 'push', success ? 'sent' : 'failed');
+      const success = batchResult.successCount > 0;
+
+      if (success) {
+        // Store external message ID if available
+        if (batchResult.results.length > 0 && batchResult.results[0].externalMessageId) {
+          await this.db.query(
+            'UPDATE notifications SET external_message_id = $1 WHERE id = $2',
+            [batchResult.results[0].externalMessageId, notification.id]
+          );
+        }
+
+        await this.updateChannelStatus(notification.id, 'push', 'sent');
+
+        // Handle invalid tokens
+        if (batchResult.invalidTokens && batchResult.invalidTokens.length > 0) {
+          await this.deactivateInvalidTokens(batchResult.invalidTokens);
+        }
+      } else {
+        await this.updateChannelStatus(notification.id, 'push', 'failed');
+        // Schedule retry
+        await this.retryQueue.scheduleRetry(notification.id, 'push');
+      }
     } catch (error) {
       logger.error('Push notification failed', { notificationId: notification.id, error });
       await this.updateChannelStatus(notification.id, 'push', 'failed');
+      await this.retryQueue.scheduleRetry(notification.id, 'push');
     }
   }
 
@@ -323,21 +383,51 @@ export class NotificationService {
     body: string
   ): Promise<void> {
     try {
-      const success = await this.emailProvider.send(email, subject, body);
-      await this.updateChannelStatus(notification.id, 'email', success ? 'sent' : 'failed');
+      const emailProvider = this.getEmailProvider();
+      const result = await emailProvider.sendWithTracking(email, subject, body);
+
+      if (result.success) {
+        // Store external message ID
+        if (result.externalMessageId) {
+          await this.db.query(
+            'UPDATE notifications SET external_message_id = $1 WHERE id = $2',
+            [result.externalMessageId, notification.id]
+          );
+        }
+        await this.updateChannelStatus(notification.id, 'email', 'sent');
+      } else {
+        await this.updateChannelStatus(notification.id, 'email', 'failed');
+        await this.retryQueue.scheduleRetry(notification.id, 'email');
+      }
     } catch (error) {
       logger.error('Email notification failed', { notificationId: notification.id, error });
       await this.updateChannelStatus(notification.id, 'email', 'failed');
+      await this.retryQueue.scheduleRetry(notification.id, 'email');
     }
   }
 
   private async sendSMS(notification: Notification, phone: string, message: string): Promise<void> {
     try {
-      const success = await this.smsProvider.send(phone, message);
-      await this.updateChannelStatus(notification.id, 'sms', success ? 'sent' : 'failed');
+      const smsProvider = this.getSMSProvider();
+      const result = await smsProvider.sendWithTracking(phone, message);
+
+      if (result.success) {
+        // Store external message ID
+        if (result.externalMessageId) {
+          await this.db.query(
+            'UPDATE notifications SET external_message_id = $1 WHERE id = $2',
+            [result.externalMessageId, notification.id]
+          );
+        }
+        await this.updateChannelStatus(notification.id, 'sms', 'sent');
+      } else {
+        await this.updateChannelStatus(notification.id, 'sms', 'failed');
+        await this.retryQueue.scheduleRetry(notification.id, 'sms');
+      }
     } catch (error) {
       logger.error('SMS notification failed', { notificationId: notification.id, error });
       await this.updateChannelStatus(notification.id, 'sms', 'failed');
+      await this.retryQueue.scheduleRetry(notification.id, 'sms');
     }
   }
 
@@ -614,6 +704,21 @@ export class NotificationService {
     };
   }
 
+  private async deactivateInvalidTokens(invalidTokens: string[]): Promise<void> {
+    if (invalidTokens.length === 0) return;
+
+    try {
+      await this.db.query(
+        'UPDATE device_tokens SET is_active = FALSE WHERE token = ANY($1)',
+        [invalidTokens]
+      );
+
+      logger.info('Deactivated invalid push tokens', { count: invalidTokens.length });
+    } catch (error) {
+      logger.error('Failed to deactivate invalid tokens', { error });
+    }
+  }
+
   private mapNotification(row: any): Notification {
     return {
       id: row.id,
@@ -635,4 +740,4 @@ export class NotificationService {
   }
 }
 
-export default new NotificationService();
+export default new NotificationService(NotificationProviderFactory.getInstance());
