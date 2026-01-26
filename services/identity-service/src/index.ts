@@ -19,6 +19,8 @@ import pinRoutes from './controllers/pinController';
 import securityQuestionsRoutes from './controllers/securityQuestionsController';
 import { initializeDatabase } from './database/connection';
 import { initializeI18n } from './utils/i18n';
+import { NotificationService } from './services/notificationService';
+import { NotificationEventConsumer } from './consumers/NotificationEventConsumer';
 
 const app = express();
 const server = createServer(app);
@@ -28,6 +30,14 @@ async function initializeServices() {
   try {
     await initializeDatabase();
     await initializeI18n();
+    
+    // Initialize notification service and event consumer
+    const notificationService = new NotificationService();
+    const notificationEventConsumer = new NotificationEventConsumer(notificationService);
+    
+    // Store references for graceful shutdown
+    (global as any).notificationEventConsumer = notificationEventConsumer;
+    
     logger.info('All services initialized successfully');
   } catch (error) {
     logger.error('Failed to initialize services:', error);
@@ -104,8 +114,20 @@ app.use('*', (req, res) => {
 app.use(errorHandler);
 
 // Graceful shutdown
-const gracefulShutdown = (signal: string) => {
+const gracefulShutdown = async (signal: string) => {
   logger.info(`Received ${signal}. Shutting down gracefully...`);
+  
+  // Stop the notification event consumer
+  const notificationEventConsumer = (global as any).notificationEventConsumer;
+  if (notificationEventConsumer) {
+    try {
+      await notificationEventConsumer.stop();
+      logger.info('Notification event consumer stopped');
+    } catch (error) {
+      logger.error('Error stopping notification event consumer:', error);
+    }
+  }
+  
   server.close(() => {
     logger.info('Server closed');
     process.exit(0);
@@ -122,6 +144,12 @@ const HOST = process.env.HOST || 'localhost';
 async function startServer() {
   try {
     await initializeServices();
+    
+    // Start the notification event consumer
+    const notificationEventConsumer = (global as any).notificationEventConsumer;
+    if (notificationEventConsumer) {
+      await notificationEventConsumer.start();
+    }
     
     server.listen(PORT, () => {
       logger.info(`Identity Service running on ${HOST}:${PORT}`);

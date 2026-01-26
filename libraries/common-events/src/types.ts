@@ -118,28 +118,28 @@ export interface AdminActionData {
 }
 
 // ============================================================================
-// Event Type Constants
+// Event Type Constants - Moved to platform-events.ts
 // ============================================================================
 
-export const EventTypes = {
-  // Identity Service
-  USER_REGISTERED: 'identity.user.registered',
-  USER_VERIFIED: 'identity.user.verified',
-  USER_UPDATED: 'identity.user.updated',
+// export const EventTypes = {
+//   // Identity Service
+//   USER_REGISTERED: 'identity.user.registered',
+//   USER_VERIFIED: 'identity.user.verified',
+//   USER_UPDATED: 'identity.user.updated',
 
-  // Wallet Service
-  WALLET_CREATED: 'wallet.created',
-  BALANCE_UPDATED: 'wallet.balance.updated',
-  CARD_ISSUED: 'wallet.card.issued',
+//   // Wallet Service
+//   WALLET_CREATED: 'wallet.created',
+//   BALANCE_UPDATED: 'wallet.balance.updated',
+//   CARD_ISSUED: 'wallet.card.issued',
 
-  // Transaction Service
-  TRANSACTION_INITIATED: 'transaction.initiated',
-  TRANSACTION_COMPLETED: 'transaction.completed',
-  SETTLEMENT_COMPLETED: 'transaction.settlement.completed',
+//   // Transaction Service
+//   TRANSACTION_INITIATED: 'transaction.initiated',
+//   TRANSACTION_COMPLETED: 'transaction.completed',
+//   SETTLEMENT_COMPLETED: 'transaction.settlement.completed',
 
-  // Admin Service
-  TICKET_CREATED: 'admin.ticket.created',
-  ADMIN_ACTION: 'admin.action',
-} as const;
+//   // Admin Service
+//   TICKET_CREATED: 'admin.ticket.created',
+//   ADMIN_ACTION: 'admin.action',
+// } as const;
 
-export type EventType = typeof EventTypes[keyof typeof EventTypes];
+// export type EventType = typeof EventTypes[keyof typeof EventTypes];

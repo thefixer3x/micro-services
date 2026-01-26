@@ -30,7 +30,8 @@
       "@/controllers/*": ["controllers/*"],
       "@/services/*": ["services/*"],
       "@/repositories/*": ["repositories/*"],
-      "@/database/*": ["database/*"]
+      "@/database/*": ["database/*"],
+      "@platform/common-events": ["../../libraries/common-events/dist"]
     }
   },
   "include": [

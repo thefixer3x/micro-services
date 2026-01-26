@@ -1,10 +1,10 @@
 import { Router, Response } from 'express';
 import { body, validationResult } from 'express-validator';
 import bcrypt from 'bcrypt';
-import { pool } from '../database/connection';
+import { getDatabase } from '../database/connection';
 import { AuthenticatedRequest } from '../types';
 import { authenticateToken } from '../middleware/auth';
-import logger from '../utils/logger';
+import { logger } from '../utils/logger';
 
 const router = Router();
 const PIN_SALT_ROUNDS = 10;
@@ -42,7 +42,7 @@ router.post(
       const { pin } = req.body;
 
       // Check if user is locked out before allowing PIN set/reset
-      const lockCheck = await pool.query(
+      const lockCheck = await getDatabase().query(
         'SELECT pin_locked_until FROM users WHERE id = $1',
         [userId]
       );
@@ -63,7 +63,7 @@ router.post(
       const pinHash = await bcrypt.hash(pin, PIN_SALT_ROUNDS);
 
       // Update user's PIN
-      await pool.query(
+      await getDatabase().query(
         `UPDATE users
          SET pin_hash = $1, pin_attempts = 0, pin_locked_until = NULL, pin_updated_at = NOW()
          WHERE id = $2`,
@@ -104,7 +104,7 @@ router.post(
       const { pin } = req.body;
 
       // Get user's PIN data
-      const result = await pool.query(
+      const result = await getDatabase().query(
         'SELECT pin_hash, pin_attempts, pin_locked_until FROM users WHERE id = $1',
         [userId]
       );
@@ -146,7 +146,7 @@ router.post(
           ? new Date(Date.now() + LOCK_DURATION_MINUTES * 60000)
           : null;
 
-        await pool.query(
+        await getDatabase().query(
           'UPDATE users SET pin_attempts = $1, pin_locked_until = $2 WHERE id = $3',
           [newAttempts, lockUntil, userId]
         );
@@ -165,7 +165,7 @@ router.post(
       }
 
       // Reset attempts on success
-      await pool.query(
+      await getDatabase().query(
         'UPDATE users SET pin_attempts = 0, pin_locked_until = NULL WHERE id = $1',
         [userId]
       );
@@ -212,7 +212,7 @@ router.post(
       const { currentPin, newPin } = req.body;
 
       // Get current PIN hash and attempt info
-      const result = await pool.query(
+      const result = await getDatabase().query(
         'SELECT pin_hash, pin_attempts, pin_locked_until FROM users WHERE id = $1',
         [userId]
       );
@@ -253,7 +253,7 @@ router.post(
           ? new Date(Date.now() + LOCK_DURATION_MINUTES * 60000)
           : null;
 
-        await pool.query(
+        await getDatabase().query(
           'UPDATE users SET pin_attempts = $1, pin_locked_until = $2 WHERE id = $3',
           [newAttempts, lockUntil, userId]
         );
@@ -275,7 +275,7 @@ router.post(
       const newPinHash = await bcrypt.hash(newPin, PIN_SALT_ROUNDS);
 
       // Update PIN
-      await pool.query(
+      await getDatabase().query(
         `UPDATE users
          SET pin_hash = $1, pin_attempts = 0, pin_locked_until = NULL, pin_updated_at = NOW()
          WHERE id = $2`,
@@ -306,7 +306,7 @@ router.get(
     try {
       const userId = req.user?.user_id;
 
-      const result = await pool.query(
+      const result = await getDatabase().query(
         'SELECT pin_hash IS NOT NULL as has_pin, pin_locked_until, pin_updated_at FROM users WHERE id = $1',
         [userId]
       );
